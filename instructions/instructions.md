@@ -68,9 +68,9 @@
 
 - Milestone 1. Configuración inicial del proyecto: Crear estructura base.
 - Milestone 2. Inicio de sesión: Crear los formularios para registro,  inicio de sesión y cierre de sesión.
-- Milestone 3. Agregar cupones: Crear formulario para registrar nuevos cupones
-- Milestone 4. Mostrar cupones: Crear lista de todos los cupones.
-- Milestone 5. Desabilitar cupones: Crear formulario para deshabilitar cupones.
+- Milestone 3. Agregar cupones: Crear formulario para registrar nuevos cupones y agregarlos a la base de datos.
+- Milestone 4. Mostrar cupones: Crear lista de todos los cupones registrados en la base de datos.
+- Milestone 5. Eliminar usuarios/categorias: Crear interfaz para eliminar usuarios y categorias.
 
 ### [ 03 ] Requerimientos no funcionales
 
