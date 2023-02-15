@@ -69,8 +69,9 @@
 - Milestone 1. Configuración inicial del proyecto: Crear estructura base.
 - Milestone 2. Inicio de sesión: Crear los formularios para registro,  inicio de sesión y cierre de sesión.
 - Milestone 3. Agregar cupones: Crear formulario para registrar nuevos cupones y agregarlos a la base de datos.
-- Milestone 4. Mostrar cupones: Crear lista de todos los cupones registrados en la base de datos.
+- Milestone 4. Mostrar cupones: Crear lista de todos los cupones registrados en la base de datos y su vista individual.
 - Milestone 5. Eliminar usuarios/categorias: Crear interfaz para eliminar usuarios y categorias.
+
 
 ### [ 03 ] Requerimientos no funcionales
 
@@ -81,21 +82,21 @@
 
 > Organiza tus requerimientos ó `milestones` de manera calendarizada.
 
-Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7 | WK8 | WK9 | WK10 | WK11 | WK12 | WK13 | WK14 | WK15 | WK16
----|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
- #1 | x | x |
- #2 |   |   | x | x | x
- #3 |   |   |   |   |   | x | x | x | x | x |
- #4 |   |   |   |   |   |   |   |   |   |   | x | x | x | x |
- #5 |   |   |   |   |   |   |   |   |   |   |   |   |   |   | x | x |
+Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7 
+---|---|---|---|---|---|---|---|
+ #1 | x |   |
+ #2 |   | x |   |   |  
+ #3 |   |   | x | x |   |   |   | 
+ #4 |   |   |   |   | x | x |   | 
+ #5 |   |   |   |   |   |   | x |   
 
 ### [ 05 ] Diseño de la UI
 
->https://www.figma.com/file/oKRDLkOJUVHNVABrXZyTFZ/Untitled?node-id=0%3A1&t=rTUIrEZjhETZfBIS-0
+>hhttps://www.figma.com/proto/oKRDLkOJUVHNVABrXZyTFZ/Untitled?node-id=19%3A899&scaling=scale-down&page-id=0%3A1&starting-point-node-id=19%3A899
 
 ### [ 07 ] Modelo de la base de datos
 
-> https://app.diagrams.net/#G1zAbQOhuHI52pFbJwM-Je_eDpa8xPrF_m
+> ![Database](../img/database.png)
 
 ### [ 08 ] GitHub Planner
 

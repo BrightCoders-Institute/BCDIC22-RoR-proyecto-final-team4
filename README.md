@@ -15,3 +15,8 @@ Things you may want to cover:
 - How to Use the Project.
 - Credits
 - Badges
+
+Co-authored-by: EverardoAlcarazBaltazar <ealcaraz12@ucol.mx>
+Co-authored-by: oscaregr <oegr.el.may@gmail.com>
+Co-authored-by: DiegoCoronaBarragan <d.coronabarragan@gmail.com>
+Co-authored-by: Ewar22 <montanoeduards321@gmail.com>
