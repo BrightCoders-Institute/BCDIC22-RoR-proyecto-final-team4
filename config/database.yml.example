@@ -17,6 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   username: postgres or your_user
   password: your_password
   # For details on connection pooling, see Rails configuration guide
@@ -83,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: ProCupons_production
   username: ProCupons
   password: <%= ENV["PROCUPONS_DATABASE_PASSWORD"] %>
