@@ -96,7 +96,7 @@ Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7
 
 ### [ 07 ] Modelo de la base de datos
 
-> ![Database](../img/database.png)
+> ![Database](../img/database.PNG)
 
 ### [ 08 ] GitHub Planner
 
