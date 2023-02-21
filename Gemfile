@@ -12,6 +12,9 @@ gem "sprockets-rails"
 # gem for made users sessions
 gem "devise"
 
+#gem SASS for style
+gem 'sass-rails', '~> 6.0'
+
 # Use postgresql as the database for Active Record
 gem "pg"
 
