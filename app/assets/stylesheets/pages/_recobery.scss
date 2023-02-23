@@ -1,61 +1,63 @@
+.a_login_singup {
+    background-color: $color3;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.actions {
+    background-color: $color3;
+    height: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.field {
+    background-color: $color3;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.form_box {
+    background-color: $color3;
+    border-radius: 10px;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    background-color: $color3;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    background-color: $color4;
+}
+
 h2 {
     font-size: 80px;
     text-align: center;
 }
 
-.field {
-    font-size: 30px;
-    padding-top: 20px;
-    background-color: $color3;
-}
-
-.actions {
-    background-color: $color3;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 25px;
-}
-
-.form_box {
-    background-color: $color3;
-    text-align: center;
-    margin-left: 700px;
-    margin-right: 700px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    padding-top: 20px;
-}
-
 input {
     background-color: aliceblue;
     border-radius: 5px;
-    margin-top: 5px;
     height: 25px;
+    margin-top: 5px;
     width: 300px;
 }
 
 label {
     background-color: $color3;
-}
-
-a:link, a:visited {
-    background-color: $color3;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-a:hover, a:active {
-    background-color: $color4;
-}
-
-.a_login_singup {
-    background-color: $color3;
-    text-align: center;
-    justify-content: space-evenly;
-    display: flex;
-    margin-left: 100px;
-    margin-right: 100px;
 }
