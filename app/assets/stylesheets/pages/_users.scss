@@ -1,3 +1,106 @@
 * {
   background-color: $background;
+  font-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 70px;
+  margin: .7rem;
+  text-align: center;
+}
+
+.form_users {
+  background-color: $color3;
+  border-radius: 10px;
+  box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+  width: 40%;
+  -moz-box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
+  -webkit-box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
+}
+
+.field {
+  background-color: $color3;
+  font-size: 25px;
+}
+
+.field input{
+  width: 70%;
+}
+
+.actions {
+  background-color: $color3;
+  height: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.actions input{
+  background-color: $color2;
+  font-size: 1rem;
+  padding: .1rem;
+  width: 50%;
+}
+
+.actions input:hover {
+  background-color: rgba(180, 150, 197, 0.151);
+  transition: 1.5s ease;
+}
+
+.links {
+  background-color: $color3;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px;
+  padding: 1rem;
+  text-align: center;
+}
+
+a {
+  background-color: $color2;
+  border-radius: 5px;
+  border: .15rem solid black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: .7rem;
+}
+
+a:hover {
+  background-color: rgba(180, 150, 197, 0.151);
+  transition: 1.5s ease;
+}
+
+input {
+  background-color: aliceblue;
+  border-radius: .5rem;
+  height: 25px;
+  margin-top: 5px;
+  padding: .5rem;
+  width: 20rem;
+}
+
+label {
+  background: $color3;
+  width: 26rem;
+}
+
+@media screen and (max-width: 800px){
+  h2 {
+    font-size: 50px;
+    margin: .7rem;
+    text-align: center;
+  }
+
+  .form_users {
+    width: 70%;
+  }
+  
+  a {
+    font-size: .8rem;
+  }
 }
