@@ -10,10 +10,11 @@ ActionMailer::Base.smtp_settings = {
 	address:	'smtp.gmail.com',
 	port:	  465,
 	domain:	'gmail.com',
-	user_name:		'procuponss@gmail.com', #ENV['GMAIL_USERNAME'], #gmail from the app
-	password:		'', #ENV['GMAIL_PASSWORD'], #password from that gmail
+	user_name:		Rails.application.credentials.mailer.public_username, #gmail from the app
+	password:		Rails.application.credentials.mailer.private_key, #password from that gmail
 	authentication: 'plain',
 	:ssl	=> true,
 	:tsl	=> true,
 	enable_starttsl_auto: true
 }
+

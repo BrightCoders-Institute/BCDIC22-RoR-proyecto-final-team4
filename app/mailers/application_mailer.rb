@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "procuponss@gmail.com"
+  default from: Rails.application.credentials.mailer.public_username
   layout "mailer"
 end
