@@ -4,16 +4,16 @@
     flex-direction: column;
     height: 518px;
     justify-content: center;
-
+    background-color: $background;
     .title-container {
         display: flex;
         flex-direction: column;
 
         h2 {
-            color: #000000;
+            color: #8f1515;
             display: flex;
             font-family: 'Nunito';
-            font-size: 96px;
+            font-size: 2rem;
             font-style: normal;
             font-weight: 500;
             justify-content: flex-end;
@@ -22,7 +22,7 @@
         }
 
         .line {
-            border: 1px solid #000000;
+            border: 0px solid #000000;
             height: 0px;
             margin-top: -70px;
             width: 588px;
@@ -30,7 +30,7 @@
     }
 
 
-    .form-container {
+    .form-container-sign-up {
         align-items: center;
         background-color: $color3;
         border-radius: 11px;
@@ -41,7 +41,9 @@
         box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
         -moz-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
         -webkit-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
-
+        h2 {
+            background-color: $color3;
+        }
         .form-line {
             display: flex;
             flex-direction: column;
