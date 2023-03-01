@@ -1,3 +1,60 @@
+.add_cupons{
+
+	&_container {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&_subtitle {
+		font-size: 2.7rem;
+		font-weight: 400;
+
+		&:first-child {
+			margin-bottom: 2rem;
+		}
+
+		&:last-child {
+			margin-top: 2rem;
+		}
+	}
+
+	&_detalles {
+		
+		&_precios {
+			display: flex;
+			flex-direction: column;
+			font-style:oblique;
+			margin-top: .5rem;
+
+			&_input {
+				font-size: 1.5rem;
+				width: 30%;
+			}
+		}
+
+		&_cupon {
+			display: flex;
+			flex-direction: column;
+			margin: 3rem 0 2rem 0;
+		}
+
+		&_finales {
+
+			&_content {
+				
+			}
+
+			&_fechas {
+				display: flex;
+				flex-direction: column;
+				
+				&_input {
+					width: 30%;
+				}
+			}
+		}
+	}
+}
 * {
 	background-color: $background;
 	font-style: none;
@@ -6,6 +63,9 @@
 }
 
 .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	text-align: start;
 }
 

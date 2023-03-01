@@ -42,7 +42,50 @@
 					<option >Oferta</option>
 				</select>
 		</div>
-	</div>		
-
+	</div>
 	
+	<div class='add_cupons_container2'>
+			<div class="add_cupons_detalles_precio">
+				<h3 class='add_cupons_subtitle'>Detalles de precio</h3>
+				
+				<%= form_for :cupon do |form| %>
+					<div class='add_cupons_detalles_precios'>
+						<%= form.label 'Precio con oferta (Opcional)' %>
+						<%= form.number_field :precio_oferta, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$' %>
+					</div>
+			
+					<div class='add_cupons_detalles_precios'>
+						<%= form.label 'Precio regular (Opcional)' %>
+						<%= form.number_field :precio_regular, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$'%>
+					</div>
+
+					<div class='add_cupons_detalles_cupon'>
+						<%= form.label 'Cupón(opcional)' %>
+						<%= form.url_field :cupon, placeholder: 'Codigo para optener el descuento' %>
+					</div>
+			</div>
+
+			<div class='add_cupons_detalles_finales'>
+					<h3 class='add_cupons_subtitle'>Detalles finales</h3>
+
+					<div class='add_cupons_detalles_finales_content'>
+						<div class='add_cupons_detalles_finales_fechas'>
+							<%= form.label 'Fecha de inicio' %>
+							<%= form.date_field :fecha_inicio, class:'add_cupons_detalles_finales_fechas_input' %>
+						</div>
+
+						<div class='add_cupons_detalles_finales_fechas'>
+							<%= form.label 'Fecha que expira' %>
+							<%= form.date_field :fecha_fin, class:'add_cupons_detalles_finales_fechas_input' %>
+						</div>
+					</div>
+
+					<div class='add_cupons_detalles_finales_content'>
+						<button id='vista_previa'>Vista previa</button>
+						<%= form.submit 'enviar la oferta' %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
