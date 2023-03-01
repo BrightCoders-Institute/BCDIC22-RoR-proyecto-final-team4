@@ -2,45 +2,49 @@
 
 <div class="container">
 	<div class="add_cupons_detalles_generales">
-		<div class="add_cupons_detalles_generales_title">
-			<h2>Detalles generales</h2>
-		</div>
-
-		<div class="detalles_generales_form">
-			<div class="form-line">
-				<label>Enlace de la oferta</label>
-				<input> 
+				<h3 class='add_cupons_subtitle'>Detalles de generales</h3>
+		<div class="add_cupons_detalles_generales_form">
+				<%= form_for :cupon do |form| %>
+			<div class="add_cupons_detalles_generales_content">
+					<%= form.label 'Enlace de la oferta' %>
+					<%= form.url_field :link, class:'add_cupons_detalles_generales_content_link' %>
 			</div>
 
-			<div class="form-line">
-				<label>Titulo</label>
-				<input> 
+			<div class="add_cupons_detalles_generales_content">
+					<%= form.label 'Titulo' %>
+					<%= form.text_field :titulo, class:'add_cupons_detalles_generales_content_titulo' %>
 			</div>
 
-			<div class="form-line">
-				<label>Descripción</label>
-				<input> 
+			<div class="add_cupons_detalles_generales_content">
+				<%= form.label 'Descripción' %>
+				<%= form.text_area :descripcion, class:'add_cupons_detalles_generales_content_descripcion' %>
 			</div>
 
-			<div class="form-line">
-				<label>Ciudad</label>
-				<input> 
+			<div class="add_cupons_detalles_generales_content">
+				<%= form.label 'Ciudad' %>
+				<%= form.text_field :ciudad, placeholder: 'https://', class:'add_cupons_detalles_generales_content_ciudad'  %>
 			</div>
 
-			<div class="form-line">
-				<label>Subir imagen usando link</label>
-				<input> 
+			<div class="add_cupons_detalles_generales_content">
+				<%= form.label 'Link de imagen' %>
+				<%= form.text_field :url_image, class:'add_cupons_detalles_generales_content_imagen' %>
 			</div>
 
-			<div class="form-line">
-			<label>Tipo de publicación</label>
+			<div class="add_cupons_detalles_generales_tipo">
+				<%= form.label 'Tipo de publicación' %>
 
+				<div class="add_cupons_detalles_generales_tipo_options">
+					<div>
+						<%= form.radio_button :type, 'Cupon', class: 'add_cupons_detalles_generales_tipo_options_values' %>
+						<%= form.label :type_cupon, "Cupon" %>
+					</div>
+
+					<div>
+						<%= form.radio_button :type, 'Oferta', class: 'add_cupons_detalles_generales_tipo_options_values' %>
+						<%= form.label :type_oferta, "Oferta" %>
+					</div>
+				</div>
 			</div>
-				<select name="type">
-					<option>Elige una opción</option>
-					<option >Cupón</option>
-					<option >Oferta</option>
-				</select>
 		</div>
 	</div>
 	
@@ -48,7 +52,6 @@
 			<div class="add_cupons_detalles_precio">
 				<h3 class='add_cupons_subtitle'>Detalles de precio</h3>
 				
-				<%= form_for :cupon do |form| %>
 					<div class='add_cupons_detalles_precios'>
 						<%= form.label 'Precio con oferta (Opcional)' %>
 						<%= form.number_field :precio_oferta, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$' %>
@@ -61,7 +64,7 @@
 
 					<div class='add_cupons_detalles_cupon'>
 						<%= form.label 'Cupón(opcional)' %>
-						<%= form.url_field :cupon, placeholder: 'Codigo para optener el descuento' %>
+						<%= form.url_field :cupon, class:'input_border-color',placeholder: 'Codigo para optener el descuento' %>
 					</div>
 			</div>
 
@@ -81,8 +84,8 @@
 					</div>
 
 					<div class='add_cupons_detalles_finales_content'>
-						<button id='vista_previa'>Vista previa</button>
-						<%= form.submit 'enviar la oferta' %>
+						<button class='add_cupons_detalles_finales_content_buttons' id='vista_previa'>Vista previa</button>
+						<%= form.submit 'enviar la oferta', class:'add_cupons_detalles_finales_content_buttons' %>
 					</div>
 				<% end %>
 			</div>
