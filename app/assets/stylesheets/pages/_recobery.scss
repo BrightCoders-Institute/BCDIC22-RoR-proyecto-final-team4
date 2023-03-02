@@ -37,15 +37,15 @@ html, body {
 }
 
 .form_box_recobery {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-    color: white;
     -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
     -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
     align-items: center;
-    //background-color: $yellow;
+    background-color: $yellow;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
     box-shadow: -2px -2px 25px -2px rgba(255, 255, 255, 0.85);
+    color: white;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -53,6 +53,9 @@ html, body {
     padding-bottom: 30px;
     padding-top: 10px;
     width: 30%;
+     /* Fallback color */
+     /* Black w/opacity/see-through */
+    //
 }
 
 .field_recobery input:focus:first-child {
