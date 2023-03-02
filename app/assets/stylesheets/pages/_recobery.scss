@@ -4,12 +4,12 @@ html, body {
 }
 
 .a_login_singup_recobery {
-    background-color: $color3;
+    background-color: $blue;
     text-align: center;
 }
 
 .actions_recobery input {
-    background-color: $color2;
+    background-color: $orange;
     border-radius: 22px;
     height: 35px;
     margin-top: 2%;
@@ -17,12 +17,13 @@ html, body {
 }
 
 .buttom input:hover {
-    background-color: $color5;
+    background-color: $blue;
 }
 
 .container_recobery {
     align-items: center;
-    background: $background;
+    background-image: $bg;
+    background-size: cover;
     display: block;
     height: 67.52rem;
     justify-content: center;
@@ -31,18 +32,20 @@ html, body {
 }
 
 .field_recobery {
-    background-color: $color3;
     font-size: 30px;
     padding-top: 20px;
 }
 
 .form_box_recobery {
-    -moz-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
-    -webkit-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+    color: white;
+    -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
+    -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
     align-items: center;
-    background-color: $color3;
+    //background-color: $yellow;
     border-radius: 10px;
-    box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
+    box-shadow: -2px -2px 25px -2px rgba(255, 255, 255, 0.85);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -64,8 +67,9 @@ html, body {
 a:link,
 a:visited {
     align-items: center;
-    background-color: $color4;
+    background-color: $blue;
     border-radius: 22px;
+    color: #000;
     display: inline-block;
     margin-top: 20px;
     padding: 14px 25px;
@@ -76,7 +80,8 @@ a:visited {
 
 a:hover,
 a:active {
-    background-color: $color2;
+    background-color: $purle;
+    color: aliceblue;
 }
 
 div .links {
@@ -115,7 +120,7 @@ h2 {
 
 @media only screen and (max-width: 811px) {
     a:active {
-        background-color: $color4;
+        background-color: $orange;
     }
     
     a {
@@ -123,7 +128,6 @@ h2 {
     }
 
     .phone {
-        background-color: $color3;
         display: block;
         text-align: center;
         width: 95%;
