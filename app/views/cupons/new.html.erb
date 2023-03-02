@@ -4,30 +4,36 @@
 	<div class="add_cupons_detalles_generales">
 				<h3 class='add_cupons_subtitle'>Detalles de generales</h3>
 		<div class="add_cupons_detalles_generales_form">
-				<%= form_for :cupon do |form| %>
+			<%= form_for @cupon do |form| %>
+				<% @cupon.errors.full_messages.each do |error| %>
+					<div>
+						<%= error %>
+					</div>
+				<% end %>
+				
 			<div class="add_cupons_detalles_generales_content">
 					<%= form.label 'Enlace de la oferta' %>
-					<%= form.url_field :link, class:'add_cupons_detalles_generales_content_link' %>
+					<%= form.url_field :url, class:'add_cupons_detalles_generales_content_link' %>
 			</div>
 
 			<div class="add_cupons_detalles_generales_content">
 					<%= form.label 'Titulo' %>
-					<%= form.text_field :titulo, class:'add_cupons_detalles_generales_content_titulo' %>
+					<%= form.text_field :title, class:'add_cupons_detalles_generales_content_titulo' %>
 			</div>
 
 			<div class="add_cupons_detalles_generales_content">
 				<%= form.label 'Descripción' %>
-				<%= form.text_area :descripcion, class:'add_cupons_detalles_generales_content_descripcion' %>
+				<%= form.text_area :description, class:'add_cupons_detalles_generales_content_descripcion' %>
 			</div>
 
 			<div class="add_cupons_detalles_generales_content">
 				<%= form.label 'Ciudad' %>
-				<%= form.text_field :ciudad, placeholder: 'https://', class:'add_cupons_detalles_generales_content_ciudad'  %>
+				<%= form.text_field :location, placeholder: 'https://', class:'add_cupons_detalles_generales_content_ciudad'  %>
 			</div>
 
 			<div class="add_cupons_detalles_generales_content">
 				<%= form.label 'Link de imagen' %>
-				<%= form.text_field :url_image, class:'add_cupons_detalles_generales_content_imagen' %>
+				<%= form.text_field :image_url, class:'add_cupons_detalles_generales_content_imagen' %>
 			</div>
 
 			<div class="add_cupons_detalles_generales_tipo">
@@ -35,13 +41,13 @@
 
 				<div class="add_cupons_detalles_generales_tipo_options">
 					<div>
-						<%= form.radio_button :type, 'Cupon', class: 'add_cupons_detalles_generales_tipo_options_values' %>
-						<%= form.label :type_cupon, "Cupon" %>
+						<%= form.radio_button :promotion_type, 'cupon', class: 'add_cupons_detalles_generales_tipo_options_values' %>
+						<%= form.label :promotion_type_cupon, "cupon" %>
 					</div>
 
 					<div>
-						<%= form.radio_button :type, 'Oferta', class: 'add_cupons_detalles_generales_tipo_options_values' %>
-						<%= form.label :type_oferta, "Oferta" %>
+						<%= form.radio_button :promotion_type, 'oferta', class: 'add_cupons_detalles_generales_tipo_options_values' %>
+						<%= form.label :promotion_type_oferta, "oferta" %>
 					</div>
 				</div>
 			</div>
@@ -54,17 +60,17 @@
 				
 					<div class='add_cupons_detalles_precios'>
 						<%= form.label 'Precio con oferta (Opcional)' %>
-						<%= form.number_field :precio_oferta, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$' %>
+						<%= form.number_field :discount_price, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$' %>
 					</div>
 			
 					<div class='add_cupons_detalles_precios'>
 						<%= form.label 'Precio regular (Opcional)' %>
-						<%= form.number_field :precio_regular, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$'%>
+						<%= form.number_field :normal_price, step: 0.5, class: 'add_cupons_detalles_precios_input', placeholder: '$'%>
 					</div>
 
 					<div class='add_cupons_detalles_cupon'>
 						<%= form.label 'Cupón(opcional)' %>
-						<%= form.url_field :cupon, class:'input_border-color',placeholder: 'Codigo para optener el descuento' %>
+						<%= form.url_field :coupon, class:'input_border-color',placeholder: 'Codigo para optener el descuento' %>
 					</div>
 			</div>
 
@@ -74,12 +80,12 @@
 					<div class='add_cupons_detalles_finales_content'>
 						<div class='add_cupons_detalles_finales_fechas'>
 							<%= form.label 'Fecha de inicio' %>
-							<%= form.date_field :fecha_inicio, class:'add_cupons_detalles_finales_fechas_input' %>
+							<%= form.date_field :start_date, class:'add_cupons_detalles_finales_fechas_input' %>
 						</div>
 
 						<div class='add_cupons_detalles_finales_fechas'>
 							<%= form.label 'Fecha que expira' %>
-							<%= form.date_field :fecha_fin, class:'add_cupons_detalles_finales_fechas_input' %>
+							<%= form.date_field :expiration_date, class:'add_cupons_detalles_finales_fechas_input' %>
 						</div>
 					</div>
 
