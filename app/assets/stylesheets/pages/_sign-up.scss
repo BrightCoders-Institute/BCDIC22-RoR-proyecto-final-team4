@@ -4,11 +4,11 @@
     flex-direction: column;
     height: 518px;
     justify-content: center;
-
+    
     .title-container {
         display: flex;
         flex-direction: column;
-
+        
         h2 {
             color: #000000;
             display: flex;
@@ -28,32 +28,32 @@
             width: 588px;
         }
     }
-
-
     .form-container {
+        -moz-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
+        -webkit-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
+        a:hover {
+            background-color: $color4;
+            transition: 1.5s ease;
+        }
         align-items: center;
         background-color: $color3;
         border-radius: 11px;
+        box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
         display: flex;
         flex-direction: column;
         margin-top: 40px;
         padding: 20px;
-        box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
-        -moz-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
-        -webkit-box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
-
+        
         .form-line {
+            background-color: $color3;
             display: flex;
             flex-direction: column;
             max-width: 100%;
-            background-color: $color3;
-
+            
             label {
-
                 display: flex;
                 flex-direction: column-reverse;
                 height: 36px;
-
             }
 
             input {
@@ -66,14 +66,13 @@
         }
 
         .form-button {
-            margin-top: 30px;
             background-color: $color3;
-
             input:hover {
                 background-color: $color2;
                 transition: 1.5s ease;
             }
-
+            margin-top: 30px;
+            
             input {
                 display: flex;
                 height: 35px;
@@ -81,38 +80,31 @@
                 width: 167px;
             }
         }
-
-        a:hover {
-            background-color: $color4;
-            transition: 1.5s ease;
-        }
-
         a {
-            text-decoration: none;
-            color: $color6;
             background-color: $color3;
+            color: $color6;
             display: flex;
             margin-top: 10px;
-
+            text-decoration: none;
         }
     }
 }
 
 @media (max-width: 426px) {
-
+    
     .main-container {
         align-items: center;
         display: flex;
         flex-direction: column;
         height: 480px;
-        width: 392px;
         justify-content: center;
-
+        width: 392px;
+        
         .title-container {
+            align-items: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
-
+            
             h2 {
                 color: #000000;
                 display: flex;
@@ -132,8 +124,6 @@
                 width: 323px;
             }
         }
-
-
         .form-container {
             align-items: center;
             background-color: $color3;
@@ -142,21 +132,18 @@
             flex-direction: column;
             margin-top: 40px;
             padding: 20px;
-
-
+            
             .form-line {
+                background-color: $color3;
                 display: flex;
                 flex-direction: column;
                 max-width: 100%;
-                background-color: $color3;
-
+                
                 label {
-
                     display: flex;
                     flex-direction: column-reverse;
                     height: 36px;
                     width: 156px;
-
                 }
 
                 input {
@@ -169,9 +156,9 @@
             }
 
             .form-button {
-                margin-top: 30px;
                 background-color: $color3;
-
+                margin-top: 30px;
+                
                 input {
                     display: flex;
                     height: 35px;
@@ -181,12 +168,11 @@
             }
 
             a {
-                text-decoration: none;
-                color: $color6;
                 background-color: $color3;
+                color: $color6;
                 display: flex;
                 margin-top: 10px;
-
+                text-decoration: none;
             }
         }
     }
