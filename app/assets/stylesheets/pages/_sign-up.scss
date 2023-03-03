@@ -23,14 +23,14 @@ html, body{
     width: 20rem;
     -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
     -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
+
+		&_title{
+			color: white;
+			font-size: 3rem;
+		}
 }
 
-.form-sign-up h2 {
-    color: white;
-    font-size: 3rem;
-}
-
-.form-sign-up input {
+.form-sign-up .sign-up-input {
     border-radius: 22px;
     border: 0px;
     font-size: 1rem;
@@ -45,29 +45,34 @@ html, body{
     padding: .3rem;
     text-align: center;
     width: 80%;
+		
+		a:first-child{
+				background-color: $color2;
+				border-radius: 22px;
+				font-size: 1rem;
+				margin: 0px;
+				padding: .2rem;
+				width: 83%;
+		}
+		
+		a:first-child:hover{
+				background-color: $color1;
+		}
 }
 
-.links-sign-up a:first-child{
-    background-color: $color2;
-    border-radius: 22px;
-    font-size: 1rem;
-    margin: 0px;
-    padding: .2rem;
-    width: 83%;
-    
-}
-.links-sign-up a:first-child:hover{
-    background-color: $color1;
-}
 .form-button-sign-up {
     padding: 0px;
     text-align: center;
     width: 85%;
-    input {
-    background-color: $color4;
-    padding: .2rem;
+
+    &_input {
+			background-color: $color4;
+			border-radius: 22px;
+			font-size: 1rem;
+			margin: 1rem;
+			padding: .2rem;
+			width: 80%;
     }
-    
 }
 
 @media (max-width: 426px) {
