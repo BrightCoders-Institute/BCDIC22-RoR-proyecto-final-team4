@@ -7,20 +7,20 @@
             <%= image_tag "logo.png", class: "logo" %>
           </div>
           <div class="container_login">
-            <h2>Log in</h2>
-            <div class="field">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "holder-login" %>
+            <h2 class="item">Log in</h2>
+            <div class="item field-log-in">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "holder-login-email" %>
             </div>
 
-            <div class="field">
-              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "holder-password"%>
+            <div class="item field-log-in">
+              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "holder-login-password"%>
             </div>
 
-            <div class="actions buttom">
+            <div class="item actions-log-in buttom">
               <%= f.submit "Log in" %>
             </div>
             
-            <div class="links">
+            <div class="item links-log-in">
               <%= render "devise/shared/links"%>
             </div>
           </div>
