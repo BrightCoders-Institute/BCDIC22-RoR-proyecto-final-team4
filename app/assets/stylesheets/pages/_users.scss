@@ -1,33 +1,40 @@
+
 * {
-  background-color: $background;
   font-style: none;
   margin: 0px;
   padding: 0px;
 }
 .container_log_in {
-  background: $background;
-  height: 45.45rem;
+  background-size: cover;
+  background: $bg;
+  height: 100%;
+  padding-bottom: 22rem;
   padding: 5.6rem;
+  .buttom input{
+    height: 2rem;
+  }
+  
 }
 
 .logo {
-  background-color: $color3;
   display: grid;
   place-items: center;
 }
 .container_login h2 {
-  background-color: $color3;
-  font-size: 50px;
+  color: white;
+  font-size: 3rem;
   margin: 0px;
-  text-align: center;
+
 }
 
+.item {
+  padding: .5rem;
+  width: 18rem;
+}
 .form_users {
-  -moz-box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
-  -webkit-box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
-  background-color: $color3;
+  background-color: rgba(0,0,0, 0.6);
   border-radius: 10px;
-  box-shadow: 9px 9px 23px -6px rgba(0,0,0,0.85);
+  box-shadow: -2px -2px 25px -2px rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
@@ -37,40 +44,20 @@
   padding: 2rem;
   text-align: center;
   width: 40%;
+  -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);;
 }
 
-.holder-login:placeholder-shown {
-  font-size: 1rem;
-  padding: .7rem;
-}
-
-.holder-password:placeholder-shown {
-  font-size: 1rem;
-  padding: .7rem;
-}
-
-.field {
-  background-color: $color3;
-}
-
-.field input{
+.field-log-in input{
   border-radius: 22px;
   border: 0px;
   font-size: 1rem;
   padding: .7rem;
   width: 70%;
 }
-.field input:focus:first-child {
-  background-color: aqua;
-}
 
-.actions {
-  background-color: $color3;
-  text-align: center;
-}
-
-.actions input{
-  background-color: $color2;
+.actions-log-in input{
+  background-color: $color4;
   border-radius: 22px;
   border: 0px;
   font-size: 1rem;
@@ -79,91 +66,71 @@
   width: 77%;
 }
 
-.buttom input:hover {
-  background-color: $color4;
-  transition: 1.5s ease;
-}
 
-.links {
-  align-items: center;
-  background-color: $color3;
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-}
-
-.links a{
-  background-color: $color4;
-  background-color: $color5;
-  border-radius: 22px;
-  border-radius: 5px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1rem;
-  height: .5rem;
-  padding: .4rem;
-  width: 60%;
-}
-.links a:first-child {
-  background-color: $color4;
-  border-radius: 22px;
-  border: 0px;
-  font-size: 1rem;
-  height: .07rem;
-  margin: 0px;
-  padding: 0px;
-  padding: 1rem;
-  width: 62%;
-}
-
-.links a:last-child {
-  background-color: $color4;
+.links-log-in a:first-child {
+  background-color: $color2;
   border-radius: 22px;
   border: 0px;
   border: 20rem;
   font-size: 1rem;
-  height: .07rem;
-  margin: 0px;
-  padding: 0px;
-  padding: 1rem;
-  width: 62%;
+  height: .7rem;
+  margin-top: 0px;
+  text-align: center;
+  width: 11rem;
 }
 
-
-a {
-  background-color: rgba(180, 150, 197, 0.151);
-  transition: 1.5s ease;
+.links-log-in a:first-child:hover {
+  background-color: $color1;
+  color: white;
+  transition: 1s ease;
 }
 
-label {
-  background: $color3;
-  width: 26rem;
+.links-log-in a:last-child {
+  background-color: $color2;
+  border-radius: 22px;
+  border: 0px;
+  border: 20rem;
+  font-size: 1rem;
+  height: .7rem;
+  margin-top: 1rem;
+  text-align: center;
+  width: 11rem;
 }
 
-@media screen and (max-width: 800px){
-  
+.links-log-in a:last-child:hover {
+  background-color: $color1;
+  color: white;
+  transition: 1s ease;
+}
+
+@media screen and (max-width: 1299px){
+
   .container_log_in {
-    padding: 20% 0 100% 0;
-    height: 26.30rem;
+    padding: 10% 10% 100% 10%;
   }
 
-  h2 {
+  .container_login h2 {
     font-size: 50px;
     margin: .7rem;
     text-align: center;
   }
 
   .form_users {
-    width: 70%;
+    width: 60%;
   }
 
   .logo {
-    width: 80%;
+    width: 60%;
   }
-  a {
+  
+  .links-log-in a {
     font-size: .8rem;
   }
+}
+
+@media screen and (max-width: 1000px){
+  .logo {
+    width: 80%;
+  }
+  
 }
