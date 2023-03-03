@@ -14,14 +14,14 @@ html, body {
     height: 35px;
     margin-top: 2%;
     width: 300px;
-}
+	}
+	
+	.buttom input:hover {
+		background-color: $blue;
+	}
 
-.buttom input:hover {
-    background-color: $blue;
-}
-
-.container_recobery {
-    align-items: center;
+	.container_recobery {
+		align-items: center;
     background-image: $bg;
     background-size: cover;
     display: block;
@@ -29,6 +29,37 @@ html, body {
     justify-content: center;
     padding-top: 3%;
     text-align: center;
+		
+		a:link,
+		a:visited {
+				align-items: center;
+				background-color: $blue;
+				border-radius: 22px;
+				color: #000;
+				display: inline-block;
+				margin-top: 20px;
+				padding: 14px 25px;
+				text-align: center;
+				text-decoration: none;
+				width: 100px;
+		}
+		
+		a:hover,
+		a:active {
+				background-color: $purle;
+				color: aliceblue;
+		}
+		
+		div .links {
+				height: 115px;
+				width: 400px;
+		}
+		
+		h2 {
+				font-size: 3rem;
+				font-weight: bold;
+				margin-bottom: 3%;
+		}
 }
 
 .field_recobery {
@@ -67,31 +98,6 @@ html, body {
     padding-left: 3%;
 }
 
-a:link,
-a:visited {
-    align-items: center;
-    background-color: $blue;
-    border-radius: 22px;
-    color: #000;
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    width: 100px;
-}
-
-a:hover,
-a:active {
-    background-color: $purle;
-    color: aliceblue;
-}
-
-div .links {
-    height: 115px;
-    width: 400px;
-}
-
 .field_recobery input {
     background-color: aliceblue;
     border-radius: 22px;
@@ -115,31 +121,26 @@ div .links {
     justify-content: space-evenly;
 }
 
-h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 3%;
-}
-
 @media only screen and (max-width: 811px) {
-    a:active {
-        background-color: $orange;
-    }
-    
-    a {
-        font-size: 1rem;
-    }
-
-    .phone {
-        display: block;
-        text-align: center;
-        width: 95%;
-    }
-
-    .container-recobery {
-        padding-bottom: 20.5%;
-        padding-top: 1%;
-    }
+	
+	.phone {
+		display: block;
+		text-align: center;
+		width: 95%;
+	}
+	
+	.container-recobery {
+		padding-bottom: 20.5%;
+		padding-top: 1%;
+		
+			a:active {
+					background-color: $orange;
+			}
+			
+			a {
+					font-size: 1rem;
+			}
+  }
 
     .field_recobery input {
         width: 260px;
