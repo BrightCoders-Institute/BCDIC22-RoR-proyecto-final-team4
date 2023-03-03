@@ -87,6 +87,11 @@ html, body {
      /* Fallback color */
      /* Black w/opacity/see-through */
     //
+
+		label {
+			background-color:transparent;
+			color: white;
+		}
 }
 
 .field_recobery input:focus:first-child {
