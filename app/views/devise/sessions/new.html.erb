@@ -1,28 +1,27 @@
 <div class="container_log_in">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form_users">
-          <div class="logo">
-            <%= image_tag "logo.png", class: "logo" %>
-          </div>
-          <div class="container_login">
-            <h2 class="item">Log in</h2>
-            <div class="item field-log-in">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "holder-login-email" %>
-            </div>
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		<div class="form_users">
+			<div class="logo">
+				<%= image_tag "logo.png", class: "logo" %>
+			</div>
+			<div class="container_login">
+				<h2 >Log in</h2>
+				<div class="field-log-in">
+				<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "holder-login-email" %>
+				</div>
 
-            <div class="item field-log-in">
-              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "holder-login-password"%>
-            </div>
+				<div class="field-log-in">
+					<%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "holder-login-password"%>
+				</div>
 
-            <div class="item actions-log-in buttom">
-              <%= f.submit "Log in" %>
-            </div>
-            
-            <div class="item links-log-in">
-              <%= render "devise/shared/links"%>
-            </div>
-          </div>
-          
-        </div>
-    <% end %>
+				<div class="actions-log-in buttom">
+					<%= f.submit "Log in" %>
+				</div>
+				
+				<div class="links-log-in">
+					<%= render "devise/shared/links"%>
+				</div>
+			</div>
+		</div>
+	<% end %>
 </div>

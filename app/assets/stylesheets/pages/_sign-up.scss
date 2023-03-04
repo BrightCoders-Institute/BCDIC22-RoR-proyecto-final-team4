@@ -14,7 +14,7 @@ html, body{
 
 .form-sign-up {
     align-items: center;
-    background-color: $color3;
+    background-color: $yellow;
     border-radius: 11px;
     box-shadow: 9px 9px 23px -6px rgba(0, 0, 0, 0.85);
     display: flex;
@@ -26,7 +26,7 @@ html, body{
 }
 
 .form-sign-up h2 {
-    background-color: $color3;
+    background-color: $yellow;
     font-size: 3rem;
 }
 
@@ -48,7 +48,7 @@ html, body{
 }
 
 .links-sign-up a:first-child{
-    background-color: $color4;
+    background-color: $orange;
     border-radius: 22px;
     font-size: 1rem;
     margin: 0px;
@@ -61,7 +61,7 @@ html, body{
     text-align: center;
     width: 85%;
     input {
-    background-color: $color2;
+    background-color: $blue;
     padding: .2rem;
     }
     
@@ -82,7 +82,7 @@ html, body{
         
         .form-sign-up {
             align-items: center;
-            background-color: $color3;
+            background-color: $yellow;
             border-radius: 11px;
             display: flex;
             flex-direction: column;

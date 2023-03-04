@@ -1,6 +1,4 @@
-
 * {
-  font-style: none;
   margin: 0px;
   padding: 0px;
 }
@@ -23,14 +21,10 @@
 .container_login h2 {
   color: white;
   font-size: 3rem;
-  margin: 0px;
+  margin: .6rem;
 
 }
 
-.item {
-  padding: .5rem;
-  width: 18rem;
-}
 .form_users {
   background-color: rgba(0,0,0, 0.6);
   border-radius: 10px;
@@ -48,12 +42,15 @@
   -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);;
 }
 
-.field-log-in input{
-  border-radius: 22px;
-  border: 0px;
-  font-size: 1rem;
-  padding: .7rem;
-  width: 70%;
+.field-log-in{ 
+	input {
+		border-radius: 22px;
+		border: 0px;
+		font-size: 1rem;
+		padding: .7rem 1.2rem .7rem 1.2rem;
+		width: 70%;
+		margin: .6rem;
+	}
 }
 
 .actions-log-in input{
@@ -61,76 +58,74 @@
   border-radius: 22px;
   border: 0px;
   font-size: 1rem;
-  margin: 0px;
+  margin: .6rem;
   text-align: center;
-  width: 77%;
+  width: 84%;
 }
 
 
-.links-log-in a:first-child {
-  background-color: $color2;
-  border-radius: 22px;
-  border: 0px;
-  border: 20rem;
-  font-size: 1rem;
-  height: .7rem;
-  margin-top: 0px;
-  text-align: center;
-  width: 11rem;
+.links-log-in {
+	display: flex;
+	flex-direction: column;
+	
+	a {
+		background-color: $color2;
+		border-radius: 22px;
+		font-size: 1rem;
+		height: .7rem;
+		margin: .6rem 1.2rem .6rem 1.2rem;
+		padding: .4rem .6rem .8rem .6rem;
+		text-align: center;
+		justify-self: center;
+		text-decoration: none;
+	}
+	
+	a:first-child:hover {
+		background-color: $color1;
+		color: white;
+		transition: 1s ease;
+	}
+	
+	a:last-child:hover {
+		background-color: $color1;
+		color: white;
+		transition: 1s ease;
+	}
 }
 
-.links-log-in a:first-child:hover {
-  background-color: $color1;
-  color: white;
-  transition: 1s ease;
-}
-
-.links-log-in a:last-child {
-  background-color: $color2;
-  border-radius: 22px;
-  border: 0px;
-  border: 20rem;
-  font-size: 1rem;
-  height: .7rem;
-  margin-top: 1rem;
-  text-align: center;
-  width: 11rem;
-}
-
-.links-log-in a:last-child:hover {
-  background-color: $color1;
-  color: white;
-  transition: 1s ease;
-}
 
 @media screen and (max-width: 1299px){
 
   .container_log_in {
     padding: 10% 10% 100% 10%;
   }
-
-  .container_login h2 {
-    font-size: 50px;
-    margin: .7rem;
-    text-align: center;
-  }
-
+	
   .form_users {
-    width: 60%;
+		width: 60%;
+		
+		h2 {
+			font-size: 50px;
+			margin: .7rem;
+			text-align: center;
+		}
+		
+		a {
+			font-size: .8rem;
+		}
   }
 
   .logo {
     width: 60%;
-  }
-  
-  .links-log-in a {
-    font-size: .8rem;
   }
 }
 
 @media screen and (max-width: 1000px){
   .logo {
-    width: 80%;
+    width: 60%;
   }
-  
+
+	.form_users {
+
+		flex-wrap: wrap;
+	}
 }
