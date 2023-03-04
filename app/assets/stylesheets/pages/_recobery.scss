@@ -3,9 +3,12 @@ html, body {
     overflow: hidden;
 }
 
-.a_login_singup_recobery {
+.a_login_singup {
+	
+	&_recobery {
     background-color: $blue;
     text-align: center;
+	}
 }
 
 .actions_recobery input {
@@ -13,7 +16,7 @@ html, body {
     border-radius: 22px;
     height: 35px;
     margin-top: 2%;
-    width: 300px;
+    width: 60%;
 	}
 	
 	.buttom input:hover {
@@ -48,6 +51,7 @@ html, body {
 		a:active {
 				background-color: $purle;
 				color: aliceblue;
+				transition: 1s;
 		}
 		
 		div .links {
@@ -56,15 +60,15 @@ html, body {
 		}
 		
 		h2 {
-				font-size: 3rem;
+				font-size: 2.7rem;
 				font-weight: bold;
 				margin-bottom: 3%;
 		}
 }
 
 .field_recobery {
-    font-size: 30px;
-    padding-top: 20px;
+    font-size: 5rem;
+    padding: 4rem 0 0 0 ;
 }
 
 .form_box_recobery {
@@ -83,7 +87,7 @@ html, body {
     margin-top: 3%;
     padding-bottom: 30px;
     padding-top: 10px;
-    width: 30%;
+    width: 40%;
      /* Fallback color */
      /* Black w/opacity/see-through */
     //
@@ -109,7 +113,7 @@ html, body {
     height: 40px;
     margin-bottom: 10px;
     margin-top: 10px;
-    width: 300px;
+    width: 60%;
 }
 
 .links {
@@ -126,12 +130,21 @@ html, body {
     justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 811px) {
+
+@media only screen and (max-width: 1150px) {
+	.container_recobery {
+		h2 {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1150px) {
 	
 	.phone {
 		display: block;
 		text-align: center;
-		width: 95%;
+		width: 65%;
 	}
 	
 	.container-recobery {
@@ -148,14 +161,14 @@ html, body {
   }
 
     .field_recobery input {
-        width: 260px;
+        width: 60%;
     }
 
     .actions_recobery input{
-        width: 260px;
+        width: 60%;
     }
 
     .form_box_recobery {
-        margin-top: 30%;
+        margin-top: 10%;
     }
 }
