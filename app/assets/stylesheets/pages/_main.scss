@@ -1,0 +1,45 @@
+.main {
+	&_container {
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		width: 100%;
+	}
+
+	&_menu_left {
+		background-color: rgb(126, 226, 156);
+		width: 16%;
+	}
+
+	&_content {
+		background-color: rgb(208, 216, 223);
+		display: flex;
+		flex-direction: column;
+		width: 84%;
+	}
+
+	&_header_up {
+		background-color: blue;
+		height: 8%;
+	}
+
+	&_cupons {
+		&_container {
+			background-color: cadetblue;
+			display: flex;
+			flex-direction: row;
+			height: 92%;
+		}
+
+		&_content {
+			background-color: orangered;
+			width: 84%;
+		}
+
+		&_bar_right {
+			background-color: yellow;
+			width: 19%;
+		}
+	}
+}
