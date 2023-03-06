@@ -1,0 +1,39 @@
+.main {
+  &_container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  &_menu_left {
+    width: 16%;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+  }
+
+  &_header_up {
+    height: 8%;
+  }
+
+  &_cupons {
+    &_container {
+      display: flex;
+      flex-direction: row;
+      height: 92%;
+    }
+
+    &_content {
+      width: 84%;
+    }
+
+    &_bar_right {
+      width: 19%;
+    }
+  }
+}
+
