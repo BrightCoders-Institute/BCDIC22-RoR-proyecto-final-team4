@@ -1,27 +1,27 @@
 <div class="main-container-sign-up">
-	<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-		<%= render "devise/shared/error_messages", resource: resource %>
-	
-		<div class="form-sign-up">
-			<h2 class='form-sign-up_title'>Sign up</h2>
-			<div class="form-line-sign-up">
-				<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" , class: "holder email-sing-up sign-up-input"%>
-			</div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  
+    <div class="form-sign-up">
+      <h2 class='form-sign-up_title'>Sign up</h2>
+      <div class="form-line-sign-up">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" , class: "holder email-sing-up sign-up-input"%>
+      </div>
 
-			<div class="form-line-sign-up">
-				<%= f.text_field :name, autofocus: true, autocomplete: "Name", placeholder: "Name", class: "holder name-sing-up sign-up-input" %> 
-			</div>
+      <div class="form-line-sign-up">
+        <%= f.text_field :name, autofocus: true, autocomplete: "Name", placeholder: "Name", class: "holder name-sing-up sign-up-input" %> 
+      </div>
 
-			<div class="form-line-sign-up">
-				<%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "holder password-sing-up sign-up-input" %>
-			</div>
+      <div class="form-line-sign-up">
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "holder password-sing-up sign-up-input" %>
+      </div>
 
-			<div class="form-button-sign-up">
-				<%= f.submit "Sign up", data: { turbo: false }, class:'form-button-sign-up_input' %>
-			</div>
-			<div class="links-sign-up">
-				<%= render "devise/shared/links" %>
-			</div>
-		</div>
-	<% end %>
+      <div class="form-button-sign-up">
+        <%= f.submit "Sign up", data: { turbo: false }, class:'form-button-sign-up_input' %>
+      </div>
+      <div class="links-sign-up">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  <% end %>
 </div>
