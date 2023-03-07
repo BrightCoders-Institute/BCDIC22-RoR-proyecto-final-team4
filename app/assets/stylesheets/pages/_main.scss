@@ -1,45 +1,116 @@
 .main {
-	&_container {
-		background-color: white;
-		display: flex;
-		flex-direction: row;
-		height: 100%;
-		width: 100%;
-	}
+  &_container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
 
-	&_menu_left {
-		background-color: rgb(126, 226, 156);
-		width: 16%;
-	}
+  &_menu_left {
+    width: 16%;
+  }
 
-	&_content {
-		background-color: rgb(208, 216, 223);
-		display: flex;
-		flex-direction: column;
-		width: 84%;
-	}
+  &_content {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+  }
 
-	&_header_up {
-		background-color: blue;
-		height: 8%;
-	}
+  &_header_up {
+    height: 8%;
+    .header_container {
+      display: flex;
+      justify-content: row;
+    }
+    .serch_bar {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 130%;
+      .bar {
+        border-radius: 22px;
+        height: 2rem;
+        margin-right: 1%;
+        padding-left: 1%;
+        width: 20rem;
+      }
+      .search, input[type=button], input[type=submit], input[type=reset] {
+        background-color: $blue;
+        border: none;
+        cursor: pointer;
+        margin: 4px 2px;
+        padding: 9px 30px;
+        text-decoration: none;
+        border-radius: 22px;
+      }
+    }
+    .add_announce {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1.25rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 50%;
+      .label_announce {
+        margin-right: 1rem;
+      }
+      .add {
+        background-color: $blue;
+        border: none;
+        border-radius: 100%;
+        height: 2rem;
+        font-size: 28px;
+        width: 2rem;
+      }
+    }
+    .buttons_container {
+      align-items: end;
+      display:flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1.25rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 50%;
+      .login_header {
+        background-color: $blue;
+        border: none;
+        border-radius: 22px;
+        height: 2rem;
+        margin-right: 2rem;
+        width: 7rem;
+      }
+      .sign_up_header {
+        background-color: $purle;
+        border: none;
+        border-radius: 22px;
+        color: white;
+        height: 2rem;
+        margin-right: 2rem;
+        width: 7rem;
+      }
+    }
+  }
 
-	&_cupons {
-		&_container {
-			background-color: cadetblue;
-			display: flex;
-			flex-direction: row;
-			height: 92%;
-		}
+  &_cupons {
+    &_container {
+      display: flex;
+      flex-direction: row;
+      height: 92%;
+    }
 
-		&_content {
-			background-color: orangered;
-			width: 84%;
-		}
+    &_content {
+      width: 84%;
+    }
 
-		&_bar_right {
-			background-color: yellow;
-			width: 19%;
-		}
-	}
+    &_bar_right {
+      width: 19%;
+    }
+  }
 }
