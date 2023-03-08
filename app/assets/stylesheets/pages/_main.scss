@@ -1,6 +1,5 @@
 .main {
   &_container {
-    background-color: $color11;
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -24,6 +23,7 @@
   &_cupons {
     &_container {
       display: flex;
+      flex-direction: row;
       height: 92%;
     }
 
@@ -92,3 +92,4 @@
     }
   }
 }
+

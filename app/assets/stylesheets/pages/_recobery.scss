@@ -1,174 +1,178 @@
 html, body {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .a_login_singup {
-	
-	&_recobery {
-    background-color: $blue;
-    text-align: center;
-	}
+    
+  &_recobery {
+  background-color: $blue;
+  text-align: center;
+  }
 }
 
 .actions_recobery input {
-    background-color: $orange;
-    border-radius: 22px;
-    height: 35px;
-    margin-top: 2%;
-    width: 60%;
-	}
-	
-	.buttom input:hover {
-		background-color: $blue;
-	}
+  background-color: $orange;
+  border-radius: 22px;
+  height: 35px;
+  margin-top: 2%;
+  width: 60%;
+}
+    
+.buttom input:hover {
+  background-color: $blue;
+}
 
-	.container_recobery {
-		align-items: center;
-    background-image: $bg;
-    background-size: cover;
-    display: block;
-    height: 67.52rem;
-    justify-content: center;
-    padding-top: 3%;
+.container_recobery {
+  align-items: center;
+  background-image: $bg;
+  background-size: cover;
+  display: block;
+  height: 67.52rem;
+  justify-content: center;
+  padding-top: 3%;
+  text-align: center;
+    
+  a:link,
+  a:visited {
+    align-items: center;
+    background-color: $blue;
+    border-radius: 22px;
+    color: #000;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
     text-align: center;
-		
-		a:link,
-		a:visited {
-				align-items: center;
-				background-color: $blue;
-				border-radius: 22px;
-				color: #000;
-				display: inline-block;
-				margin-top: 20px;
-				padding: 14px 25px;
-				text-align: center;
-				text-decoration: none;
-				width: 100px;
-		}
-		
-		a:hover,
-		a:active {
-				background-color: $purle;
-				color: aliceblue;
-				transition: 1s;
-		}
-		
-		div .links {
-				height: 115px;
-				width: 400px;
-		}
-		
-		h2 {
-				font-size: 2.7rem;
-				font-weight: bold;
-				margin-bottom: 3%;
-		}
+    text-decoration: none;
+    width: 100px;
+  }
+    
+  a:hover,
+  a:active {
+    background-color: $purle;
+    color: aliceblue;
+    transition: 1s;
+  }
+  
+  div .links {
+    height: 115px;
+    width: 400px;
+  }
+  
+  h2 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 3%;
+    margin-top: 1rem;
+  }
 }
 
 .field_recobery {
-    font-size: 5rem;
-    padding: 4rem 0 0 0 ;
+
+  label {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  em {
+    font-size: 1.5rem;
+  }
 }
 
 .form_box_recobery {
-    -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
-    -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
-    align-items: center;
-    background-color: $yellow;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.6);
-    border-radius: 10px;
-    box-shadow: -2px -2px 25px -2px rgba(255, 255, 255, 0.85);
-    color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    padding-bottom: 30px;
-    padding-top: 10px;
-    width: 40%;
-     /* Fallback color */
-     /* Black w/opacity/see-through */
-    //
+  -moz-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: -2px -2px 23px -2px rgba(255, 255, 255, 0.85);
+  align-items: center;
+  background-color: $yellow;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.6);
+  border-radius: 10px;
+  box-shadow: -2px -2px 25px -2px rgba(255, 255, 255, 0.85);
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  width: 40%;
+  /* Fallback color */
+  /* Black w/opacity/see-through */
+  //
 
-		label {
-			background-color:transparent;
-			color: white;
-		}
+  label {
+    background-color:transparent;
+    color: white;
+  }
 }
 
 .field_recobery input:focus:first-child {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .holder_recobery {
-    font-size: 1rem;
-    padding-left: 3%;
+  font-size: 1rem;
+  padding-left: 3%;
 }
 
 .field_recobery input {
-    background-color: aliceblue;
-    border-radius: 22px;
-    height: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 60%;
+  background-color: aliceblue;
+  border-radius: 22px;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 60%;
 }
 
 .links {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .field_recobery input:focus{
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .form_users {
-    justify-content: space-evenly;
-}
-
-
-@media only screen and (max-width: 1150px) {
-	.container_recobery {
-		h2 {
-			font-size: 2.2rem;
-		}
-	}
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 1150px) {
-	
-	.phone {
-		display: block;
-		text-align: center;
-		width: 65%;
-	}
-	
-	.container-recobery {
-		padding-bottom: 20.5%;
-		padding-top: 1%;
-		
-			a:active {
-					background-color: $orange;
-			}
-			
-			a {
-					font-size: 1rem;
-			}
+    
+  .phone {
+    display: block;
+    text-align: center;
+    width: 65%;
+  }
+  
+  .container-recobery {
+    padding-bottom: 20.5%;
+    padding-top: 1%;
+    
+    a:active {
+      background-color: $orange;
+    }
+            
+    a {
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
   }
 
-    .field_recobery input {
-        width: 60%;
-    }
+  .field_recobery input {
+    width: 60%;
+  }
 
-    .actions_recobery input{
-        width: 60%;
-    }
+  .actions_recobery input{
+    width: 60%;
+  }
 
-    .form_box_recobery {
-        margin-top: 10%;
-    }
+  .form_box_recobery {
+    margin-top: 10%;
+  }
 }
