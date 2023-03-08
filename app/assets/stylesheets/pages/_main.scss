@@ -9,51 +9,80 @@
 
 	&_menu_left {
 		background-color: rgb(126, 226, 156);
-		width: 16%;
-		display: flex;
+		box-sizing: border-box;
 		color: white;
+		display: flex;
 		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		.nav-bar {
-			padding-top: 35%;
-			width: 100%;
+		margin: 0;
+		padding: 0;
+		width: 16%;
+		// @include mediumSmall{
+		// 	.side-bar .menu .item a {
+		// 		font-size: .5rem;
+		// 	}
+		// }
+		.side-bar{
+			background: $color3;
 			height: 100%;
-			.sub-categori a {
-				background: rgb(151, 98, 98);
-        height: 3rem;
-				padding: 1rem;
-				text-align: center;
-			}
-
-			nav ul{
-				margin: 0;
-				padding: 0;
-				list-style: none;
-				line-height: 1rem;
-			}
-			ul ul {
-				height: 0px;
-				overflow: hidden;
-				transition: .4s ease;
-
-			}
-			ul li:hover ul {
-				height: 100%;
-				// padding: .5rem;
-			}
-			ul li a:hover {
-				background: gray;
-				transition: .5s ease;
-			}
-			a {
-				text-decoration: none;
-				box-sizing: border-box;
-				color: white;
-				background-color: black;
-				display: block;
-				width: 100%;
-				padding: 1rem .8rem;
-			}
+			left: 0;
+			overflow-y: auto;
+			padding-top: auto;
+			position: fixed;
+			top: 0;
+			width: 16%;
 		}
+		.item {
+			width: 100%;
+		}
+		.side-bar .menu {
+			width: 100%;
+		}
+		
+		.side-bar .menu .item a{
+			background:$color3;
+			color: white;
+			display: block;
+			font-size: 1rem;
+			line-height: 3rem;
+			padding: .5rem 1rem;
+			text-decoration: none;
+		}
+
+		.side-bar .menu .item a:hover {
+			background: $color2;
+			transition: 1s ease;
+		}
+
+		.side-bar .menu .item i {
+			margin-right: .5rem;
+		}
+		
+		.side-bar .menu .item .sub-menu {
+			background-color: $color2;
+			display: none;
+		}
+
+		.side-bar .menu .item .sub-menu a{
+			background: $color2;
+			text-align: center;
+			font-size: .7rem;
+		}
+
+		.side-bar .menu .item .sub-menu a:hover{
+			background: $color1;
+			transition: 1s ease;
+		}
+
+		.icons_menu {
+			margin-right: 1rem;
+		}
+
+		.icon_logo02{
+			margin-top: .5rem;
+			width: 100%;
+		}
+
+		
 	}
 
 	&_content {
@@ -64,26 +93,64 @@
 	}
 
 	&_header_up {
-		background-color: blue;
+
 		height: 8%;
 	}
 
 	&_cupons {
 		&_container {
-			background-color: cadetblue;
+
 			display: flex;
 			flex-direction: row;
 			height: 92%;
 		}
 
 		&_content {
-			background-color: orangered;
 			width: 84%;
 		}
 
 		&_bar_right {
-			background-color: yellow;
+
 			width: 19%;
+		}
+	}
+}
+
+@include mediumSmall{
+	.main {
+		&_menu_left {
+			.side-bar .menu .item a {
+				font-size: .7rem;
+			}
+		}
+	}
+}
+
+@include small{
+	.main {
+		&_menu_left {
+			.side-bar .menu .item a {
+				font-size: 0rem;
+			}
+		}
+	}
+}
+
+
+@include smallxs{
+	.main {
+		&_menu_left {
+			.menu {
+				display: flex;
+				flex-direction: column;
+			}
+			.side-bar .menu .item a {
+				font-size: 0rem;
+			}
+			.icons_menu {
+				height: 2.5rem;
+				// padding-left: 25%;
+			}
 		}
 	}
 }
