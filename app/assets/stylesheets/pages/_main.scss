@@ -1,6 +1,6 @@
 .main {
   &_container {
-    background-color: white;
+    background-color: $white;
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -8,9 +8,8 @@
   }
 
   &_menu_left {
-    background-color: rgb(126, 226, 156);
     box-sizing: border-box;
-    color: white;
+    color: $white;
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -38,7 +37,7 @@
 
     .side-bar .menu .item a{
       background:$color3;
-      color: white;
+      color: $white;
       display: block;
       font-size: 1rem;
       line-height: 3rem;
@@ -152,3 +151,4 @@
     }
   }
 }
+
