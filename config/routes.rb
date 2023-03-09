@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
    root "mainpages#index"
+  # root "articles#index"
+  resources :cupons
 end
