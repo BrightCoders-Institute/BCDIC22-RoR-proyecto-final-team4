@@ -44,7 +44,6 @@
 
           @include small {
             width: 100%;
-
           }
 
           .box {
@@ -73,7 +72,7 @@
             }
 
             h1 {
-              color: white;
+              color: $color11;
               font-size: 160%;
               margin-bottom: 3%;
             }
