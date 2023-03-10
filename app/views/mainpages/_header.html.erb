@@ -8,7 +8,11 @@
     <input class="add" type="button" value="+">
   </div>
   <div class="buttons_container">
-    <input class="login_header" type="button" value="Login">
+  <%= link_to user_session_path do %>
+    <input class="login_header" type="button" value="Login"> 
+  <% end %>
+  <%= link_to new_user_registration_path do %>
     <input class="sign_up_header" type="button" value="Sing Up">
+  <% end %>
   </div>
 </div>
