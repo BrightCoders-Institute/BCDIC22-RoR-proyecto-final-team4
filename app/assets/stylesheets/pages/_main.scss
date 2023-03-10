@@ -88,6 +88,84 @@
 
   &_header_up {
     height: 8%;
+    .header_container {
+      display: flex;
+      justify-content: row;
+    }
+    .serch_bar {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 130%;
+      .bar {
+        border-radius: 22px;
+        height: 2rem;
+        margin-right: 1%;
+        padding-left: 1%;
+        width: 20rem;
+      }
+      .search, input[type=button], input[type=submit], input[type=reset] {
+        background-color: $blue;
+        border: none;
+        cursor: pointer;
+        margin: 4px 2px;
+        padding: 9px 30px;
+        text-decoration: none;
+        border-radius: 22px;
+      }
+    }
+    .add_announce {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1.25rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 50%;
+      .label_announce {
+        margin-right: 1rem;
+      }
+      .add {
+        background-color: $blue;
+        border: none;
+        border-radius: 100%;
+        height: 2rem;
+        font-size: 28px;
+        width: 2rem;
+      }
+    }
+    .buttons_container {
+      align-items: end;
+      display:flex;
+      height: 100%;
+      justify-content: row;
+      margin-top: 1.25rem;
+      margin-left: 2%;
+      text-align: center;
+      width: 50%;
+      .login_header {
+        background-color: $blue;
+        border: none;
+        border-radius: 22px;
+        height: 2rem;
+        margin-right: 2rem;
+        width: 7rem;
+      }
+      .sign_up_header {
+        background-color: $purle;
+        border: none;
+        border-radius: 22px;
+        color: $white;
+        height: 2rem;
+        margin-right: 2rem;
+        width: 7rem;
+      }
+    }
   }
 
   &_cupons {
@@ -104,6 +182,77 @@
     &_bar_right {
 
       width: 19%;
+      padding-top: 2rem;
+      
+      .conteiner_category {
+        align-items: center;
+        background-color: $grey;
+        border-radius: 22px;
+        justify-content: center;
+        padding-bottom: 30%;
+        text-align: center;
+        
+        .add_coupon {
+          background-color: $purle;
+          border-radius: 22px;
+          border: none;
+          color: $white;
+          font-size: 30px;
+          height: 3rem;
+          margin-bottom: 25%;
+          margin-top: 20%;
+          width: 90%;
+        }
+        .category_tittle{
+          font-size: 20px;
+          margin-bottom: 10%;
+        }
+        .add_category_box {
+          display: flex;
+          justify-content: row;
+          
+          .add_category_input {
+            border-radius: 7px;
+            border: none;
+            height: 2rem;
+            margin: 0 0.5rem 10% 0.5rem;
+            padding-left: 8px;
+            width: 80%;
+          }
+          .add_category_button {
+            background-color: $blue;
+            border-radius: 10px;
+            border: none;
+            font-size: 21px;
+            height: 2rem;
+            margin-right: 0.5rem;
+            width: 1.8rem;
+          }
+        }
+        .delete_category_box {
+          display: flex;
+          justify-content: row;
+          
+          .delete_category_input {
+            background-color: $white;
+            border-radius: 7px;
+            border: none;
+            height: 2rem;
+            margin: 0 0.5rem 10% 0.5rem;
+            padding-left: 8px;
+            width: 85%;
+          }
+          .delete_category_button {
+            background-color: $blue;
+            border-radius: 10px;
+            border: none;
+            font-size: 21px;
+            height: 2rem;
+            margin-right: 0.5rem;
+            width: 1.8rem;
+          }
+        }
+      }
     }
   }
 }

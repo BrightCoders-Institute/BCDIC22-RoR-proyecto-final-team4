@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+	font-family: 'Nunito', sans-serif;
+}
+
 $color1 : #7e5686;
 $color2 : #a5aad9;
 $color3 : #f8e479;
@@ -13,8 +19,14 @@ $orange : #f8a13f;
 $red : #ba3c3d;
 $black : #000000;
 $green-yellow: #e8f9a2af;
-$white : #ffffff;
+$grey: rgb(199, 197, 197);
+$white: #ffffff;
+$input-border:#BFBFBF;
 
 $background: linear-gradient(210deg, rgba(165,170,217,1) 0%, rgba(248,161,63,1) 50%, rgba(186,60,61,1) 100%);
+$color-susseful: #65cf4f;
+$color-white: #FFFF;
+
 $titles: $color6;
 $bg: url("bg1.png")
+
