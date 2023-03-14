@@ -12,7 +12,7 @@ class CuponsController < ApplicationController
     @cupon = current_user.cupons.new(cupon_params)
     
     if @cupon.save
-      redirect_to new_user_session_path
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
