@@ -5,7 +5,9 @@
   </div>
   <div class="add_announce">
     <h2 class="label_announce">Add Announce</h2>
-    <input class="add" type="button" value="+">
+    <%= link_to new_cupon_path do %>
+      <input class="add" type="button" value="+">
+    <% end %>
   </div>
   <div class="buttons_container">
   <%= link_to user_session_path do %>
