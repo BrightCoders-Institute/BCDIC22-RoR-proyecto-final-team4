@@ -1,0 +1,33 @@
+.container-new-category {
+  width: 70%;
+  padding: 2rem;
+  margin: 10%;
+  border: 20%;
+  text-align: center;
+  border-radius: 22px;
+  background: rgba(0,0,0, 0.6);
+  h1 {
+    color: aqua;
+  }
+  // input {
+  //   border-radius: 22px;
+  //   border: none;
+  //   padding: .4rem;
+  // }
+  // .holder-new-category {
+  //   width: 70%;
+  //   font-size: 1.5rem;
+  // }
+  // .buttom-create-category {
+  //   width: 70%;
+    
+  // }
+  .content-new-category {
+    text-align: center;
+    div {
+      width: 70%;
+      text-align: center;
+    }
+    
+  }
+}

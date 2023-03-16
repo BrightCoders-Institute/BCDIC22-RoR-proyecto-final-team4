@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :namecategory, style: "display: block" %>
-    <%= form.text_field :namecategory %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="content-new-category">
+    <div>
+      <%= form.text_field :namecategory, placeholder: "Name Cartegory" %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
