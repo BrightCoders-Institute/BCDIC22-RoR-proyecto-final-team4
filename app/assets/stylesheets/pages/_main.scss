@@ -246,66 +246,20 @@
         justify-content: center;
         padding-bottom: 30%;
         text-align: center;
-        
-        .add_coupon {
+        .add_category {
           background-color: $purle;
           border-radius: 22px;
           border: none;
           color: $white;
-          font-size: 30px;
+          font-size: 20px;
           height: 3rem;
-          margin-bottom: 25%;
-          margin-top: 20%;
+          margin-bottom: 15%;
           width: 90%;
         }
-        .category_tittle{
+        .admin_menu_title{
           font-size: 20px;
+          padding-top: 10%;
           margin-bottom: 10%;
-        }
-        .add_category_box {
-          display: flex;
-          justify-content: row;
-          
-          .add_category_input {
-            border-radius: 7px;
-            border: none;
-            height: 2rem;
-            margin: 0 0.5rem 10% 0.5rem;
-            padding-left: 8px;
-            width: 80%;
-          }
-          .add_category_button {
-            background-color: $blue;
-            border-radius: 10px;
-            border: none;
-            font-size: 21px;
-            height: 2rem;
-            margin-right: 0.5rem;
-            width: 1.8rem;
-          }
-        }
-        .delete_category_box {
-          display: flex;
-          justify-content: row;
-          
-          .delete_category_input {
-            background-color: $white;
-            border-radius: 7px;
-            border: none;
-            height: 2rem;
-            margin: 0 0.5rem 10% 0.5rem;
-            padding-left: 8px;
-            width: 85%;
-          }
-          .delete_category_button {
-            background-color: $blue;
-            border-radius: 10px;
-            border: none;
-            font-size: 21px;
-            height: 2rem;
-            margin-right: 0.5rem;
-            width: 1.8rem;
-          }
         }
       }
     }
