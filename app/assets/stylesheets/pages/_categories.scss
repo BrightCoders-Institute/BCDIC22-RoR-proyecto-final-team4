@@ -1,3 +1,97 @@
+.container-main-category {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .box-main-category {
+    background: $black-gray;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    padding: 2rem;
+    border-radius: 22px;
+    .title-main-category {
+      color: $white;
+      font-size: 25px;
+      margin-bottom: 5%;
+    }
+    .list-main-category {
+      font-size: 20px;
+      div {
+        color: $white;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 1%;
+      }
+      a {
+        text-decoration: none;
+        background-color: $blue;
+        padding-left: 2%;
+        padding-right: 2%;
+        color: $black;
+        border-radius: 15px;
+      }
+    }
+  }
+  .link-main-category {
+    margin-top: 10%;
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      background-color: $orange;
+      padding-left: 5%;
+      padding-right: 5%;
+      color: $black;
+      border-radius: 15px;
+    }
+  }
+}
+
+.container-show-category {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .box-show-category {
+    position: relative;
+    background: $black-gray;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    padding: 2rem;
+    border-radius: 22px;
+    p {
+      font-size: 50px;
+      color: $white;
+    }
+    .opc-show-category{
+      margin-top: 3%;
+      font-size: 30px;
+      a {
+        height: 2rem;
+        font-size: 25px;
+        text-decoration: none;
+        background-color: $blue;
+        padding: 1.5%;
+        color: $black;
+        border-radius: 15px;
+      }
+    }
+    .destroy-show-category {
+      margin-top: 5%;
+      button {
+        width: 85%;
+        font-size: 30px;
+        height: 3rem;
+        border: none;
+        background-color: $orange;
+        padding: 1.5%;
+        color: $black;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
 .container-new-category {
   width: 70%;
   padding: 2rem;
