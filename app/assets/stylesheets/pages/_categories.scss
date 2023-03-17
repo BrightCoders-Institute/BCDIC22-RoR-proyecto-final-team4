@@ -74,3 +74,79 @@
     }
   }
 }
+.container-edit-category {
+  background: rgba(0,0,0, 0.6);
+  border-radius: 22px;
+  box-shadow: -2px -2px 25px -2px rgba(14, 13, 13, 0.85);
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 10%;
+  padding: 2rem;
+  text-align: center;
+  width: 20%;
+  h1 {
+    color: $white;
+    font-size: 2.5rem;
+  }
+
+  .button-categories {
+    div :first-child{
+    background: aqua;
+    border-radius: 22px;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin: 5%;
+    padding: .5rem;
+    text-align: center;
+    }
+  }
+  
+  .content-new-category {
+    text-align: center;
+    div {
+      margin: 1rem;
+    }
+
+    .input-new-category {
+      border-radius: 22px;
+      width: 90%;
+      font-size: 1.2rem;
+      padding: .5rem;
+      text-align: center;
+      border: none;
+    }
+
+    .bottom-new-category {
+      width: 100%;
+      border-radius: 22px;
+      font-size: 1.2rem;
+      padding: .5rem;
+      background: $orange;
+    }
+
+    .bottum-back{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 85%;
+      border-radius: 22px;
+      font-size: 1.2rem;
+      padding: .1rem;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+
+      a {
+        width: 100%;
+        text-decoration: none;
+        background: $color2;;
+        border-radius: 22px;
+        padding: .2rem;
+      }
+    }
+
+    .bottum-back :hover{
+      background: $color1;
+      transition: .5s ease;
+    }
+  }
+}
