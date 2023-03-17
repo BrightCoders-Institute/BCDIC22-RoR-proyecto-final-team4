@@ -1,6 +1,6 @@
-<div class="container-main-category">
+<div class="container-main-category" style="overflow-y: scroll;">
   <div class="box-main-category">
-    <p style="color: green"><%= notice %></p>
+    <p style="color: white"><%= notice %></p>
     <div class="title-main-category">
       <h1>Categories</h1>
     </div>
@@ -9,7 +9,6 @@
         <%= render category %>
         <p>
           <%= link_to "Edit", edit_category_path(category) %>
-          <%# <%= button_to "Destroy this category", category, method: :delete %>
         </p>
         <div class="destroy-show-category">
           <%= button_to "Delete", category, method: :delete %>
@@ -21,3 +20,4 @@
     </div>
   </div>
 </div>
+
