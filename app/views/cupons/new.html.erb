@@ -12,7 +12,7 @@
         <div class="add_cupons_detalles_generales_form">
           <%= form_for @cupon do |form| %>
             <% @cupon.errors.full_messages.each do |error| %>
-              <div>
+              <div class="error">
                 <%= error %>
               </div>
             <% end %>
@@ -24,7 +24,8 @@
 
           <div class="add_cupons_detalles_generales_content">
             <%= form.label 'Titulo' %>
-            <%= form.text_field :title, class:'add_cupons_detalles_generales_content_titulo' %>
+            <%= form.text_field :title, class:'add_cupons_detalles_generales_content_titulo', 
+            pattern: "[a-zA-Z0-9\s]+" %>
           </div>
 
           <div class="add_cupons_detalles_generales_content">

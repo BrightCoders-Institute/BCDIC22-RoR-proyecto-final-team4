@@ -410,3 +410,13 @@
   }
 }
 
+#error_explanation {
+  h2 {
+    color: $grey;
+  }
+
+  li {
+    font-weight: 800;
+    text-shadow: $red 1px 0 10px;
+  }
+}
