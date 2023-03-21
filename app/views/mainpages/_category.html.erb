@@ -1,14 +1,9 @@
 <div class="conteiner_category">
   <div class="category_box">
-    <input class="add_coupon" type="button" value="Add Coupons">
-  </div>
-  <div class="category_tittle"><h2>Category</h2></div>
-  <div class="add_category_box">
-    <input class="add_category_input" type="text">
-    <input class="add_category_button" type="submit" value="+">
-  </div>
-  <div class="delete_category_box">
-    <select class="delete_category_input" type="select">
-    <input class="delete_category_button" type="submit" value="-">
+    <h2 class="admin_menu_title">Admin Menu</h2>
+    <%= link_to categories_path do %>
+      <input class="add_category" type="button" value="Add Category">
+    <% end %>
   </div>
 </div>
+

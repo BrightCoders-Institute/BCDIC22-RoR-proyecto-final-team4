@@ -295,21 +295,19 @@
         justify-content: center;
         padding-bottom: 30%;
         text-align: center;
-
-        .add_coupon {
+        .add_category {
           background-color: $purle;
           border-radius: 22px;
           border: none;
           color: $white;
-          font-size: 30px;
+          font-size: 20px;
           height: 3rem;
-          margin-bottom: 25%;
-          margin-top: 20%;
+          margin-bottom: 15%;
           width: 90%;
         }
-
-        .category_tittle {
+        .admin_menu_title {
           font-size: 20px;
+          padding-top: 10%;
           margin-bottom: 10%;
         }
 

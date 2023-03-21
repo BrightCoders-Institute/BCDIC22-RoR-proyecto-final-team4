@@ -1,0 +1,267 @@
+.container-main-category {
+  align-items: center;
+  box-sizing: content-box;
+  height: 100%;
+  justify-content: center;
+  overflow-y: scroll;
+  padding-right: 17px;
+  text-align: center;
+  width: 100%;
+  
+  .destroy-show-category {
+    margin-top: 3%;
+    
+    button {
+      background-color: $orange;
+      border-radius: 15px;
+      border: none;
+      color: $black;
+      font-size: 25px;
+      height: 3rem;
+      padding: 1.5%;
+      width: 52%;
+    }
+  }
+  .box-main-category {
+    background: $black-gray;
+    border-radius: 22px;
+    margin: 5% 30%;
+    padding: 2rem;
+    
+    .title-main-category {
+      color: $white;
+      font-size: 25px;
+      margin-bottom: 5%;
+    }
+    .list-main-category {
+      font-size: 20px;
+      
+      p {
+        font-size: 25px;
+        margin-bottom: 2%;
+      }
+      div {
+        color: $white;
+        margin: 5% 10% 1%;
+      }
+      a {
+        background-color: $blue;
+        border-radius: 15px;
+        color: $black;
+        font-size: 25px;
+        padding: 1% 17%;
+        text-decoration: none;
+      }
+    }
+  }
+  .link-main-category {
+    margin-top: 10%;
+    
+    a {
+      background-color: $orange;
+      border-radius: 15px;
+      color: $black;
+      font-size: 30px;
+      padding: 0 5%;
+      text-decoration: none;
+    }
+  }
+}
+
+.container-show-category {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  .box-show-category {
+    background: $black-gray;
+    border-radius: 22px;
+    margin: 5% 30% 0;
+    padding: 2rem;
+    position: relative;
+    
+    p {
+      color: $white;
+      font-size: 50px;
+    }
+    .opc-show-category{
+      font-size: 30px;
+      margin-top: 3%;
+      
+      a {
+        background-color: $blue;
+        border-radius: 15px;
+        color: $black;
+        font-size: 25px;
+        height: 3rem;
+        padding: 1.5%;
+        text-decoration: none;
+      }
+    }
+    .destroy-show-category {
+      margin-top: 2%;
+      
+      button {
+        background-color: $orange;
+        border-radius: 15px;
+        border: none;
+        color: $black;
+        font-size: 30px;
+        height: 3rem;
+        padding: 1.5%;
+        width: 52%;
+      }
+    }
+  }
+}
+
+.container-new-category {
+  background: rgba(0,0,0, 0.6);
+  border-radius: 22px;
+  box-shadow: -2px -2px 25px -2px rgba(14, 13, 13, 0.85);
+  margin: 10% 40% 0;
+  padding: 2rem;
+  text-align: center;
+  width: 20%;
+  
+  h1 {
+    color: $white;
+    font-size: 2.5rem;
+  }
+
+  .button-categories {
+    div :first-child{
+    background: aqua;
+    border-radius: 22px;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin: 5%;
+    padding: .5rem;
+    text-align: center;
+  }
+  }
+  .content-new-category {
+    .bottum-back :hover{
+      background: $color1;
+      transition: .5s ease;
+    }
+    text-align: center;
+    
+    div {
+      margin: 1rem;
+    }
+
+    .input-new-category {
+      border-radius: 22px;
+      border: none;
+      font-size: 1.2rem;
+      padding: .5rem;
+      text-align: center;
+      width: 90%;
+    }
+
+    .bottom-new-category {
+      background: $orange;
+      border-radius: 22px;
+      font-size: 1.2rem;
+      padding: .5rem;
+      width: 100%;
+    }
+
+    .bottum-back{
+      align-content: center;
+      border-radius: 22px;
+      display: flex;
+      font-size: 1.2rem;
+      justify-content: center;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+      padding: .1rem;
+      width: 85%;
+      
+      a {
+        background: $color2;;
+        border-radius: 22px;
+        padding: .2rem;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.container-edit-category {
+  background: rgba(0,0,0, 0.6);
+  border-radius: 22px;
+  box-shadow: -2px -2px 25px -2px rgba(14, 13, 13, 0.85);
+  margin: 10% 40% 0;
+  padding: 2rem;
+  text-align: center;
+  width: 20%;
+  
+  h1 {
+    color: $white;
+    font-size: 2.5rem;
+  }
+
+  .button-categories {
+    div :first-child{
+    background: aqua;
+    border-radius: 22px;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin: 5%;
+    padding: .5rem;
+    text-align: center;
+  }
+  }
+  .content-new-category {
+    .bottum-back :hover{
+      background: $color1;
+      transition: .5s ease;
+    }
+    text-align: center;
+    
+    div {
+      margin: 1rem;
+    }
+
+    .input-new-category {
+      border-radius: 22px;
+      border: none;
+      font-size: 1.2rem;
+      padding: .5rem;
+      text-align: center;
+      width: 90%;
+    }
+
+    .bottom-new-category {
+      background: $orange;
+      border-radius: 22px;
+      font-size: 1.2rem;
+      padding: .5rem;
+      width: 100%;
+    }
+
+    .bottum-back{
+      align-content: center;
+      border-radius: 22px;
+      display: flex;
+      font-size: 1.2rem;
+      justify-content: center;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+      padding: .1rem;
+      width: 85%;
+      
+      a {
+        background: $color2;;
+        border-radius: 22px;
+        padding: .2rem;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
