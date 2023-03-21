@@ -1,3 +1,5 @@
 class MainpagesController < ApplicationController
-    def index; end
+    def index; 
+        @cupon = Cupon.all
+    end
 end

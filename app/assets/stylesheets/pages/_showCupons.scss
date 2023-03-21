@@ -1,0 +1,125 @@
+.showCupons {
+  &_container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+
+    &_detaills {
+      background-color: $gray-white;
+      box-sizing: content-box;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      margin: 3rem;
+      overflow-y: scroll;
+
+      @include smallxs {
+        flex-direction: column-reverse;
+      }
+
+      .area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: .5rem;
+        width: 50%;
+
+        @include smallxs {
+          width: 100%;
+        }
+
+        &_image {
+          height: 45%;
+          padding: .3rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        
+        &_map {
+          height: 45%;
+          margin-top: .5rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &_data {
+          margin: 1rem;
+          padding: 1rem;
+
+          mark {
+            background: $greenyellow;
+            border-radius: 22px;
+            font-size: .8rem;
+            padding: .2rem .4rem;
+          }
+
+          &_container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.1rem;
+            
+            button {
+              align-self: center;
+              background-color: $black-brown;
+              border-radius: 22px;
+              border: none;
+              color: $white;
+              padding: .7rem 3.8rem;
+            }
+          }
+          
+          &_content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-bottom: 1.3rem;
+
+            p {
+              &:first-child {
+                background-color: $pink-white;
+                border-radius: 22px;
+                padding: .4rem .8rem;
+              }
+
+              &:last-child {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+
+        &_description{
+          background-color: $gray-medium-light;
+          border-radius: 7px;
+          font-weight: 300;
+          height: 45%;
+          margin: 1rem;
+          padding: .7rem;
+          
+          h3 {
+            opacity: 50%;
+          }
+
+          p {
+            opacity: 90%;
+            padding: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
