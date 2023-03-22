@@ -1,3 +1,4 @@
+// @import 'abstracts/variables';
 .main {
   &_container {
     background-color: $white;
@@ -20,67 +21,102 @@
       display: none;
     }
 
-    .side-bar {
-      background: $color3;
-      height: 100%;
-      left: 0;
-      overflow-y: auto;
-      padding-top: auto;
-      position: fixed;
-      top: 0;
-      width: 16%;
-    }
+    .navbar {
+      
+      &__container {
+        align-items: center;
+        background-color: $color1;
+        display: flex;
+        flex-direction: column;
+        font-size: x-large;
+        height: 100%;
+        left: 0;
+        padding-left: .5rem;
+        padding-top: 0;
+        position: fixed;
+        text-align: left;
+        top: 0;
+        transition: 0.5s;
+        width: 0;
+        z-index: 999;
+        &__closed {
+          background-color: $color1;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 2rem;
+          z-index: 1;
+        }
 
-    .item {
-      width: 100%;
-    }
+        .navbar__logo__open {
+          color: white;
+          height: 1.5rem;
+          margin: 1rem 8rem 1rem 0rem;
+          transform: rotate(90deg);
+          width: 2rem;
+        }
+      }
 
-    .side-bar .menu {
-      width: 100%;
-    }
+      &__logo {
+        border-radius: 20px;
+        height: auto;
+        padding: 0rem 0rem 2rem 0rem;
+        width: 95%;
 
-    .side-bar .menu .item a {
-      background: $color3;
-      color: $white;
-      display: block;
-      font-size: 1rem;
-      line-height: 3rem;
-      padding: .5rem 1rem;
-      text-decoration: none;
-    }
+        &__closed {
+          color: white;
+          height: 1.5rem;
+          margin-top: 1rem;
+          width: 2rem;
+        }
+      }
 
-    .side-bar .menu .item a:hover {
-      background: $color2;
-      transition: 1s ease;
-    }
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        justify-content: space-around;
 
-    .side-bar .menu .item i {
-      margin-right: .5rem;
-    }
+        &__category {
+          color: $white;
+          text-decoration: none;
+          transition: 0.5s;
 
-    .side-bar .menu .item .sub-menu {
-      background-color: $color2;
+          &:hover {
+            color: $color4;
+          }
+        }
+      }
+
+    }
+    
+    #main {
+      padding: 0 0rem 0 1rem;
+      transition: margin-left .5s;
+      margin-left: 10rem;
+    }
+    
+    #mySidenav {
+      width: 10rem;
+    }
+    
+    #logo {
       display: none;
     }
-
-    .side-bar .menu .item .sub-menu a {
-      background: $color2;
-      font-size: .7rem;
-      text-align: center;
+    
+    #mainService {
+      margin-left: 0;
+      padding: 0 1rem 0 1rem;
+      transition: margin-left .5s;
     }
-
-    .side-bar .menu .item .sub-menu a:hover {
-      background: $color1;
-      transition: 1s ease;
+    
+    #mySidenavService {
+      width: 0;
     }
-
-    .icons_menu {
-      margin-right: 1rem;
-    }
-
-    .icon_logo02 {
-      margin-top: .5rem;
-      width: 100%;
+    
+    #logo {
+      display: block;
     }
   }
 
