@@ -108,6 +108,10 @@
       text-align: center;
       width: 130%;
 
+      form {
+        display: flex;
+      }
+
       .bar {
         border-radius: 22px;
         height: 2rem;
@@ -203,11 +207,15 @@
       padding: 5%;
       width: 84%;
 
-
       &_promotions {
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
+
+        .noFound {
+          display: flex;
+          flex-direction: column;
+        }
 
         li {
           display: flex;
