@@ -186,6 +186,7 @@
   }
 
   &_cupons {
+
     &_container {
       display: flex;
       flex-direction: row;
@@ -197,12 +198,54 @@
       }
     }
 
+    &_grup {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+
+    &_carrusel {
+      height: 50%;
+      margin: 5% 5% 0% 5%;
+
+      &_slider {
+        filter: drop-shadow(.5rem .5rem 1.5rem $black);
+        height: 92%;
+        overflow: hidden;
+
+        figure {
+          animation: 20s slidy infinite;
+          font-size: 0;
+          height: 100%;
+          position: relative;
+          width: 500%;
+
+          img {
+            filter: brightness(90%);
+            height: 100%;
+            width: 20%;
+          }
+        }
+      }
+
+      @keyframes slidy {
+        0% {left: 0%;}
+        15% {left: 0%;}
+        25% {left: -100%;}
+        35% {left: -100%;}
+        40% {left: -200%;}
+        50% {left: -200%;}
+        65% {left: -300%;}
+        75% {left: -300%;}
+        85% {left: -400%;}
+        100% {left: -400%;}
+      }
+    }
+
     &_content {
       box-sizing: content-box;
-      overflow-y: scroll;
-      padding: 5%;
+      padding: 0% 5% 5% 8%;
       width: 84%;
-
 
       &_promotions {
         display: flex;
@@ -225,6 +268,7 @@
             margin: 5%;
 
             img {
+              border: 3px solid $black;
               height: 20rem;
               width: 100%;
 
@@ -234,10 +278,14 @@
             }
 
             .information {
+              background-color: $transparent-black;
+              border-radius: 10px;
+              border: 1px solid $color-white;
               display: flex;
               flex-direction: column;
-              margin: -26% 25% 17% 6%;
-              text-shadow: 1px 1px 2px black, 0 0 12em black, 0 0 0.2em black;
+              margin: -26% 31% 17% 6%;
+              padding-left:10px ;
+              text-shadow: 1px 1px 2px $black;
 
               @include smallxs {
                 margin: -35% 25% 17% 6%;
@@ -267,7 +315,7 @@
               flex-direction: row-reverse;
 
               button {
-                background-color: #00000061;
+                background-color: $transparent-black;
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;

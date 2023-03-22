@@ -1,0 +1,12 @@
+<div class="main_cupons_carrusel_slider">
+  <figure>
+    <% @cupon.each do |cupon| %>
+      <%= if cupon.image_url == "" 
+        image_tag "coupon_defaul.webp"
+      else 
+        image_tag cupon.image_url 
+      end %>
+    <%end%>
+  </figure>
+</div>
+
