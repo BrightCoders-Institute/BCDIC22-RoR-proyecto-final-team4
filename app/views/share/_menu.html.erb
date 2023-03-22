@@ -1,33 +1,20 @@
+<div>
+  <%=  javascript_include_tag 'navbarService' %>
 
-<div class = "side-bar">
-  <div class = "container-logo">
-    <%= image_tag 'logo02.png', class: "icon_logo02"%>
-  </div>
-  
-  <div class = "menu">
-    <div class = "item">
-      <a class= "sub-btn" href="#"><%= image_tag 'home.svg', class: "icons_menu"%>Home</a>
+  <div id="mySidenavService" class="navbar__container">
+    <a onclick="closeNav()"><%= image_tag("menuburger.svg", class:'navbar__logo__open')%></a>
+    <%= image_tag("logo02.png", class:'navbar__logo')%>
+
+    <div class='navbar__menu' >
+      <%= link_to 'Home', root_path, class: 'navbar__menu__category'%>
+      <%= link_to 'Categories', new_cupon_path, class: 'navbar__menu__category'%>
+      <%= link_to 'Date', new_cupon_path, class: 'navbar__menu__category'%>
     </div>
-    <div class = "item">
-      <a class= "sub-btn" href="#"><%= image_tag 'categories.svg', class: "icons_menu"%>Categories</a>
-      <div class="sub-menu">
-        <a class= "sub-item" href="#">Electronic</a>
-        <a class= "sub-item" href="#">Games</a>
-        <a class= "sub-item" href="#">Line White</a>
-      </div>
-    </div>
-    <div class = "item">
-      <a class= "sub-btn" href="#"><%= image_tag 'recientes.svg', class: "icons_menu"%>Recent</a>
+
+    <div id='mainService' class="navbar__container__closed" onclick="openNav()">
+      <%= image_tag("menuburger.svg", class:'navbar__logo__closed', id:'logoService')%>
     </div>
 
   </div>
+
 </div>
-
-<script type = "text/javascript">
-  $(document).ready(function(){
-  $('.sub-btn').click(function(){
-    $(this).next('.sub-menu').slideToggle();
-
-  });
-});
-</script>
