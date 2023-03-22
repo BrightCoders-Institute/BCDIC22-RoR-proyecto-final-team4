@@ -1,6 +1,8 @@
 class CuponsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :destroy]
-  def index; end
+  def index
+    @categories = Category.all
+  end
 
   def show; end
 
@@ -21,7 +23,7 @@ class CuponsController < ApplicationController
   private
 
     def cupon_params
-      params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date)
+      params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date, :category_id)
     end
 
     def cupon
