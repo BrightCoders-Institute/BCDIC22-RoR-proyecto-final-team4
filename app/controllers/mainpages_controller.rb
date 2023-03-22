@@ -6,8 +6,8 @@ class MainpagesController < ApplicationController
   private
 
     def find
-      result = User.select(:name, :follower).where("name LIKE ?","%" + params[:search] + "%")
-      result += Cupon.where("title LIKE ?","%" + params[:search] + "%")
+      result = User.select(:name, :follower).where("name LIKE ?","%" + params[:search].downcase + "%")
+      result += Cupon.where("title LIKE ?","%" + params[:search].downcase + "%")
       result
     end
 end
