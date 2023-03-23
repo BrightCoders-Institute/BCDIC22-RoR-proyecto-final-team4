@@ -27,3 +27,4 @@ class MainpagesController < ApplicationController
       User.all.where(id: follower)
     end
 end
+
