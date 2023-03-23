@@ -7,8 +7,13 @@
 
     <div class='navbar__menu' >
       <%= link_to 'Home', root_path, class: 'navbar__menu__category'%>
-      <%= link_to 'Categories', new_cupon_path, class: 'navbar__menu__category'%>
+      <p class= 'navbar__menu__category'>Categories</p>
+
+      <%= form_with url: root_url, method: :get do | form | %>
+      <%= form.collection_select :category_id, Category.all, :id, :namecategory %>
       <%= link_to 'Date', new_cupon_path, class: 'navbar__menu__category'%>
+      <% end %>
+
     </div>
 
     <div id='mainService' class="navbar__container__closed" onclick="openNav()">

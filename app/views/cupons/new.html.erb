@@ -38,21 +38,15 @@
                 <%= form.label 'Ubicación' %>
                 <%= form.text_field :location, placeholder: 'Nombre', class:'add_cupons_detalles_generales_content_ciudad', pattern: "[a-z0-9A-Z ÁáÉéÍíÓóÚú,.]+" %>
               </div>
-              
+              <div> 
+                <%= form.label 'Category' %>
+                <%= form.collection_select :category_id, Category.all, :id, :namecategory %>
+              </div>
               <div class="add_cupons_detalles_generales_content">
                 <%= form.label 'Link de imagen' %>
                 <%= form.text_field :image_url, placeholder: 'https://', class:'add_cupons_detalles_generales_content_imagen' %>
               </div>
-            </div>
-            
-            <div class="select">
-              <label>Categorias</label>
-              <select>
-                <option>Electronica</option>
-                <option>Ropa</option>
-                <option>Zapatos</option>
-              </select>
-            </div>
+            </div>           
           </div>
 
           <div class="add_cupons_detalles_generales_tipo">
@@ -105,11 +99,12 @@
               <%= form.date_field :expiration_date, class:'add_cupons_detalles_finales_fechas_input' %>
             </div>
           </div>
-
+            
           <div class='add_cupons_detalles_finales_content'>
             <button class='add_cupons_detalles_finales_content_buttons' id='vista_previa'>Vista previa</button>
             <%= form.submit 'Enviar la oferta', class:'add_cupons_detalles_finales_content_buttons' %>
           </div>
+          
           <% end %>
         </div>
       </div>
