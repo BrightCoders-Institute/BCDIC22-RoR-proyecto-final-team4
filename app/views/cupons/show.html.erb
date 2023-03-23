@@ -11,7 +11,7 @@
         <div class='area_data'>
           <h2><%= @cupon.title %></h2>
           <mark>Vigente</mark>
-          <p>Esxpiration date: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%A, %d de %B de %Y") %></p>
+          <p>Expiration date: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%A, %d de %B de %Y") %></p>
 
           <div class='area_data_container'>
             <div class='area_data_content'>
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class='area_description'>
-          <h3>Descripción:</h3>
+          <h3>Description:</h3>
           <p><%= @cupon.description %></p>
         </div>
       </div>
