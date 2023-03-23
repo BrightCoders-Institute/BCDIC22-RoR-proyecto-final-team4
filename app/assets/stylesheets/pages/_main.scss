@@ -237,11 +237,12 @@
         width: 120%;
       }
     }
-
+    
     &_grup {
       display: flex;
       flex-direction: column;
       overflow-y: scroll;
+      width: 84%;
     }
 
     &_carrusel {
@@ -285,7 +286,6 @@
     &_content {
       box-sizing: content-box;
       padding: 0% 5% 5% 8%;
-      width: 84%;
 
       &_promotions {
         display: flex;

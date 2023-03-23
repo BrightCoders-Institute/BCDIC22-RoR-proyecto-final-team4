@@ -11,4 +11,3 @@ const closeNav = () => {
   document.getElementById("mainService").style.marginLeft= "0";
   document.getElementById("logoService").style.display = "block";
 }
-

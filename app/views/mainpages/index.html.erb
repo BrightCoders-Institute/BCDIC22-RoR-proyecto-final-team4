@@ -4,7 +4,11 @@
     <div class='main_header_up'><%= render 'share/header'%> </div>
     <div class='main_cupons_container'>
       <div class='main_cupons_grup'>
-        <div class='main_cupons_carrusel'><%= render 'carousel'%></div>
+        <% if params[:home] %>
+          <div class='main_cupons_home'><%= render 'home'%></div>
+        <% elsif params[:search].nil? || params[:search] == '' %>
+          <div class='main_cupons_carrusel'><%= render 'carousel'%></div>
+        <% end %>
         <div class='main_cupons_content'><%= render 'content'%></div>
       </div>
       <div class='main_cupons_bar_right'><%= render 'category'%></div>

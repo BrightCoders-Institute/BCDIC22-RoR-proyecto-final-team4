@@ -2,7 +2,7 @@
   <div class="serch_bar">
     <%= form_with url: root_path, method: :get do |form| %>
       <%= form.text_field :search, placeholder:"buscar por:", class:'bar',
-      pattern: "[a-zA-Z0-9\s]+" %>
+      pattern: "[a-zA-Z0-9ÁáÉéÍíÓóÚú,.\s]+" %>
       <%= form.submit 'Search', class:'serch' %>
     <% end %>
   </div>
