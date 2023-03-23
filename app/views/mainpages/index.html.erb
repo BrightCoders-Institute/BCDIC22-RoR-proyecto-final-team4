@@ -6,7 +6,7 @@
       <div class='main_cupons_grup'>
         <% if params[:home] %>
           <div class='main_cupons_home'><%= render 'home'%></div>
-        <% else %>
+        <% elsif params[:search].nil? || params[:search] == '' %>
           <div class='main_cupons_carrusel'><%= render 'carousel'%></div>
         <% end %>
         <div class='main_cupons_content'><%= render 'content'%></div>
