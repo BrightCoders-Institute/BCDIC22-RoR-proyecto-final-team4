@@ -1,7 +1,7 @@
 .home {
   &_container {
+    margin-top: 1rem;
     padding: 1rem;
-    margin-top: 1.5rem;
   }
 
   &_content {
@@ -9,16 +9,48 @@
     flex-direction: row;
     justify-content: space-around;
 
+    @include smallxs {
+      flex-direction: column;
+    }
+
     &_user {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+
+      img {
+        width: 60%;
+      }
+
       h2 {
         font-weight: 500;
       }
     }
 
     &_buttons {
+      align-items: center;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      justify-items: center;
+      width: 40%;
+
+      @include smallxs {
+        width: 100%;
+      }
+
+      a {
+        background-color: $green-yellow;
+        border-radius: 7px;
+        color: $purle;
+        padding: .9rem;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
     }
   }
 }
