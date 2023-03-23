@@ -1,0 +1,12 @@
+<div class="home_container">
+  <div class="home_content">
+    <div class="home_content_user">
+      <%#= image_tag "user.png" %>
+      <h2><%= current_user.name %></h2>
+    </div>
+    <div class="home_content_buttons">
+      <%= link_to 'Cupónes', root_path(:home => true, :cupon => true) %>
+      <%= link_to 'Usuarios Seguidos', root_path(:home => true, :following => true) %>
+    </div>
+  </div>
+</div>

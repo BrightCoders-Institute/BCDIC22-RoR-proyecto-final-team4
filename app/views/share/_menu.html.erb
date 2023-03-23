@@ -6,7 +6,7 @@
     <%= image_tag("logo02.png", class:'navbar__logo')%>
 
     <div class='navbar__menu' >
-      <%= link_to 'Home', root_path, class: 'navbar__menu__category'%>
+      <%= link_to 'Home', root_path(:cupon => true, :home => true), class: 'navbar__menu__category' if current_user%>
       <%= link_to 'Categories', new_cupon_path, class: 'navbar__menu__category'%>
       <%= link_to 'Date', new_cupon_path, class: 'navbar__menu__category'%>
     </div>
@@ -14,7 +14,6 @@
     <div id='mainService' class="navbar__container__closed" onclick="openNav()">
       <%= image_tag("menuburger.svg", class:'navbar__logo__closed', id:'logoService')%>
     </div>
-
   </div>
-
 </div>
+
