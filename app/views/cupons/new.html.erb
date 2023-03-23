@@ -36,7 +36,7 @@
             <div>
               <div class="add_cupons_detalles_generales_content">
                 <%= form.label 'Ubicación' %>
-                <%= form.text_field :location, placeholder: 'https://', class:'add_cupons_detalles_generales_content_ciudad'  %>
+                <%= form.text_field :location, placeholder: 'Nombre', class:'add_cupons_detalles_generales_content_ciudad',pattern: "[a-z0-9A-Z ÁáÉéÍíÓóÚú,.]+" %>
               </div>
 
               <div class="add_cupons_detalles_generales_content">

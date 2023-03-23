@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "mainpages#index"
   # root "articles#index"
-  resources :cupons
+
+  resources :cupons do
+    post :increase_punctuation, on: :member
+    post :decrease_punctuation, on: :member
+  end
+ 
 end

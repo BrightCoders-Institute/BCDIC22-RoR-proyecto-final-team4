@@ -9,6 +9,12 @@
       </div>
       <div class='area'>
         <div class='area_data'>
+        <div class='heart'>
+          <%=image_tag("heart.svg")%>
+          <div id="likes-container">
+            <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
+          </div>
+        </div>
           <h2>Promoción de Oxxo</h2>
           <mark>Vigente</mark>
 
@@ -16,6 +22,10 @@
             <div class='area_data_content'>
               <p>-20%</p>
               <p>$123.00</p>
+            </div>
+            <div class=area_data_puntuation>
+              <%= button_to image_tag("like.svg"), increase_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment"}%>
+              <%= button_to image_tag("dislike.svg"), decrease_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement"}%>    
             </div>
             <button>ver</button>
           </div>
