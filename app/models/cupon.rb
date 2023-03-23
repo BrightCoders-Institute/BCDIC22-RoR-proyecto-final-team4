@@ -3,7 +3,7 @@ class Cupon < ApplicationRecord
 
   validates :title, presence: true, 
   format: {
-    with: /\A[a-z0-9A-Z\s]+\z/
+    with: /\A[a-z0-9A-ZÁáÉéÍíÓóÚú,.\s]+\z/
   }
 
   validates :location, presence: true,

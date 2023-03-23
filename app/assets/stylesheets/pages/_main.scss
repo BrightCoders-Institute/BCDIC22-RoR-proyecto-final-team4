@@ -91,7 +91,7 @@
   }
 
   &_header_up {
-    height: 8%;
+    height: 10%;
 
     .header_container {
       display: flex;
@@ -194,7 +194,7 @@
     &_container {
       display: flex;
       flex-direction: row;
-      height: 92%;
+      height: 90%;
 
       @include small {
         justify-content: center;
@@ -480,3 +480,4 @@
     text-shadow: $red 1px 0 10px;
   }
 }
+
