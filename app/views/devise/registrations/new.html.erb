@@ -9,7 +9,8 @@
       </div>
 
       <div class="form-line-sign-up">
-        <%= f.text_field :name, autofocus: true, autocomplete: "Name", placeholder: "Name", class: "holder name-sing-up sign-up-input" %> 
+        <%= f.text_field :name, autofocus: true, autocomplete: "Name", placeholder: "Name", class: "holder name-sing-up sign-up-input", 
+        pattern: "^[A-Za-z0-9]{3,20}$" %> 
       </div>
 
       <div class="form-line-sign-up">
