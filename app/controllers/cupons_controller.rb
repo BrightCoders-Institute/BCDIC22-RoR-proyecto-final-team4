@@ -2,7 +2,9 @@ class CuponsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :destroy]
   def index; end
 
-  def show; end
+  def show;
+    @cupon = Cupon.find(params[:id])
+  end
 
   def new
     @cupon = Cupon.new
