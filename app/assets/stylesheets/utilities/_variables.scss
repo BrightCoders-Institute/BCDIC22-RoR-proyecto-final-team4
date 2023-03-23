@@ -18,6 +18,7 @@ $yellow : #f8e479;
 $orange : #f8a13f;
 $red : #ba3c3d;
 $black : #000000;
+$transparent-black: #000000a1;
 $green-yellow: #e8f9a2af;
 $background-image: "https://imgs.search.brave.com/YFeXutVrkezCfY-NSAM3twl9_W4r3_ZG_FAC50WIzQg/rs:fit:728:546:1/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9pbWFn/ZW5lcy0xNjQwMi85/NS9pbWFnZW5lcy0x/Mi03MjguanBnP2Ni/PTExNjc1NjAxMzc";
 $grey: rgb(199, 197, 197);
@@ -28,7 +29,7 @@ $pink-white: hsl(341, 58%, 86%);
 $greenyellow: hsl(84, 100%, 59%);
 $white: #ffffff;
 $input-border:#BFBFBF;
-
+$black-gray:rgba(0,0,0, 0.6);
 $background: linear-gradient(210deg, rgba(165,170,217,1) 0%, rgba(248,161,63,1) 50%, rgba(186,60,61,1) 100%);
 $color-susseful: #65cf4f;
 $color-white: #FFFF;
