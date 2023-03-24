@@ -7,10 +7,8 @@ class CuponsController < ApplicationController
 
   def show
     @cupon = Cupon.find(params[:id])
-    if img && porcentaje
-      img
-      porcentaje
-    end
+    img
+    porcentaje
   end
 
   def new
@@ -60,12 +58,11 @@ class CuponsController < ApplicationController
     end
 
     def porcentaje
-      if @cupon.discount_percentage.nil?
+      if @cupon.discount_percentage.nil? && @cupon.normal_price.present? && @cupon.discount_price.present?
         @subtraction = (@cupon.normal_price.to_i - @cupon.discount_price.to_i)
         @mount = (@subtraction.to_f / @cupon.normal_price.to_f)
         @percentage = (@mount * 100).to_i
         @cupon.discount_percentage = @percentage
-        puts @cupon.discount_percentage
       end
     end
 end
