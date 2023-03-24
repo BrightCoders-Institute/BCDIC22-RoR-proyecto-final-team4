@@ -1,9 +1,18 @@
 class CuponsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create, :destroy]
-  def index; end
+  before_action :authenticate_user!, only:[:new, :create, :destroy, :edit]
+  before_action :delete_expired
+  before_action :update_expired
+
+  def index
+    @categories = Category.all
+  end
 
   def show
     @cupon = Cupon.find(params[:id])
+    if img && porcentaje
+      img
+      porcentaje
+    end
   end
 
   def new
@@ -34,16 +43,43 @@ class CuponsController < ApplicationController
   def destroy
     @cupon = Cupon.find(params[:id])
     @cupon.destroy
+  def delete_expired
+    @cupon = Cupon.where('expiration_date <= ?', Date.today - 15.days)
+    @cupon.destroy_all
+  end
+
+  def update_expired
+    @cupon = Cupon.where('expiration_date <= ?', Date.today)
+    @cupon.each do |cupon|
+      @cupon.update(image_url: 'https://thumbs.dreamstime.com/b/sello-expirado-122003510.jpg')
+    end
   end
 
   private
 
     def cupon_params
-      params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date)
+      params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date, :category_id)
     end
 
     def cupon
       @cupon = Cupon.find(params[:id])
+    end
+
+    def img
+      if 
+        cupon.image_url == ""
+        @cupon.image_url = "/assets/coupon_defaul-f44b2a800def72f7969c4ecbfc178de784ff728aa337740e588a3c2ab8ec5bb1.webp"
+      end 
+    end
+
+    def porcentaje
+      if @cupon.discount_percentage.nil?
+        @subtraction = (@cupon.normal_price.to_i - @cupon.discount_price.to_i)
+        @mount = (@subtraction.to_f / @cupon.normal_price.to_f)
+        @percentage = (@mount * 100).to_i
+        @cupon.discount_percentage = @percentage
+        puts @cupon.discount_percentage
+      end
     end
 end
 
