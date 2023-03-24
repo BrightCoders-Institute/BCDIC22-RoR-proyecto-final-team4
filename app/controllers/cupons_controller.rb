@@ -29,6 +29,20 @@ class CuponsController < ApplicationController
     end
   end
 
+  def edit
+    @cupon = Cupon.find(params[:id])
+  end
+
+  def update
+    @cupon = Cupon.find(params[:id])
+    @cupon.update(cupon_params)
+
+    redirect_to root_path
+  end
+
+  def destroy
+    @cupon = Cupon.find(params[:id])
+    @cupon.destroy
   def delete_expired
     @cupon = Cupon.where('expiration_date <= ?', Date.today - 15.days)
     @cupon.destroy_all

@@ -1,21 +1,34 @@
 <ul class="main_cupons_content_promotions">
-  <% @cupon.each do |cupon| %>
-    <li>
-      <div class="box" >
-        <%=
-          if cupon.image_url == "" 
-            image_tag "coupon_defaul.webp"
-          else 
-            image_tag cupon.image_url 
-          end 
-        %>
-        <div class="information">
-          <h1><%= cupon.title %></h1>
-          <p><%= cupon.description %></p>
-        </div>
-        <%= link_to cupon_path(cupon.id) do %>
-          <div class="button_container">
-            <button>ver</button>
+  <% if @result.length == 0 %>
+    <div class="noFound">
+      <h2>Resultado no encontrado!! ¯\_(ツ)_/¯</h2>
+      <h3>Favor de intentar con otro nombre.</h3>
+    </div>
+  <% else %>
+    <% @result.each do |result| %>
+      <li>
+        <%if result.is_a? Cupon%>
+          <div class="box" >
+            <%=
+              if result.image_url == "" 
+                image_tag "coupon_defaul.webp"
+              else 
+                image_tag result.image_url 
+              end
+            %>
+            <div class="information">
+              <h1><%= result.title %></h1>
+              <p><%= result.description %></p>
+            </div>
+            <div class="coupon_opc">
+              <%= button_to "delete", {:controller => :cupons, :action => 'destroy', :id => result.id }, :method => :delete %>
+              <%= link_to "Edit", edit_cupon_path(result)%>
+            </div>
+            <%= link_to new_cupon_path do %>
+              <div class="button_container">
+                <button>ver</button>
+              </div>
+            <% end %>
           </div>
         <%else%>
           <div class="box user">

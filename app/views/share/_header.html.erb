@@ -13,11 +13,15 @@
     <% end %>
   </div>
   <div class="buttons_container">
-  <%= link_to user_session_path do %>
-    <input class="login_header" type="button" value="Login"> 
-  <% end %>
-  <%= link_to new_user_registration_path do %>
-    <input class="sign_up_header" type="button" value="Sing Up">
+  <% if user_signed_in? %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class:'sign_up_header' %>
+  <% else %>
+    <%= link_to user_session_path do %>
+      <input class="login_header" type="button" value="Login"> 
+    <% end %>
+    <%= link_to new_user_registration_path do %>
+      <input class="sign_up_header" type="button" value="Sing Up">
+    <% end %>
   <% end %>
   </div>
 </div>
