@@ -4,7 +4,7 @@ class CuponsController < ApplicationController
     @categories = Category.all
   end
 
-  def show;
+  def show
     @cupon = Cupon.find(params[:id])
   end
 

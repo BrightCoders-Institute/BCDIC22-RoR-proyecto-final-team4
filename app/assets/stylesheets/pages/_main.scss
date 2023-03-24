@@ -127,7 +127,7 @@
   }
 
   &_header_up {
-    height: 8%;
+    height: 10%;
 
     .header_container {
       display: flex;
@@ -143,6 +143,10 @@
       margin-left: 2%;
       text-align: center;
       width: 130%;
+
+      form {
+        display: flex;
+      }
 
       .bar {
         border-radius: 22px;
@@ -226,18 +230,19 @@
     &_container {
       display: flex;
       flex-direction: row;
-      height: 92%;
+      height: 90%;
 
       @include small {
         justify-content: center;
         width: 120%;
       }
     }
-
+    
     &_grup {
       display: flex;
       flex-direction: column;
       overflow-y: scroll;
+      width: 84%;
     }
 
     &_carrusel {
@@ -281,12 +286,16 @@
     &_content {
       box-sizing: content-box;
       padding: 0% 5% 5% 8%;
-      width: 84%;
 
       &_promotions {
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
+
+        .noFound {
+          display: flex;
+          flex-direction: column;
+        }
 
         li {
           display: flex;
@@ -296,6 +305,11 @@
 
           @include small {
             width: 100%;
+          }
+
+          .user {
+            height: 60%;
+            width: 60%;
           }
 
           .box {
@@ -489,6 +503,17 @@
         width: 90%;
       }
     }
+  }
+}
+
+#error_explanation {
+  h2 {
+    color: $grey;
+  }
+
+  li {
+    font-weight: 800;
+    text-shadow: $red 1px 0 10px;
   }
 }
 
