@@ -1,3 +1,4 @@
+// @import 'abstracts/variables';
 .main {
   &_container {
     background-color: $white;
@@ -20,67 +21,102 @@
       display: none;
     }
 
-    .side-bar {
-      background: $color3;
-      height: 100%;
-      left: 0;
-      overflow-y: auto;
-      padding-top: auto;
-      position: fixed;
-      top: 0;
-      width: 16%;
-    }
+    .navbar {
+      
+      &__container {
+        align-items: center;
+        background-color: $color1;
+        display: flex;
+        flex-direction: column;
+        font-size: x-large;
+        height: 100%;
+        left: 0;
+        padding-left: .5rem;
+        padding-top: 0;
+        position: fixed;
+        text-align: left;
+        top: 0;
+        transition: 0.5s;
+        width: 0;
+        z-index: 999;
+        &__closed {
+          background-color: $color1;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 2rem;
+          z-index: 1;
+        }
 
-    .item {
-      width: 100%;
-    }
+        .navbar__logo__open {
+          color: white;
+          height: 1.5rem;
+          margin: 1rem 8rem 1rem 0rem;
+          transform: rotate(90deg);
+          width: 2rem;
+        }
+      }
 
-    .side-bar .menu {
-      width: 100%;
-    }
+      &__logo {
+        border-radius: 20px;
+        height: auto;
+        padding: 0rem 0rem 2rem 0rem;
+        width: 95%;
 
-    .side-bar .menu .item a {
-      background: $color3;
-      color: $white;
-      display: block;
-      font-size: 1rem;
-      line-height: 3rem;
-      padding: .5rem 1rem;
-      text-decoration: none;
-    }
+        &__closed {
+          color: white;
+          height: 1.5rem;
+          margin-top: 1rem;
+          width: 2rem;
+        }
+      }
 
-    .side-bar .menu .item a:hover {
-      background: $color2;
-      transition: 1s ease;
-    }
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        justify-content: space-around;
 
-    .side-bar .menu .item i {
-      margin-right: .5rem;
-    }
+        &__category {
+          color: $white;
+          text-decoration: none;
+          transition: 0.5s;
 
-    .side-bar .menu .item .sub-menu {
-      background-color: $color2;
+          &:hover {
+            color: $color4;
+          }
+        }
+      }
+
+    }
+    
+    #main {
+      padding: 0 0rem 0 1rem;
+      transition: margin-left .5s;
+      margin-left: 10rem;
+    }
+    
+    #mySidenav {
+      width: 10rem;
+    }
+    
+    #logo {
       display: none;
     }
-
-    .side-bar .menu .item .sub-menu a {
-      background: $color2;
-      font-size: .7rem;
-      text-align: center;
+    
+    #mainService {
+      margin-left: 0;
+      padding: 0 1rem 0 1rem;
+      transition: margin-left .5s;
     }
-
-    .side-bar .menu .item .sub-menu a:hover {
-      background: $color1;
-      transition: 1s ease;
+    
+    #mySidenavService {
+      width: 0;
     }
-
-    .icons_menu {
-      margin-right: 1rem;
-    }
-
-    .icon_logo02 {
-      margin-top: .5rem;
-      width: 100%;
+    
+    #logo {
+      display: block;
     }
   }
 
@@ -91,7 +127,7 @@
   }
 
   &_header_up {
-    height: 8%;
+    height: 10%;
 
     .header_container {
       display: flex;
@@ -107,6 +143,10 @@
       margin-left: 2%;
       text-align: center;
       width: 130%;
+
+      form {
+        display: flex;
+      }
 
       .bar {
         border-radius: 22px;
@@ -186,28 +226,76 @@
   }
 
   &_cupons {
+
     &_container {
       display: flex;
       flex-direction: row;
-      height: 92%;
+      height: 90%;
 
       @include small {
         justify-content: center;
         width: 120%;
       }
     }
+    
+    &_grup {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      width: 84%;
+    }
+
+    &_carrusel {
+      height: 50%;
+      margin: 5% 5% 0% 5%;
+
+      &_slider {
+        filter: drop-shadow(.5rem .5rem 1.5rem $black);
+        height: 92%;
+        overflow: hidden;
+
+        figure {
+          animation: 20s slidy infinite;
+          font-size: 0;
+          height: 100%;
+          position: relative;
+          width: 500%;
+
+          img {
+            filter: brightness(90%);
+            height: 100%;
+            width: 20%;
+          }
+        }
+      }
+
+      @keyframes slidy {
+        0% {left: 0%;}
+        15% {left: 0%;}
+        25% {left: -100%;}
+        35% {left: -100%;}
+        40% {left: -200%;}
+        50% {left: -200%;}
+        65% {left: -300%;}
+        75% {left: -300%;}
+        85% {left: -400%;}
+        100% {left: -400%;}
+      }
+    }
 
     &_content {
       box-sizing: content-box;
-      overflow-y: scroll;
-      padding: 5%;
-      width: 84%;
-
+      padding: 0% 5% 5% 8%;
 
       &_promotions {
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
+
+        .noFound {
+          display: flex;
+          flex-direction: column;
+        }
 
         li {
           display: flex;
@@ -219,12 +307,18 @@
             width: 100%;
           }
 
+          .user {
+            height: 60%;
+            width: 60%;
+          }
+
           .box {
             display: flex;
             flex-direction: column;
             margin: 5%;
 
             img {
+              border: 3px solid $black;
               height: 20rem;
               width: 100%;
 
@@ -234,10 +328,14 @@
             }
 
             .information {
+              background-color: $transparent-black;
+              border-radius: 10px;
+              border: 1px solid $color-white;
               display: flex;
               flex-direction: column;
-              margin: -26% 25% 17% 6%;
-              text-shadow: 1px 1px 2px black, 0 0 12em black, 0 0 0.2em black;
+              margin: -26% 31% 17% 6%;
+              padding-left:10px ;
+              text-shadow: 1px 1px 2px $black;
 
               @include smallxs {
                 margin: -35% 25% 17% 6%;
@@ -267,7 +365,7 @@
               flex-direction: row-reverse;
 
               button {
-                background-color: #00000061;
+                background-color: $transparent-black;
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
@@ -405,6 +503,17 @@
         width: 90%;
       }
     }
+  }
+}
+
+#error_explanation {
+  h2 {
+    color: $grey;
+  }
+
+  li {
+    font-weight: 800;
+    text-shadow: $red 1px 0 10px;
   }
 }
 

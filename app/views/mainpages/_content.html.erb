@@ -13,12 +13,20 @@
           <h1><%= cupon.title %></h1>
           <p><%= cupon.description %></p>
         </div>
-        <%= link_to new_cupon_path do %>
+        <%= link_to cupon_path(cupon.id) do %>
           <div class="button_container">
             <button>ver</button>
           </div>
-        <% end %>
-      </div>
-    </li>
+        <%else%>
+          <div class="box user">
+            <%= image_tag "user.png"%>
+            <div class="information">
+              <h1><%= result.name %></h2>
+            </div>
+            <div class="button_container"><button>ver</button></div>
+          </div>
+        <%end%>
+      </li>
+    <%end%>
   <%end%>
 </ul>

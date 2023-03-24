@@ -1,7 +1,10 @@
 <div class="header_container">
   <div class="serch_bar">
-    <input class="bar" type="text">
-    <input class="serch" type="submit" value="Search">
+    <%= form_with url: root_path, method: :get do |form| %>
+      <%= form.text_field :search, placeholder:"buscar por:", class:'bar',
+      pattern: "[a-zA-Z0-9ÁáÉéÍíÓóÚú,.\s]+" %>
+      <%= form.submit 'Search', class:'serch' %>
+    <% end %>
   </div>
   <div class="add_announce">
     <h2 class="label_announce">Add Announce</h2>
