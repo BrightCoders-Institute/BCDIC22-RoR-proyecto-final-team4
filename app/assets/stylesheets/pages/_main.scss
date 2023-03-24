@@ -327,6 +327,35 @@
               }
             }
 
+            .coupon_opc {
+              display: flex;
+              flex-direction: row-reverse;
+              margin: -83% 4% 55% 5%;
+
+              button {
+                background-color: $transparent-black;
+                border-radius: 100px;
+                border: 1px solid $color-white;
+                color: $color-white;
+                margin: -4% 1% 83% -15%;
+                padding: 23% 14%;
+                height: 3rem;
+                font-size: 20px;
+              }
+
+              a {
+                background-color: $transparent-black;
+                border-radius: 100px;
+                border: 1px solid $color-white;
+                color: $color-white;
+                padding: 4% 3%;
+                margin: -0.5% 10% 0% 0%;
+                height: 1.3rem;
+                font-size: 20px;
+                text-decoration: none;
+              }
+            }
+
             .information {
               background-color: $transparent-black;
               border-radius: 10px;
@@ -369,8 +398,9 @@
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
-                margin: -25% 4% 15% 10%;
+                margin: -20% 3% 15% 10%;
                 padding: 2% 10%;
+                text-decoration: none;
               }
             }
           }
