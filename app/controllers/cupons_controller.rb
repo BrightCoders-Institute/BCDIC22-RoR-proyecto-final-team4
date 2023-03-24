@@ -27,6 +27,22 @@ class CuponsController < ApplicationController
     end
   end
 
+  def edit
+    @cupon = Cupon.find(params[:id])
+  end
+
+  def update
+    @cupon = Cupon.find(params[:id])
+    @cupon.update(cupon_params)
+
+    redirect_to root_path
+  end
+
+  def destroy
+    @cupon = Cupon.find(params[:id])
+    @cupon.destroy
+  end
+
   private
     def cupon_params
       params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date, :category_id)
