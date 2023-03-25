@@ -7,11 +7,20 @@ class MainpagesController < ApplicationController
         @result = user_following
       end
     else
-      @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
+      if params[:category_id].nil?
+        @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
+      else
+        @result = find_by_category
+      end
     end
   end
 
   private
+
+    def find_by_category
+      Cupon.where(category_id: params[:category_id])
+    end
+
     def find
       result = User.select(:name, :follower).where("name LIKE ?","%" + params[:search].downcase + "%")
       result += Cupon.where("title LIKE ?","%" + params[:search].downcase + "%")
@@ -27,9 +36,5 @@ class MainpagesController < ApplicationController
       User.all.where(id: follower)
     end
         
-    # def category
-    #     param = params[:category_id].nil? ? 1 : params[:category_id]
-    #     Category.find_by(id: param.to_i)
-    # end
 end
 

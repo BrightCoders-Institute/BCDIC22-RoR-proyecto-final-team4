@@ -7,13 +7,21 @@
 
     <div class='navbar__menu' >
       <%= link_to 'Home', root_path(:cupon => true, :home => true), class: 'navbar__menu__category' if current_user%>
-      <p class= 'navbar__menu__category'>Categories</p>
-
+      
       <%= form_with url: root_url, method: :get do | form | %>
-      <%= form.collection_select :category_id, Category.all, :id, :namecategory %>
-      <%= link_to 'Date', new_cupon_path, class: 'navbar__menu__category'%>
+      <div class= 'navbar__menu__category'>
+        <div class = 'select'>
+          Category
+          <%= form.collection_select :category_id, Category.all, :id, :namecategory, class: 'list__category'%>
+          <%= form.button type: "submit" do%>
+            <%= image_tag("search.svg", class:'logo__search')%>
+          <% end %>
+        </div>
+      </div>
       <% end %>
 
+      <%= link_to 'Date', new_cupon_path, class: 'navbar__menu__category'%>
+      
     </div>
 
     <div id='mainService' class="navbar__container__closed" onclick="openNav()">
