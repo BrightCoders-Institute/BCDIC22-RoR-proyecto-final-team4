@@ -68,7 +68,7 @@ class MainpagesController < ApplicationController
   
     def remove_follower
       following = users_followed.delete(params[:id].to_i)
-      current_user.update(follower: "#{(following == params[:id].to_i) ? '' : following.to_s}")
+      current_user.update(follower: "#{(following == params[:id].to_i) ? '' : following.to_s.tr!('[] ','')}")
     end
 end
   
