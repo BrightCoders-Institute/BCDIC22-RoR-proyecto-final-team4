@@ -10,5 +10,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "mainpages#index", via: [:get,:post]
   # root "articles#index"
-  resources :cupons
+ 
+  resources :cupons do
+    member do
+      post 'increment_punctuation', to: 'cupons#update'
+      post 'decrement_punctuation', to: 'cupons#update'
+    end
+  end
+  
 end

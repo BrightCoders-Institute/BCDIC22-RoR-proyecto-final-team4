@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'reload' %>
 <div class='showCupons_container'>
   <div class='main_menu_left'><%= render 'share/menu'%></div>
   <div class='showCupons_content'>
@@ -9,6 +10,13 @@
       </div>
       <div class='area'>
         <div class='area_data'>
+        <div class='heart'>
+          <%=image_tag("heart.svg")%>
+          <div id="likes-container">
+            <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
+          </div>
+          
+        </div>
           <h2><%= @cupon.title %></h2>
           <mark>Vigente</mark>
           <p>Expiration date: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%A, %d de %B de %Y") %></p>
@@ -17,6 +25,10 @@
             <div class='area_data_content'>
               <p><%= "- #{@cupon.discount_percentage} %" %></p>
               <p><%= (@cupon.normal_price.nil?) ? '' : "$ #{@cupon.normal_price}" %></p>
+            </div>
+              <div class="area_data_puntuation">
+              <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment", turbolinks: false} %>
+              <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement", turbolinks: false} %>
             </div>
             <div class='area_url'>
               <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
@@ -31,4 +43,7 @@
     </div>
   </div>
 </div>
+
+
+
 
