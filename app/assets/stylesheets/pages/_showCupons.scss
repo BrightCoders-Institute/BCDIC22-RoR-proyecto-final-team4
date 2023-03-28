@@ -1,4 +1,5 @@
 .showCupons {
+  
   &_container {
     display: flex;
     flex-direction: row;
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 84%;
-
+    
     &_detaills {
       background-color: $gray-white;
       box-sizing: content-box;
@@ -19,7 +20,7 @@
       height: 100%;
       margin: 3rem;
       overflow-y: scroll;
-
+      
       @include smallxs {
         flex-direction: column-reverse;
       }
@@ -30,7 +31,7 @@
         justify-content: space-between;
         margin: .5rem;
         width: 50%;
-
+        
         @include smallxs {
           width: 100%;
         }
@@ -38,27 +39,42 @@
         &_image {
           height: 45%;
           padding: .3rem;
-
+          
           img {
             height: 100%;
             width: 100%;
           }
         }
-        
         &_map {
           height: 48%;
           margin-top: .2rem;
-
+          
           iframe {
             height: 100%;
             width: 100%;
           }
         }
 
+        .area_url{
+          
+          button {
+            margin-left: 40%;
+            margin-right: 40%;
+            padding: 0.5rem 0.5rem;
+          }
+          a {
+            align-items: center;
+            color: $white;
+            font-size: 20px;
+            justify-content: center;
+            text-decoration: none;
+          }
+        }
+
         &_data {
           margin: 1rem;
           padding: 1rem;
-
+          
           mark {
             background: $greenyellow;
             border-radius: 22px;
@@ -80,14 +96,14 @@
               padding: .7rem 3.8rem;
             }
           }
-          
           &_content {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             padding-bottom: 1.3rem;
-
+            
             p {
+              
               &:first-child {
                 background-color: $pink-white;
                 border-radius: 22px;

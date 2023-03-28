@@ -18,7 +18,9 @@
               <p><%= "- #{@cupon.discount_percentage} %" %></p>
               <p><%= (@cupon.normal_price.nil?) ? '' : "$ #{@cupon.normal_price}" %></p>
             </div>
-            <button>ver</button>
+            <div class='area_url'>
+              <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
+            </div>
           </div>
         </div>
         <div class='area_description'>
