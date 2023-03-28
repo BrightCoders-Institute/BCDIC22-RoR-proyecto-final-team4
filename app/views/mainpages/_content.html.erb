@@ -20,7 +20,11 @@
               <h1><%= result.title %></h1>
               <p><%= result.description %></p>
             </div>
-            <%= link_to new_cupon_path do %>
+            <div class="coupon_opc">
+              <%= button_to "delete", {:controller => :cupons, :action => 'destroy', :id => result.id }, :method => :delete %>
+              <%= link_to "Edit", edit_cupon_path(result)%>
+            </div>
+            <%= link_to cupon_path(result.id) do %>
               <div class="button_container">
                 <button>ver</button>
               </div>

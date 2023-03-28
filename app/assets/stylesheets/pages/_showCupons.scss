@@ -1,4 +1,5 @@
 .showCupons {
+  
   &_container {
     display: flex;
     flex-direction: row;
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 84%;
-
+    
     &_detaills {
       background-color: $gray-white;
       box-sizing: content-box;
@@ -19,39 +20,64 @@
       height: 100%;
       margin: 3rem;
       overflow-y: scroll;
-
+      
       @include smallxs {
         flex-direction: column-reverse;
+        margin-right: 7%;
       }
 
+      @include small {
+        flex-direction: column-reverse;
+        margin-right: -7%;
+      }
+    
       .area {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin: .5rem;
         width: 50%;
-
+        
         @include smallxs {
           width: 100%;
         }
 
+    
+
         &_image {
           height: 45%;
           padding: .3rem;
-
+          
           img {
             height: 100%;
             width: 100%;
           }
         }
-        
         &_map {
           height: 48%;
           margin-top: .2rem;
-
+          
           iframe {
             height: 100%;
             width: 100%;
+          }
+        }
+
+        .area_url{
+          display: flex;
+          justify-content: center;
+
+          button {
+           
+            width: 10rem;
+            padding: 0.5rem 0.5rem;
+          }
+          a {
+            align-items: center;
+            color: $white;
+            font-size: 20px;
+            justify-content: center;
+            text-decoration: none;
           }
         }
 
@@ -59,35 +85,80 @@
           margin: 1rem;
           padding: 1rem;
 
+          @include smallxs {
+            h2 {
+              display: flex;
+              justify-content: center
+            }
+          }
+            @include large {
+              h2 {
+                display: flex;
+                justify-content: center
+              }
+            }
+          
           mark {
             background: $greenyellow;
             border-radius: 22px;
             font-size: .8rem;
             padding: .2rem .4rem;
           }
+          .heart {
+            display: inline-block;
+            margin: -2.8rem 0 0 14rem;
+            position: relative;
 
+            @include smallxs {
+              margin: -2.8rem 0 0 26rem;
+            }
+
+            @include small {
+              margin: -2.8rem 0 0 11rem;
+            }
+            @include large {
+              margin: -2.8rem 0 0 25rem;
+            }
+            
+            .likes {
+              color: $black;
+              font-size: 18px;
+              left: 50%;
+              position: absolute;
+              top: 45%;
+              transform: translate(-50%, -50%);
+            }
+            img{
+              height: 4rem;
+              width: 4rem;
+            }
+          }
           &_container {
             display: flex;
             flex-direction: column;
             margin-top: 1.1rem;
-            
+
+
             button {
               align-self: center;
-              background-color: $black-brown;
               border-radius: 22px;
               border: none;
               color: $white;
               padding: .7rem 3.8rem;
+
+              &:last-child {
+                background-color: $black-brown;
+              }
             }
           }
-          
           &_content {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             padding-bottom: 1.3rem;
-
+            
             p {
+              
               &:first-child {
                 background-color: $pink-white;
                 border-radius: 22px;
@@ -99,16 +170,54 @@
               }
             }
           }
+
+          &_puntuation {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+
+            #likeboton,
+            #dislikeboton {
+              cursor: pointer;
+              padding: 0.5rem 1rem;
+            }
+
+            img {
+              display: flex;
+              height: 3rem;
+              justify-content: center
+            }
+
+            #likeboton.desactivado {
+              background-color: $color-likebutton;
+              cursor: not-allowed;
+              cursor: pointer;
+            }
+
+            #dislikeboton.desactivado {
+              background-color: $color-dislikebutton;
+              cursor: not-allowed;
+              cursor: pointer;
+            }
+
+            @include smallxs {
+              padding: 0%;
+            }
+
+            @include large {
+              justify-content: space-evenly
+            }
+          }
         }
 
-        &_description{
+        &_description {
           background-color: $gray-medium-light;
           border-radius: 7px;
           font-weight: 300;
           height: 45%;
           margin: 1rem;
           padding: .7rem;
-          
+
           h3 {
             opacity: 50%;
           }

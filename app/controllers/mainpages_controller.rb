@@ -1,4 +1,7 @@
 class MainpagesController < ApplicationController
+  before_action :delete_expired
+  before_action :update_expired
+
   def index
     if params[:home]
       if params[:cupon]
@@ -16,6 +19,18 @@ class MainpagesController < ApplicationController
   end
 
   private
+    def delete_expired
+      @cupon = Cupon.where('expiration_date <= ?', Date.today - 15.days)
+      @cupon.destroy_all
+    end
+
+    def update_expired
+      @cupon = Cupon.where('expiration_date <= ?', Date.today)
+      @cupon.each do |cupon|
+        @cupon.update(image_url: 'https://thumbs.dreamstime.com/b/sello-expirado-122003510.jpg')
+      end
+    end
+
 
     def find_by_category
       Cupon.where(category_id: params[:category_id])
