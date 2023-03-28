@@ -4,13 +4,18 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-   root "mainpages#index"
-  # root "articles#index"
+  delete '/logout', to: 'sessions#destroy'
 
-  resources :cupons do
-    post :increase_punctuation, on: :member
-    post :decrease_punctuation, on: :member
-  end
+
+  # Defines the root path route ("/")
+  root "mainpages#index", via: [:get,:post]
+  # root "articles#index"
  
+  resources :cupons do
+    member do
+      post 'increment_punctuation', to: 'cupons#update'
+      post 'decrement_punctuation', to: 'cupons#update'
+    end
+  end
+  
 end

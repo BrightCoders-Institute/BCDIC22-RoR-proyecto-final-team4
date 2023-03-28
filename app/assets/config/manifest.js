@@ -4,3 +4,5 @@
 //= link_tree ../../../vendor/javascript .js
 //= link show.js
 //= link update.js
+//= link navbarService.js
+//= link reload.js
