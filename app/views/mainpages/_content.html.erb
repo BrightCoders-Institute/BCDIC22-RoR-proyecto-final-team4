@@ -35,6 +35,11 @@
             <%= image_tag "user.png"%>
             <div class="information">
               <h1><%= result.name %></h2>
+              <div class="following">
+                <%= button_to (@followed.include? result.id) ? 'Siguiendo' : 'Seguir', {:controller => :mainpages, :action => 'update', :id => result.id, 
+                  :search => params[:search], :home => params[:home], 
+                  :following => params[:following] }, :method => :patch if current_user %>
+              </div>
             </div>
             <div class="button_container"><button>ver</button></div>
           </div>

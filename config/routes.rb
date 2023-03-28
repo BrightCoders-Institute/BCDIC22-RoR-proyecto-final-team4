@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "mainpages#index", via: [:get,:post]
-  # root "articles#index"
+  resources :mainpages, only: [:update]
+
   resources :cupons
 end
