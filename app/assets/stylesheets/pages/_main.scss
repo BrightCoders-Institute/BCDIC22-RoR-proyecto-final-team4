@@ -17,6 +17,7 @@
     padding: 0;
     width: 16%;
 
+    
     @include small {
       display: none;
     }
@@ -77,6 +78,27 @@
         flex-direction: column;
         height: 40%;
         justify-content: space-around;
+        
+        select {
+          background: $color1;
+          border-radius: 7px;
+          border: 1px solid $color4;
+          color: white;
+          font-size: 1rem;
+        }
+
+        button {
+          background: $color1;
+          border: 0px;
+          width: 20%;
+        }
+        
+        .logo__search {
+          background: $color1;
+          height: auto;
+          margin-top: 1rem;
+          width: 50%;
+        }
 
         &__category {
           color: $white;
