@@ -9,6 +9,14 @@
         <div class='area_map'><iframe src="https://www.google.com/maps?q= <%=@cupon.location%>&output=embed"></iframe> </div>
       </div>
       <div class='area'>
+        <div class = 'area_creator'>
+            <h3>Autor:
+              <%= 
+              result = User.find_by(id: @cupon.user_id)
+              result.name
+              %>
+            </h3>
+        </div>
         <div class='area_data'>
         <div class='heart'>
           <%=image_tag("heart.svg")%>

@@ -68,7 +68,6 @@
           justify-content: center;
 
           button {
-           
             width: 10rem;
             padding: 0.5rem 0.5rem;
           }
@@ -81,6 +80,12 @@
           }
         }
 
+        &_creator {
+          margin: 1rem;
+          padding: 1rem;
+          // background: red;
+          border-radius: 7px;
+        }
         &_data {
           margin: 1rem;
           padding: 1rem;
@@ -98,6 +103,8 @@
               }
             }
           
+          // background: gray;
+          border-radius: 7px;
           mark {
             background: $greenyellow;
             border-radius: 22px;
