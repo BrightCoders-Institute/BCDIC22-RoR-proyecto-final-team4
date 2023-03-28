@@ -66,6 +66,18 @@
       text-decoration: none;
     }
   }
+  
+  .link-return-category {
+    margin-top: 5%;
+    a {
+      background-color: $blue;
+      border-radius: 15px;
+      color: $black;
+      font-size: 30px;
+      padding: 0 6%;
+      text-decoration: none;
+    }
+  }
 }
 
 .container-show-category {

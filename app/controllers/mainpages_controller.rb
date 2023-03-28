@@ -11,7 +11,11 @@ class MainpagesController < ApplicationController
         @result = user_following
       end
     else
-      @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
+      if params[:category_id].nil?
+        @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
+      else
+        @result = find_by_category
+      end
     end
     @followed = users_followed if current_user
   end
@@ -42,7 +46,12 @@ class MainpagesController < ApplicationController
         @cupon.update(image_url: 'https://thumbs.dreamstime.com/b/sello-expirado-122003510.jpg')
       end
     end
-    
+
+
+    def find_by_category
+      Cupon.where(category_id: params[:category_id])
+    end
+
     def find
       result = User.select(:id, :name).where("name LIKE ?","%" + params[:search].downcase + "%")
       result += Cupon.where("title LIKE ?","%" + params[:search].downcase + "%")
@@ -70,5 +79,6 @@ class MainpagesController < ApplicationController
       following = users_followed.delete(params[:id].to_i)
       current_user.update(follower: "#{(following == params[:id].to_i) ? '' : following.to_s.tr!('[] ','')}")
     end
+        
 end
   
