@@ -1,0 +1,2 @@
+class Interaccione < ApplicationRecord
+end
