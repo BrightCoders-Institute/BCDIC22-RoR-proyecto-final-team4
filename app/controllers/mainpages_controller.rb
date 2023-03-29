@@ -47,7 +47,6 @@ class MainpagesController < ApplicationController
       end
     end
 
-
     def find_by_category
       Cupon.where(category_id: params[:category_id])
     end
@@ -67,7 +66,8 @@ class MainpagesController < ApplicationController
     end
     
     def users_followed
-      current_user.follower&.split(",")&.map(&:to_i)
+      result = current_user.follower&.split(",")&.map(&:to_i)
+      (result.nil?) ? [] : result
     end
   
     def add_follower
@@ -76,9 +76,10 @@ class MainpagesController < ApplicationController
     end
   
     def remove_follower
-      following = users_followed.delete(params[:id].to_i)
-      current_user.update(follower: "#{(following == params[:id].to_i) ? '' : following.to_s.tr!('[] ','')}")
-    end
-        
+      follow = users_followed.to_a
+      follow.delete(params[:id].to_i)
+      follow.delete(0)
+      current_user.update(follower: "#{(follow == params[:id].to_i) ? '' : follow.to_s.tr!('[] ','')}")
+    end  
 end
   
