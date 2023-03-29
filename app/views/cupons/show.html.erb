@@ -26,10 +26,12 @@
               <p><%= "- #{@cupon.discount_percentage} %" %></p>
               <p><%= (@cupon.normal_price.nil?) ? '' : "$ #{@cupon.normal_price}" %></p>
             </div>
+            <% if user_signed_in? %>
               <div class="area_data_puntuation">
-              <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment" } %>
-              <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement"} %>
-            </div>
+                <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment" } %>
+                <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement"} %>
+              </div>
+            <% end %>
             <div class='area_url'>
               <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
             </div>

@@ -7,11 +7,9 @@ class CuponsController < ApplicationController
   end
 
   def show
-  
     @cupon = Cupon.find(params[:id])
     img
     porcentaje
-    
   end
 
   def update
@@ -43,6 +41,7 @@ class CuponsController < ApplicationController
       redirect_to root_path
     end
   end
+
   def set_punctuation
     if params[:type] == "increment"
       if !voted?(1)
@@ -57,6 +56,7 @@ class CuponsController < ApplicationController
     end
     redirect_to @cupon
   end
+
   def new
     @cupon = Cupon.new
   end
@@ -82,6 +82,7 @@ class CuponsController < ApplicationController
   end
 
   private
+  
   def set_cupon
     @cupon = Cupon.find(params[:id])
   end
@@ -95,9 +96,10 @@ class CuponsController < ApplicationController
     end
   end
 
-  def set_voted_cookie(value)
-    cookies.signed[@cupon.id] = value
-  end
+    def set_voted_cookie(value)
+      cookies.signed[@cupon.id] = value
+    end
+
     def cupon_params
       params.require(:cupon).permit(:url, :title, :description, :location, :image_url, :normal_price, :discount_price, :coupon, :promotion_type, :start_date, :expiration_date, :category_id)
     end
