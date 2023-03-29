@@ -33,6 +33,7 @@ class MainpagesController < ApplicationController
     def render_layout
       redirect_to root_path(search: params[:search]).to_s unless params[:search].nil?
       redirect_to root_path(home: true, following: true) unless params[:following].nil?
+      # redirect_to coupon_url(home: true, following: true) unless params[:following].nil?
     end
   
     def delete_expired

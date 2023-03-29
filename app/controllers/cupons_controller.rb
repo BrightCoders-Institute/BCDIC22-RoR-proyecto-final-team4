@@ -8,6 +8,7 @@ class CuponsController < ApplicationController
 
   def show
     @cupon = Cupon.find(params[:id])
+    @followed = users_followed if current_user
     img
     porcentaje
   end
@@ -83,6 +84,11 @@ class CuponsController < ApplicationController
 
   private
   
+    def users_followed
+      result = current_user.follower&.split(",")&.map(&:to_i)
+      (result.nil?) ? [] : result
+    end
+    
   def set_cupon
     @cupon = Cupon.find(params[:id])
   end
