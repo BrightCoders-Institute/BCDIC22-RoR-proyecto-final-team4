@@ -22,8 +22,8 @@
             </div>
             <div class="coupon_opc">
               <%= link_to "Ver", cupon_path(result.id) %>
-              <%= ((button_to "delete", {:controller => :cupons, :action => 'destroy', :id => result.id }, :method => :delete) if current_user.id == result.user_id) if current_user %>
-              <%= ((link_to "Edit", edit_cupon_path(result)) if current_user.id == result.user_id) if current_user %>
+              <%= (button_to "delete", {:controller => :cupons, :action => 'destroy', :id => result.id }, :method => :delete) if current_user.id == result.user_id && current_user %>
+              <%= (link_to "Edit", edit_cupon_path(result)) if current_user.id == result.user_id && current_user %>
             </div>
           </div>
         <%else%>
