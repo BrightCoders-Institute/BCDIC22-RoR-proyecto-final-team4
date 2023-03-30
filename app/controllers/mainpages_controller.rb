@@ -4,6 +4,7 @@ class MainpagesController < ApplicationController
   before_action :update_expired
 
   def index
+    @cupons = Cupon.all.sort_by(&:punctuation_with_default).reverse.take(3)
     if params[:home]
       if params[:cupon]
         @result = user_cupons
@@ -19,6 +20,7 @@ class MainpagesController < ApplicationController
     end
     @followed = users_followed if current_user
   end
+
 
   def update
     unless users_followed.include? params[:id].to_i
