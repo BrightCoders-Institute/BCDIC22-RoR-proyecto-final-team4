@@ -2,11 +2,20 @@
   <div class="home_content">
     <div class="home_content_user">
       <%= image_tag "user.png" %>
-      <h2><%= current_user.name %></h2>
+      <h2>
+        <%= 
+          if params[:user_id].nil?
+            current_user.name
+          else
+            user = User.select(:name).find_by(id: params[:user_id].to_i)
+            user.name
+          end
+        %>
+      </h2>
     </div>
     <div class="home_content_buttons">
-      <%= link_to 'Cupónes', root_path(:home => true, :cupon => true) %>
-      <%= link_to 'Usuarios Seguidos', root_path(:home => true, :following => true) %>
+      <%= link_to 'Cupónes', root_path(:home => true, :cupon => true) if params[:user_id].nil? %>
+      <%= link_to 'Usuarios Seguidos', root_path(:home => true, :following => true) if params[:user_id].nil? %>
     </div>
   </div>
 </div>
