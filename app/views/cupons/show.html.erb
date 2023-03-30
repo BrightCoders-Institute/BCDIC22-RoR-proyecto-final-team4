@@ -9,13 +9,36 @@
         <div class='area_map'><iframe src="https://www.google.com/maps?q= <%=@cupon.location%>&output=embed"></iframe> </div>
       </div>
       <div class='area'>
+        
         <div class='area_data'>
-        <div class='heart'>
-          <%=image_tag("heart.svg")%>
-          <div id="likes-container">
-            <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
-          </div>
-          
+        
+
+        <div class = 'area_creator'>
+            <h3>Autor:
+              <%= 
+              result = User.find_by(id: @cupon.user_id)
+              result.name
+              %>
+            </h3>
+            <div class="follos">
+                <div class="following">
+                  <%=
+                    following = @followed.include? result.id if current_user 
+                    
+                    button_to (following) ? 'Siguiendo' : 'Seguir', {:controller => :mainpages, :action => 'update', :id => result.id, 
+                    :search => params[:search], :home => params[:home], 
+                    :following => params[:following] , :id_cupon => @cupon.id }, :method => :patch, 
+                    class: (following) ? 'follow' : 'not_follow' if current_user 
+                  %>
+                  <%= image_tag 'following.svg', class: (following) ? 'following_svg follow' : 'following_svg not_follow' if current_user %>
+                </div>
+                <div class='heart'>
+                  <%=image_tag("heart.svg")%>
+                  <div id="likes-container">
+                    <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
+                  </div>
+                </div>
+            </div>
         </div>
           <h2><%= @cupon.title %></h2>
           <mark>Vigente</mark>
