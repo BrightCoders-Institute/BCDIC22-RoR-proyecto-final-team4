@@ -273,6 +273,7 @@
       margin: 5% 5% 0% 5%;
 
       &_slider {
+        border-radius: .7rem;
         filter: drop-shadow(.5rem .5rem 1.5rem $black);
         height: 92%;
         overflow: hidden;
@@ -336,10 +337,14 @@
             margin: 5%;
 
             img {
-              border: 3px solid $black;
+              border-radius: 1rem;
+              border: 3px solid $grey;
               height: 20rem;
               width: 100%;
-
+              &:hover {
+                transition: .5s ease;
+                box-shadow: 1px 7px 12px $grey;
+              }
               @include smallxs {
                 height: 14rem;
               }
@@ -355,10 +360,15 @@
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
+                font-size: 20px;
+                height: 3rem;
                 margin: -4% 1% 83% -15%;
                 padding: 23% 14%;
-                height: 3rem;
-                font-size: 20px;
+
+                &:hover {
+                  box-shadow: 1px 5px 5px $grey;
+                  transition: .5s ease;
+                }
               }
 
               a {
@@ -366,11 +376,16 @@
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
-                padding: 4% 3%;
-                margin: -0.5% 10% 0% 0%;
-                height: 1.3rem;
                 font-size: 20px;
+                height: 1.3rem;
+                margin: -0.5% 10% 0% 0%;
+                padding: 4% 3%;
                 text-decoration: none;
+
+                &:hover {
+                  box-shadow: 1px 5px 5px $grey;
+                  transition: .5s ease;
+                }
               }
             }
 
