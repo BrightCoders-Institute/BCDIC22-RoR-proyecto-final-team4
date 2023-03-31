@@ -155,7 +155,7 @@
             }
 
             @include small {
-              margin: -2.8rem 0 0 11rem;
+              margin: -2.8rem 0 0 8rem;
             }
             @include large {
               margin: -2.8rem 0 0 25rem;
@@ -255,10 +255,9 @@
           background-color: $gray-medium-light;
           border-radius: 7px;
           font-weight: 300;
-          height: 45%;
           margin: 1rem;
           padding: .7rem;
-
+          
           h3 {
             opacity: 50%;
           }

@@ -1,3 +1,4 @@
+
 <div class="header_container">
   <div class="serch_bar">
     <%= form_with url: root_path, method: :get do |form| %>
@@ -14,7 +15,8 @@
   </div>
   <div class="buttons_container">
   <% if user_signed_in? %>
-    <%= button_to "Logout", destroy_user_session_path, method: :delete, class:'sign_up_header' %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'sign_up_header', id: 'logout-button' %>
+    <%= javascript_include_tag 'cookies'%>
   <% else %>
     <%= link_to user_session_path do %>
       <input class="login_header" type="button" value="Login"> 

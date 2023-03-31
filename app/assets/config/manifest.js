@@ -6,3 +6,4 @@
 //= link update.js
 //= link navbarService.js
 //= link reload.js
+//= link cookies.js
