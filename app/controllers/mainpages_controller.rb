@@ -11,6 +11,8 @@ class MainpagesController < ApplicationController
       elsif params[:following]
         @result = user_following
       end
+    elsif params[:users]
+      @result = all_users
     else
       if params[:category_id].nil?
         @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
@@ -35,6 +37,7 @@ class MainpagesController < ApplicationController
     def render_layout
       redirect_to root_path(search: params[:search]).to_s unless params[:search].nil?
       redirect_to root_path(home: true, following: true) unless params[:following].nil?
+      redirect_to root_path(users: true) unless params[:users].nil?
       # redirect_to cupon_path(cupon: true, following: true) unless params[:id].nil?
       # @cupon = Cupon.find(params[:id])
       redirect_to cupon_path(params[:id_cupon]) unless params[:id_cupon].nil?
@@ -73,6 +76,10 @@ class MainpagesController < ApplicationController
     def users_followed
       result = current_user.follower&.split(",")&.map(&:to_i)
       (result.nil?) ? [] : result
+    end
+
+    def all_users
+      User.all.select(:id, :name)
     end
   
     def add_follower
