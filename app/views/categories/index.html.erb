@@ -5,15 +5,23 @@
       <h1>Categories</h1>
     </div>
     <div class="list-main-category" id="categories">
-      <% @categories.each do |category| %>
-        <%= render category %>
-        <p>
-          <%= link_to "Edit", edit_category_path(category) %>
-        </p>
-        <div class="destroy-show-category">
-          <%= button_to "Delete", category, method: :delete %>
-        </div>
-      <% end %>
+      <table class = "table-category">
+        <tr>
+          <th>Name</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <% @categories.each do |category| %>
+        <tr>
+          <th><%= render category %></th>
+          <th><%= link_to "Edit", edit_category_path(category) %></th>
+          <th><%= button_to "Delete", category, method: :delete %></th>
+        </tr>
+        
+            
+            
+        <% end %>
+      </table>
     </div>
     <div class="link-main-category">
       <%= link_to "New category", new_category_path %>
