@@ -17,7 +17,7 @@
               end
             %>
             <div class="information">
-              <h1><%= result.title %></h1>
+              <h3><%= result.title %></h3>
               <p><%= result.description %></p>
             </div>
             <div class="coupon_opc">
@@ -27,12 +27,25 @@
             </div>
           </div>
         <%else%>
-          <div class="box user">
-            <%= image_tag "user.png"%>
-            <div class="information">
-              <h1><%= result.name %></h2>
+          <div class="users">
+            <div class="users_box">
+              <div class="following">
+                <%=
+                  following = @followed.include? result.id if current_user 
+                  
+                  button_to (following) ? 'Siguiendo' : 'Seguir', {:controller => :mainpages, :action => 'update', :id => result.id, 
+                  :search => params[:search], :home => params[:home], 
+                  :following => params[:following] }, :method => :patch, 
+                  class: (following) ? 'follow' : 'not_follow' if current_user 
+                %>
+                <%= image_tag 'following.svg', class: (following) ? 'following_svg follow' : 'following_svg not_follow' if current_user %>
+              </div>
+              <%= image_tag "user.png"%>
+              <div class="information">
+                <h3 class="<%= (result.name.length >= 12) ? 'name_long' : 'name_short' %>"><%= result.name %></h3>
+              </div>
+              <div class="button_container"><button>ver</button></div>
             </div>
-            <div class="button_container"><button>ver</button></div>
           </div>
         <%end%>
       </li>

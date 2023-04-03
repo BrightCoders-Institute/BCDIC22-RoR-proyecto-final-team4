@@ -68,10 +68,10 @@
           justify-content: center;
 
           button {
-           
             width: 10rem;
             padding: 0.5rem 0.5rem;
           }
+          
           a {
             align-items: center;
             color: $white;
@@ -81,6 +81,45 @@
           }
         }
 
+        &_creator {
+          border-radius: 7px;
+          padding: 1rem 0 ;
+          .heart {
+            width: 15%;
+
+          }
+          .following {
+            align-items: center;
+            display: flex;
+            width: 85%;
+            .heart {
+              width: 15%;
+            }
+
+            &_svg {
+              border-radius: 7px;
+              border: none;
+              height: 10%;
+              width: 7%;
+            }
+            
+            button {
+              border-color: $grey;
+              border-radius: 7px 2px;
+              color:$white;
+              margin: .1rem;
+              padding: .1rem .3rem;
+            }
+
+            .follow {
+              background: $color-susseful;
+            }
+
+            .not_follow {
+              background: $red;
+            }
+          }
+        }
         &_data {
           margin: 1rem;
           padding: 1rem;
@@ -98,6 +137,8 @@
               }
             }
           
+          // background: gray;
+          border-radius: 7px;
           mark {
             background: $greenyellow;
             border-radius: 22px;
@@ -114,7 +155,7 @@
             }
 
             @include small {
-              margin: -2.8rem 0 0 11rem;
+              margin: -2.8rem 0 0 8rem;
             }
             @include large {
               margin: -2.8rem 0 0 25rem;
@@ -214,10 +255,9 @@
           background-color: $gray-medium-light;
           border-radius: 7px;
           font-weight: 300;
-          height: 45%;
           margin: 1rem;
           padding: .7rem;
-
+          
           h3 {
             opacity: 50%;
           }

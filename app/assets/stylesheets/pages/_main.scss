@@ -17,6 +17,7 @@
     padding: 0;
     width: 16%;
 
+    
     @include small {
       display: none;
     }
@@ -77,6 +78,27 @@
         flex-direction: column;
         height: 40%;
         justify-content: space-around;
+        
+        select {
+          background: $color1;
+          border-radius: 7px;
+          border: 1px solid $color4;
+          color: white;
+          font-size: 1rem;
+        }
+
+        button {
+          background: $color1;
+          border: 0px;
+          width: 20%;
+        }
+        
+        .logo__search {
+          background: $color1;
+          height: auto;
+          margin-top: 1rem;
+          width: 50%;
+        }
 
         &__category {
           color: $white;
@@ -128,6 +150,7 @@
 
   &_header_up {
     height: 10%;
+    margin-bottom: 2rem;
 
     .header_container {
       display: flex;
@@ -250,6 +273,7 @@
       margin: 5% 5% 0% 5%;
 
       &_slider {
+        border-radius: .7rem;
         filter: drop-shadow(.5rem .5rem 1.5rem $black);
         height: 92%;
         overflow: hidden;
@@ -271,18 +295,18 @@
 
       @keyframes slidy {
         0% {left: 0%;}
-        15% {left: 0%;}
-        25% {left: -100%;}
-        35% {left: -100%;}
-        40% {left: -200%;}
-        50% {left: -200%;}
-        65% {left: -300%;}
-        75% {left: -300%;}
-        85% {left: -400%;}
-        100% {left: -400%;}
+        11.1% {left: 0%;}
+        22.2% {left: -100%;}
+        33.3% {left: -100%;}
+        44.4% {left: -200%;}
+        55.5% {left: -200%;}
+        66.6% {left: -100%;}
+        77.7% {left: -100%;}
+        88.8% {left: 0%;}
+        100% {left: 0%;}
       }
     }
-
+ 
     &_content {
       box-sizing: content-box;
       padding: 0% 5% 5% 8%;
@@ -304,13 +328,8 @@
           list-style-type: none;
           width: 50%;
 
-          @include small {
+          @include smallxs {
             width: 100%;
-          }
-
-          .user {
-            height: 60%;
-            width: 60%;
           }
 
           .box {
@@ -319,10 +338,14 @@
             margin: 5%;
 
             img {
-              border: 3px solid $black;
+              border-radius: 1rem;
+              border: 3px solid $grey;
               height: 20rem;
               width: 100%;
-
+              &:hover {
+                transition: .5s ease;
+                box-shadow: 1px 7px 12px $grey;
+              }
               @include smallxs {
                 height: 14rem;
               }
@@ -338,10 +361,18 @@
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
-                margin: 5% 0% 0% 15%;
-                padding: 23% 14%;
-                height: 3rem;
+                
+
                 font-size: 20px;
+                height: 3rem;
+                margin: 5% 0% 0% 15%;
+
+                padding: 23% 14%;
+
+                &:hover {
+                  box-shadow: 1px 5px 5px $grey;
+                  transition: .5s ease;
+                }
               }
 
               a {
@@ -349,11 +380,16 @@
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
-                padding: 10px 10px 35px 10px;
-                margin: 0.5% 0% 0% 10%;
-                height: 0.1rem;
                 font-size: 20px;
+                height: 0.1rem;
+                margin: 0.5% 0% 0% 10%;
+                padding: 10px 10px 35px 10px;
                 text-decoration: none;
+
+                &:hover {
+                  box-shadow: 1px 5px 5px $grey;
+                  transition: .5s ease;
+                }
               }
             }
 
@@ -371,7 +407,7 @@
                 margin: -35% 25% 17% 6%;
               }
 
-              h1 {
+              h3 {
                 color: $color-white;
                 font-size: 160%;
                 margin-bottom: 3%;
@@ -387,6 +423,192 @@
                 padding-right: 11%;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+              }
+
+              .following {
+                align-items: center;
+                display: flex;
+
+                &_svg {
+                  border: none;
+                  height: 75%;
+                  width: 15%;
+                }
+                
+                button {
+                  border-color: $grey;
+                  border-radius: 7px 2px;
+                  color:$white;
+                  margin: .1rem;
+                  padding: .1rem .3rem;
+                }
+                .follow {
+                  background: $color-susseful;
+                }
+
+                .not_follow {
+                  background: $red;
+                }
+              }
+            }
+          }
+
+          .users {
+            display: flex;
+            justify-content: center;
+
+            
+            &_box {
+              border-radius: 1rem;
+              border: 3px solid $grey;
+              display: flex;
+              flex-direction: column;
+              margin: 5%;
+              width: 60%;
+              
+              &:hover {
+                box-shadow: 1px 7px 12px $grey;
+              }
+
+              @include mediumSmall {
+                width: 95%;
+              }
+              
+              .following {
+                align-self: flex-end;
+                align-items: center;
+                display: flex;
+                margin: .5rem;
+
+                &_svg {
+                  border: none;
+                  height: 75%;
+                  width: 20%;
+                }
+                
+                button {
+                  border-color: $grey;
+                  border-radius: 7px 2px;
+                  color:$white;
+                  margin: .1rem;
+                  padding: .1rem .3rem;
+                }
+
+                .follow {
+                  background: $color-susseful;
+                }
+
+                .not_follow {
+                  background: $red;
+                }
+              }
+
+              img {
+                align-self: center;
+                border-radius: .5rem;
+                border: 1px solid $grey;
+                width: 40%;
+
+                @include smallxs {
+                  width: 60%;
+                }
+              }
+              
+              .coupon_opc {
+                display: flex;
+                flex-direction: row-reverse;
+                margin: -83% 4% 55% 5%;
+                
+                button {
+                  background-color: $transparent-black;
+                  border-radius: 100px;
+                  border: 1px solid $color-white;
+                  color: $color-white;
+                  font-size: 20px;
+                  height: 3rem;
+                  margin: -4% 1% 83% -15%;
+                  padding: 23% 14%;
+                }
+
+                a {
+                  background-color: $transparent-black;
+                  border-radius: 100px;
+                  border: 1px solid $color-white;
+                  color: $color-white;
+                  font-size: 20px;
+                  height: 1.3rem;
+                  margin: -0.5% 10% 0% 0%;
+                  padding: 4% 3%;
+                  text-decoration: none;
+                }
+              }
+              
+              .information {
+                background-color: $transparent-black;
+                border-radius: 10px;
+                border: 1px solid $color-white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: .4rem 1.6rem;
+                padding-left:10px ;
+                text-shadow: 1px 1px 2px $black;
+                
+                h3 {
+                  align-self: center;
+                  color: $color-white;
+                  margin-bottom: 3%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+                .name {
+                  &_long {
+                    font-size: .92rem;
+
+                    @include mediumSmall {
+                      font-size: .8rem;
+                    }
+                  }
+                  
+                  &_short {
+                    font-size: 2rem;
+                    
+                    @include medium {
+                      font-size: 1.5rem;
+                    }
+
+                    @include mediumSmall {
+                      font-size: 1.2rem;
+                    }
+                  }
+                }
+                
+                p {
+                  color: $color-white;
+                  font-size: 80%;
+                  overflow: hidden;
+                  padding-right: 11%;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+              }
+              
+              .button_container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                margin-bottom: .5rem;
+                
+                button {
+                  background-color: $transparent-black;
+                  border-radius: 100px;
+                  border: 1px solid $color-white;
+                  color: $color-white;
+                  padding: 2% 10%;
+                  text-decoration: none;
+                }
               }
             }
           }

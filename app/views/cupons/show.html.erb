@@ -9,13 +9,36 @@
         <div class='area_map'><iframe src="https://www.google.com/maps?q= <%=@cupon.location%>&output=embed"></iframe> </div>
       </div>
       <div class='area'>
+        
         <div class='area_data'>
-        <div class='heart'>
-          <%=image_tag("heart.svg")%>
-          <div id="likes-container">
-            <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
-          </div>
-          
+        
+
+        <div class = 'area_creator'>
+            <h3>Autor:
+              <%= 
+              result = User.find_by(id: @cupon.user_id)
+              result.name
+              %>
+            </h3>
+            <div class="follos">
+                <div class="following">
+                  <%=
+                    following = @followed.include? result.id if current_user 
+                    
+                    button_to (following) ? 'Siguiendo' : 'Seguir', {:controller => :mainpages, :action => 'update', :id => result.id, 
+                    :search => params[:search], :home => params[:home], 
+                    :following => params[:following] , :id_cupon => @cupon.id }, :method => :patch, 
+                    class: (following) ? 'follow' : 'not_follow' if current_user 
+                  %>
+                  <%= image_tag 'following.svg', class: (following) ? 'following_svg follow' : 'following_svg not_follow' if current_user %>
+                </div>
+                <div class='heart'>
+                  <%=image_tag("heart.svg")%>
+                  <div id="likes-container">
+                    <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
+                  </div>
+                </div>
+            </div>
         </div>
           <h2><%= @cupon.title %></h2>
           <mark>Vigente</mark>
@@ -26,10 +49,12 @@
               <p><%= "- #{@cupon.discount_percentage} %" %></p>
               <p><%= (@cupon.normal_price.nil?) ? '' : "$ #{@cupon.normal_price}" %></p>
             </div>
+            <% if user_signed_in? %>
               <div class="area_data_puntuation">
-              <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment", turbolinks: false} %>
-              <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement", turbolinks: false} %>
-            </div>
+                <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment" } %>
+                <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement"} %>
+              </div>
+            <% end %>
             <div class='area_url'>
               <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
             </div>

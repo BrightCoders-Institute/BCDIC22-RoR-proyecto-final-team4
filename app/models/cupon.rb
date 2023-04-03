@@ -12,6 +12,10 @@ class Cupon < ApplicationRecord
     }
 
   before_save :downcase_atributes
+  
+  def punctuation_with_default
+    self.punctuation || 0
+  end
   private
   def downcase_atributes
     self.title = title.downcase
