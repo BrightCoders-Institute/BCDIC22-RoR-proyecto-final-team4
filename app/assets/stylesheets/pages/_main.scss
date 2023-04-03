@@ -324,6 +324,7 @@
         li {
           display: flex;
           flex-direction: column;
+          margin-bottom: 260px;
           list-style-type: none;
           width: 50%;
 
@@ -353,16 +354,19 @@
             .coupon_opc {
               display: flex;
               flex-direction: row-reverse;
-              margin: -83% 4% 55% 5%;
+              margin: -375px 1% 0% 0%;
 
               button {
                 background-color: $transparent-black;
                 border-radius: 100px;
                 border: 1px solid $color-white;
                 color: $color-white;
+                
+
                 font-size: 20px;
                 height: 3rem;
-                margin: -4% 1% 83% -15%;
+                margin: 5% 0% 0% 15%;
+
                 padding: 23% 14%;
 
                 &:hover {
@@ -377,9 +381,9 @@
                 border: 1px solid $color-white;
                 color: $color-white;
                 font-size: 20px;
-                height: 1.3rem;
-                margin: -0.5% 10% 0% 0%;
-                padding: 4% 3%;
+                height: 0.1rem;
+                margin: 0.5% 0% 0% 10%;
+                padding: 10px 10px 35px 10px;
                 text-decoration: none;
 
                 &:hover {
@@ -395,7 +399,7 @@
               border: 1px solid $color-white;
               display: flex;
               flex-direction: column;
-              margin: -26% 31% 17% 6%;
+              margin: -95px 31% 17% 6%;
               padding-left:10px ;
               text-shadow: 1px 1px 2px $black;
 
@@ -445,21 +449,6 @@
                 .not_follow {
                   background: $red;
                 }
-              }
-            }
-
-            .button_container {
-              display: flex;
-              flex-direction: row-reverse;
-
-              button {
-                background-color: $transparent-black;
-                border-radius: 100px;
-                border: 1px solid $color-white;
-                color: $color-white;
-                margin: -20% 3% 15% 10%;
-                padding: 2% 10%;
-                text-decoration: none;
               }
             }
           }
