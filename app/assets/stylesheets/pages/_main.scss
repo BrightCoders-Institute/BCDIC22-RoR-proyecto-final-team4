@@ -282,6 +282,7 @@
           img {
             filter: brightness(90%);
             height: 100%;
+            object-fit: contain;
             width: 20%;
           }
         }
@@ -318,28 +319,35 @@
         li {
           display: flex;
           flex-direction: column;
-          margin-bottom: 260px;
           list-style-type: none;
           width: 50%;
 
           @include smallxs {
             width: 100%;
           }
+          .link{
+            text-decoration: none;
+          }
 
           .box {
+            border-radius: 1rem;
+            border: 3px solid $grey;
             display: flex;
             flex-direction: column;
             margin: 5%;
-
+            padding: 1%;
+            &:hover {
+              box-shadow: 1px 7px 12px $grey;
+              transition: .5s ease;
+            }
+          
             img {
-              border-radius: 1rem;
-              border: 3px solid $grey;
-              height: 20rem;
+              border-radius: 0.5rem;
+              height: 15rem;
+              margin-bottom: .5rem;
+              object-fit: contain;
               width: 100%;
-              &:hover {
-                transition: .5s ease;
-                box-shadow: 1px 7px 12px $grey;
-              }
+              
               @include smallxs {
                 height: 14rem;
               }
@@ -347,20 +355,17 @@
 
             .coupon_opc {
               display: flex;
-              flex-direction: row-reverse;
-              margin: -375px 1% 0% 0%;
-
+              justify-content: space-around;
+              margin-top: 5%;
+              
               button {
-                background-color: $transparent-black;
-                border-radius: 100px;
+                background-color: $color-dislikebutton;
+                border-radius: 1rem;
                 border: 1px solid $color-white;
                 color: $color-white;
-                
-
                 font-size: 20px;
                 height: 3rem;
-                margin: 5% 0% 0% 15%;
-
+                margin: 3% 0% 0% 15%;
                 padding: 23% 14%;
 
                 &:hover {
@@ -370,8 +375,8 @@
               }
 
               a {
-                background-color: $transparent-black;
-                border-radius: 100px;
+                background-color: $color4;
+                border-radius: 1rem;
                 border: 1px solid $color-white;
                 color: $color-white;
                 font-size: 20px;
@@ -379,7 +384,7 @@
                 margin: 0.5% 0% 0% 10%;
                 padding: 10px 10px 35px 10px;
                 text-decoration: none;
-
+              
                 &:hover {
                   box-shadow: 1px 5px 5px $grey;
                   transition: .5s ease;
@@ -393,13 +398,8 @@
               border: 1px solid $color-white;
               display: flex;
               flex-direction: column;
-              margin: -95px 31% 17% 6%;
               padding-left:10px ;
               text-shadow: 1px 1px 2px $black;
-
-              @include smallxs {
-                margin: -35% 25% 17% 6%;
-              }
 
               h3 {
                 color: $color-white;
