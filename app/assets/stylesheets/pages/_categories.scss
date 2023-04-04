@@ -10,7 +10,6 @@
   
   .destroy-show-category {
     margin-top: 3%;
-    
     button {
       background-color: $orange;
       border-radius: 15px;
@@ -22,6 +21,7 @@
       width: 52%;
     }
   }
+
   .box-main-category {
     background: $black-gray;
     border-radius: 22px;
@@ -29,31 +29,67 @@
     padding: 2rem;
 
     .list-main-category {
+      button {
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        width: 2.8rem;
+        border-radius: 7px;
+        background-color: $color5;
+        border: 0;
+        &:hover {
+          box-shadow: none;
+          transition: 1s ease;
+        }
+      }
+
       .button-delete{
+        border: 0;
+        padding: .2rem;
         width: 2rem;
+        height: 30%;
+      }
+      .button-edit {
+        background-color: $color-susseful;
+        padding: .3rem;
+        border-radius: 7px;
+        width: 2rem;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+
+        &:hover {
+          box-shadow: none;
+          transition: 1s ease;
+        }
       }
       .table-category {
+        border-radius: 7px;
         width: 100%;
         margin: 0px;
-        background-color: $color2;
+        background-color: white;
+
+        .buttons {
+          padding-top: .2rem;
+        }
+
         th {
+          border-radius: 7px;
           padding: .5rem;
           background-color: $color4;
         }
+
         td {
+          border-radius: 7px;
+          border: 1px solid gray;
           div {
-            margin: 0;
+            margin: .4rem .4rem;
+            text-transform: uppercase;
+            color: black;
             padding: .5rem;
           }
         }
+
         td:first-child {
           text-align: left;
           margin: 0px;
         }
-        tr:nth-child(even){
-          background-color: $color1;
-        }
-        
       }
     }
 

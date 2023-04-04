@@ -18,8 +18,12 @@
         <% @categories.each do |category| %>
         <tr>
           <td><%= render category ,class: 'name_category'%></td>
-          <td><%= link_to "Edit", edit_category_path(category), class: 'button-edit' %></td>
-          <td><%= button_to 'delete', category, method: :delete  %></td>
+          <td class='buttons'><%= link_to edit_category_path(category) do %>
+                <%= image_tag 'lapiz.svg', alt: 'Edit' , class: 'button-edit'%> 
+              <% end %></td>
+          <td class='buttons'><%= button_to category_path(category), method: :delete do %>
+                <%= image_tag 'basura.svg' , class: 'button-delete'%> 
+              <% end %></td>
 
           
         </tr>    
