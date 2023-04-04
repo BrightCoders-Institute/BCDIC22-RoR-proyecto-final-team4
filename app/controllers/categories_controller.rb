@@ -65,7 +65,7 @@ class CategoriesController < ApplicationController
     end
 
     def authenticate_user
-      if current_user.nil? || current_user.email != "procuponss@gmail.com"
+      if current_user.nil? || current_user.email != Rails.application.credentials.mailer.public_username
         redirect_to root_path
       end
     end
