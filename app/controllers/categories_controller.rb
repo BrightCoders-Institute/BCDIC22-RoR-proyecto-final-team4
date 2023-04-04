@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user
   before_action :set_category, only: %i[ show edit update destroy ]
 
   # GET /categories or /categories.json
@@ -61,5 +62,11 @@ class CategoriesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def category_params
       params.require(:category).permit(:namecategory)
+    end
+
+    def authenticate_user
+      if current_user.nil? || current_user.email != "procuponss@gmail.com"
+        redirect_to root_path
+      end
     end
 end

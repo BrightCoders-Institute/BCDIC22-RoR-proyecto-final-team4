@@ -11,7 +11,7 @@
         <% end %>
         <div class='main_cupons_content'><%= render 'content'%></div>
       </div>
-      <div class='main_cupons_bar_right'><%= render 'category'%></div>
+      <div class='main_cupons_bar_right'><%= (render 'category') if current_user && current_user.email == "procuponss@gmail.com"%></div>
     </div>
   </div>
 </div>
