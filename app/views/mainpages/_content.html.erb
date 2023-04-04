@@ -7,23 +7,23 @@
   <% else %>
     <% @result.each do |result| %>
       <li>
-        <%if result.is_a? Cupon%>
+        <%if result.is_a? Cupon%>  
+          <a href="<%= cupon_path(result.id) %>" class="link">
           <div class="box" >
-            <%=
-              if result.image_url == "" 
-                image_tag "coupon_defaul.webp"
-              else 
-                image_tag result.image_url 
-              end
+            <%= if result.image_url == "" 
+              image_tag "coupon_defaul.webp"
+            else 
+              image_tag result.image_url
+            end
             %>
             <div class="information">
               <h3><%= result.title %></h3>
               <p><%= result.description %></p>
             </div>
+          </a>
             <div class="coupon_opc">
-              <%= link_to "Ver", cupon_path(result.id) %>
               <%= (button_to "delete", {controller: :cupons, action: 'destroy', id: result.id }, method: :delete) if current_user && current_user.id == result.user_id %>
-              <%= (link_to "Edit", edit_cupon_path(result)) if current_user && current_user.id == result.user_id %>
+              <%= (link_to "Edit", edit_cupon_path(result)) if current_user && current_user.id == result.user_id %> 
             </div>
           </div>
         <%else%>
