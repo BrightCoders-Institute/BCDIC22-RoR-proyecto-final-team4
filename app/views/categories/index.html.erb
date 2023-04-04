@@ -4,24 +4,28 @@
     <div class="title-main-category">
       <h1>Categories</h1>
     </div>
+
     <div class="list-main-category" id="categories">
+
       <table class = "table-category">
+        <thead>
         <tr>
           <th>Name</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
+        </thead>
         <% @categories.each do |category| %>
         <tr>
-          <th><%= render category %></th>
-          <th><%= link_to "Edit", edit_category_path(category) %></th>
-          <th><%= button_to "Delete", category, method: :delete %></th>
-        </tr>
-        
-            
-            
+          <td><%= render category ,class: 'name_category'%></td>
+          <td><%= link_to "Edit", edit_category_path(category), class: 'button-edit' %></td>
+          <td><%= button_to 'delete', category, method: :delete  %></td>
+
+          
+        </tr>    
         <% end %>
       </table>
+
     </div>
     <div class="link-main-category">
       <%= link_to "New category", new_category_path %>

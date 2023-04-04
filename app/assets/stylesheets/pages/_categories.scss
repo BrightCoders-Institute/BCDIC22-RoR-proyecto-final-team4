@@ -27,12 +27,42 @@
     border-radius: 22px;
     margin: 5% 30%;
     padding: 2rem;
-    
+
+    .list-main-category {
+      .button-delete{
+        width: 2rem;
+      }
+      .table-category {
+        width: 100%;
+        margin: 0px;
+        background-color: $color2;
+        th {
+          padding: .5rem;
+          background-color: $color4;
+        }
+        td {
+          div {
+            margin: 0;
+            padding: .5rem;
+          }
+        }
+        td:first-child {
+          text-align: left;
+          margin: 0px;
+        }
+        tr:nth-child(even){
+          background-color: $color1;
+        }
+        
+      }
+    }
+
     .title-main-category {
       color: $white;
       font-size: 25px;
       margin-bottom: 5%;
     }
+
     .list-main-category {
       font-size: 20px;
       
@@ -43,14 +73,6 @@
       div {
         color: $white;
         margin: 5% 10% 1%;
-      }
-      a {
-        background-color: $blue;
-        border-radius: 15px;
-        color: $black;
-        font-size: 25px;
-        padding: 1% 17%;
-        text-decoration: none;
       }
     }
   }
