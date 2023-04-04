@@ -9,7 +9,7 @@ class MainpagesController < ApplicationController
       if params[:cupon]
         @result = user_cupons
       elsif params[:following]
-        @result = user_following
+        @result = user_following if current_user
       end
     elsif params[:users]
       @result = all_users
@@ -66,7 +66,7 @@ class MainpagesController < ApplicationController
     end
     
     def user_cupons
-      Cupon.all.where(user: current_user.id)
+      Cupon.all.where('user_id = ?', (params[:user_id].nil?) ? current_user.id : params[:user_id])
     end
     
     def user_following
