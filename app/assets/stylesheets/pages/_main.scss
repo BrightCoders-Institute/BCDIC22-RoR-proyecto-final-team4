@@ -702,8 +702,7 @@
   }
 }
 
-@media (max-width: 1080px) {
-  
+@media (max-width: 1080px) {  
   .main_header_up {
     height: 100%;
     width: 120%;
@@ -716,7 +715,6 @@
       .serch_bar {
         margin-top: 2rem;
         
-
         .bar {
           width: 15rem;
         }
@@ -753,9 +751,9 @@
   }
 
   .main_menu_left {
-
+    
     .navbar__container {
-
+      
       .navbar__logo__open {
         margin: 1rem 21.5rem 1rem 0%;
       }
@@ -765,15 +763,15 @@
       }
 
       .logo__search {
+        background-color: none;
+        margin-left: 0.5rem;
         margin-top: 0;
         width: 30px;
-        margin-left: 0.5rem;
-        background-color: none;
       }
     }
 
     .navbar__menu {
-
+      
       .navbar__menu__category {
         font-size: 30px;
       }
@@ -789,10 +787,11 @@
 
 @media (min-width: 760px) {
   @media (max-width: 850px) {
+    
     .main_menu_left {
-
+      
       .navbar__container {
-
+        
         .navbar__logo__open {
           margin: 1rem 21.5rem 1rem -56%;
         }
