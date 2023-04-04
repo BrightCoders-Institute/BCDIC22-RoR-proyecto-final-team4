@@ -111,7 +111,7 @@
     #main {
       padding: 0 0rem 0 1rem;
       transition: margin-left .5s;
-      margin-left: 10rem;
+      margin-left: 20rem;
     }
     
     #mySidenav {
@@ -747,6 +747,54 @@
         
         a {
           margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .main_menu_left {
+
+    .navbar__container {
+
+      .navbar__logo__open {
+        margin: 1rem 21.5rem 1rem 0%;
+      }
+
+      button {
+        width: 10%;
+      }
+
+      .logo__search {
+        margin-top: 0;
+        width: 30px;
+        margin-left: 0.5rem;
+        background-color: none;
+      }
+    }
+
+    .navbar__menu {
+
+      .navbar__menu__category {
+        font-size: 30px;
+      }
+
+      select {
+        font-size: 30px;
+        margin-top: 2%;
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  @media (max-width: 850px) {
+    .main_menu_left {
+
+      .navbar__container {
+
+        .navbar__logo__open {
+          margin: 1rem 21.5rem 1rem -56%;
         }
       }
     }
