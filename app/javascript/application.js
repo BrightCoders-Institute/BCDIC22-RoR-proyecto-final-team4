@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+
 $(function() {
   $.ajaxSetup({
     headers: {
@@ -9,3 +10,4 @@ $(function() {
     }
   });
 });
+

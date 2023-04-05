@@ -2,7 +2,8 @@ class MainpagesController < ApplicationController
   before_action :authenticate_user!, only:[:update]
   before_action :delete_expired
   before_action :update_expired
-
+  before_action :set_resource_name
+  
   def index
     @cupons = Cupon.all.sort_by(&:punctuation_with_default).reverse.take(3)
     if params[:home]
@@ -24,7 +25,6 @@ class MainpagesController < ApplicationController
     @followed = users_followed if current_user
   end
 
-
   def update
     unless users_followed.include? params[:id].to_i
       add_follower
@@ -42,6 +42,11 @@ class MainpagesController < ApplicationController
   end
 
   private
+
+    def set_resource_name
+      @resource_name = current_user
+    end
+
     def render_layout
       redirect_to root_path(search: params[:search]).to_s unless params[:search].nil?
       redirect_to root_path(home: true, following: true) unless params[:following].nil?

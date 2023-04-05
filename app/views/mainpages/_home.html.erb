@@ -2,6 +2,17 @@
   <div class="home_content">
     <div class="home_content_user">
       <%= image_tag "user.png" %>
+      <div class="edit">
+        <a id="myBtn">
+          <%= image_tag("engranaje.png") %>
+        </a>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <%= render 'devise/registrations/edit'%> 
+              <%= javascript_include_tag 'modal_controller', 'modalClose' %>
+            </div>
+          </div>
+        </div>
       <h2>
         <%= 
           if params[:user_id].nil?

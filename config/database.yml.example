@@ -88,3 +88,4 @@ production:
   database: ProCupons_production
   username: ProCupons
   password: <%= ENV["PROCUPONS_DATABASE_PASSWORD"] %>
+  
