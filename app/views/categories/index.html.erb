@@ -31,7 +31,9 @@
           <% end %>
         </tbody>
       </table>
-      <%= will_paginate @categories %>
+    </div>
+    <div class = 'nav_categories'>
+      <%== pagy_nav(@pagy) %>
     </div>
     <div class="link-main-category">
       <%= link_to "New category", new_category_path %>
