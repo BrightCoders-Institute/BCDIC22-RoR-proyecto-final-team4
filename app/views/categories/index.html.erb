@@ -1,40 +1,40 @@
-<div class="container-main-category" style="overflow-y: scroll;">
+<div class="container-main-category">
   <div class="box-main-category">
     <p style="color: white"><%= notice %></p>
     <div class="title-main-category">
       <h1>Categories</h1>
     </div>
-
     <div class="list-main-category" id="categories">
-
-      <table class = "table-category">
+      <table class="table-category">
         <thead>
-        <tr>
-          <th>Name</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
+          <tr>
+            <th>Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
         </thead>
-        <% @categories.each do |category| %>
-        <tr>
-          <td><%= render category ,class: 'name_category'%></td>
-          <td class='buttons'><%= link_to edit_category_path(category) do %>
-                <%= image_tag 'lapiz.svg', alt: 'Edit' , class: 'button-edit'%> 
-              <% end %></td>
-          <td class='buttons'><%= button_to category_path(category), method: :delete do %>
-                <%= image_tag 'basura.svg' , class: 'button-delete'%> 
-              <% end %></td>
-
-          
-        </tr>    
-        <% end %>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td><%= render category ,class: 'name_category'%></td>
+              <td class='buttons'>
+                <%= link_to edit_category_path(category) do %>
+                  <%= image_tag 'lapiz.svg', alt: 'Edit', class: 'button-edit' %> 
+                <% end %>
+              </td>
+              <td class='buttons'>
+                <%= button_to category_path(category), method: :delete do %>
+                  <%= image_tag 'basura.svg', class: 'button-delete' %> 
+                <% end %>
+              </td>
+            </tr>    
+          <% end %>
+        </tbody>
       </table>
-
+      <%= will_paginate @categories %>
     </div>
     <div class="link-main-category">
       <%= link_to "New category", new_category_path %>
-    </div>
-    <div class="link-return-category">
       <%= link_to "Return", root_path %>
     </div>
   </div>
