@@ -1,26 +1,25 @@
 <%= javascript_include_tag 'reload' %>
 <div class='showCupons_container'>
   <div class='main_menu_left'><%= render 'share/menu'%></div>
+
   <div class='showCupons_content'>
     <div class='main_header_up'><%= render 'share/header'%></div>
+
     <div class='showCupons_content_detaills'>
       <div class='area'>
-        <div class='area_image'><img src='<%= @cupon.image_url %>'/></div>
-        <div class='area_map'><iframe src="https://www.google.com/maps?q= <%=@cupon.location%>&output=embed"></iframe> </div>
-      </div>
-      <div class='area'>
+        <div class='area_image'><div class='area_image_content'><img src='<%= @cupon.image_url %>'/></div></div>
         
         <div class='area_data'>
-        
+          <div class='area_data_container'>
+            <div class = 'creator'>
+              <div class="follos">
+                <h3>Autor:
+                  <%= 
+                  result = User.find_by(id: @cupon.user_id)
+                  result.name
+                  %>
+                </h3>
 
-        <div class = 'area_creator'>
-            <h3>Autor:
-              <%= 
-              result = User.find_by(id: @cupon.user_id)
-              result.name
-              %>
-            </h3>
-            <div class="follos">
                 <div class="following">
                   <%=
                     following = @followed.include? result.id if current_user 
@@ -32,43 +31,53 @@
                   %>
                   <%= image_tag 'following.svg', class: (following) ? 'following_svg follow' : 'following_svg not_follow' if current_user %>
                 </div>
-                <div class='heart'>
-                  <%=image_tag("heart.svg")%>
-                  <div id="likes-container">
-                    <div class="likes" id="punctuation"><%= @cupon.punctuation %></div>
-                  </div>
-                </div>
-            </div>
-        </div>
-          <h2><%= @cupon.title %></h2>
-          <mark>Vigente</mark>
-          <p>Expiration date: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%A, %d de %B de %Y") %></p>
+              </div>
 
-          <div class='area_data_container'>
-            <div class='area_data_content'>
-              <p><%= "- #{@cupon.discount_percentage} %" %></p>
-              <p><%= (@cupon.normal_price.nil?) ? '' : "$ #{@cupon.normal_price}" %></p>
+              <div class='heart'>
+                <div id="likes">
+                  <div class="likes-container" id="punctuation"><%= @cupon.punctuation %></div>
+                </div>
+              </div>
+            </div>
+
+            <h2><%= @cupon.title %></h2>
+            <div class="cupon_state">
+              <% if @cupon.expiration_date.present? && @cupon.expiration_date < DateTime.current %>
+                <mark class="size expired">Expiro</mark>
+              <% else %>
+                <mark class="size valid">Vigente</mark>
+                <p class="size">Expira el: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%d de %B de %Y") %></p>
+              <% end %>
+            </div>
+            <div class="price">
+              <p class="price_percentage"><%= (@cupon.discount_percentage.present?) ? "- #{@cupon.discount_percentage} %" : '' %></p>
+              <div>
+                <s class="price_normal"><%= (@cupon.normal_price.present?) ? "$ #{@cupon.normal_price}" : '' %></s>
+                <p class="price_discount"><%= (@cupon.discount_price.present?) ? "$ #{@cupon.discount_price}" : '' %></p>
+              </div>
             </div>
             <% if user_signed_in? %>
-              <div class="area_data_puntuation">
+              <div class="area_data_container_puntuation">
                 <%= button_to image_tag("like.svg"), increment_punctuation_cupon_path(@cupon), method: :post, id: "likeboton", data: {type: "increment" } %>
                 <%= button_to image_tag("dislike.svg"), decrement_punctuation_cupon_path(@cupon), method: :post, id: "dislikeboton", data: {type: "decrement"} %>
               </div>
             <% end %>
-            <div class='area_url'>
+
+            <div class='area_data_container_url'>
               <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class='area'>
+        <div class='area_map'><iframe src="https://www.google.com/maps?q= <%=@cupon.location%>&output=embed"></iframe> </div>
         <div class='area_description'>
-          <h3>Description:</h3>
+          <h3>Descripción:</h3>
           <p><%= @cupon.description %></p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 

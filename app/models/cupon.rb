@@ -11,6 +11,8 @@ class Cupon < ApplicationRecord
       with: /\A[a-z0-9A-ZÁáÉéÍíÓóÚú,. ]+\z/
     }
 
+  validates :expiration_date, presence: true
+
   before_save :downcase_atributes
   
   def punctuation_with_default

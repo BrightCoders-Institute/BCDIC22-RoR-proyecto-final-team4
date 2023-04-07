@@ -1,0 +1,27 @@
+.following {
+  align-items: center;
+  display: flex;
+
+  &_svg {
+    border-radius: 7px;
+    border: none;
+    height: 1.2rem;
+    width: 1rem;
+  }
+  
+  button {
+    border-color: $grey;
+    border-radius: 7px 2px;
+    color:$white;
+    margin: .1rem;
+    padding: .1rem .3rem;
+  }
+  .follow {
+    background: $color-susseful;
+  }
+
+  .not_follow {
+    background: $red;
+  }
+}
+

@@ -14,256 +14,247 @@
     
     &_detaills {
       background-color: $gray-white;
+      border-radius: 9px;
       box-sizing: content-box;
       display: flex;
-      flex-direction: row;
-      height: 100%;
-      margin: 3rem;
+      flex-direction: column;
       overflow-y: scroll;
-      
-      @include smallxs {
-        flex-direction: column-reverse;
-        margin-right: 7%;
-      }
-
-      @include small {
-        flex-direction: column-reverse;
-        margin-right: -7%;
-      }
     
       .area {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         margin: .5rem;
-        width: 50%;
-        
-        @include smallxs {
-          width: 100%;
-        }
 
-    
-
-        &_image {
-          height: 45%;
-          padding: .3rem;
-          
-          img {
-            height: 100%;
-            object-fit: contain;
-            width: 100%;
-          }
-        }
-        &_map {
-          height: 48%;
-          margin-top: .2rem;
-          
-          iframe {
-            height: 100%;
-            width: 100%;
-          }
-        }
-
-        .area_url{
-          display: flex;
-          justify-content: center;
-
-          button {
-            width: 10rem;
-            padding: 0.5rem 0.5rem;
-          }
-          
-          a {
-            align-items: center;
-            color: $white;
-            font-size: 20px;
-            justify-content: center;
-            text-decoration: none;
-          }
-        }
-
-        &_creator {
-          border-radius: 7px;
-          padding: 1rem 0 ;
-          .heart {
-            width: 15%;
-
-          }
-          .following {
-            align-items: center;
-            display: flex;
-            width: 85%;
-            .heart {
-              width: 15%;
-            }
-
-            &_svg {
-              border-radius: 7px;
-              border: none;
-              height: 10%;
-              width: 7%;
-            }
-            
-            button {
-              border-color: $grey;
-              border-radius: 7px 2px;
-              color:$white;
-              margin: .1rem;
-              padding: .1rem .3rem;
-            }
-
-            .follow {
-              background: $color-susseful;
-            }
-
-            .not_follow {
-              background: $red;
-            }
-          }
-        }
-        &_data {
-          margin: 1rem;
-          padding: 1rem;
+        &:first-child{
+          flex-direction: row;
 
           @include smallxs {
-            h2 {
-              display: flex;
-              justify-content: center
-            }
+            flex-direction: column;
           }
-            @include large {
-              h2 {
-                display: flex;
-                justify-content: center
-              }
-            }
-          
-          border-radius: 7px;
-          mark {
-            background: $greenyellow;
-            border-radius: 22px;
-            font-size: .8rem;
-            padding: .2rem .4rem;
+        }
+
+        &_image {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          width: 40%;
+
+          @include smallxs {
+            width: 100%;
           }
-          .heart {
-            display: inline-block;
-            margin: -2.8rem 0 0 14rem;
-            position: relative;
+
+          &_content {
+            height: 80%;
+            width: 60%;
 
             @include smallxs {
-              margin: -2.8rem 0 0 26rem;
-            }
-
-            @include small {
-              margin: -2.8rem 0 0 11rem;
-            }
-            @include large {
-              margin: -2.8rem 0 0 25rem;
-            }
-            
-            .likes {
-              color: $black;
-              font-size: 18px;
-              left: 71%;
-              position: absolute;
-              top: 45%;
-              transform: translate(-50%, -50%);
-
-              @include large {
-                left: 47%;
-              }
-              @include smallxs {
-                left: 46%;
-              }
-              @include small {
-                left: 94%;
-              }
-            }
-            img{
-              height: 4rem;
-              width: 4rem;
-            }
-          }
-          &_container {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1.1rem;
-
-
-            button {
-              align-self: center;
-              border-radius: 22px;
-              border: none;
-              color: $white;
-              padding: .7rem 3.8rem;
-
-              &:last-child {
-                background-color: $black-brown;
-              }
-            }
-          }
-          &_content {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding-bottom: 1.3rem;
-            
-            p {
-              
-              &:first-child {
-                background-color: $pink-white;
-                border-radius: 22px;
-                padding: .4rem .8rem;
-              }
-
-              &:last-child {
-                font-size: 1.4rem;
-              }
-            }
-          }
-
-          &_puntuation {
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem;
-
-            #likeboton,
-            #dislikeboton {
-              cursor: pointer;
-              padding: 0.5rem 1rem;
+              height: 90%;
+              width: 100%;
             }
 
             img {
+              border-radius: 15px;
+              height: 100%;
+              object-fit: contain;
+              width: 100%;
+            }
+          }
+        }
+
+        &_data {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          padding: .5rem;
+          width: 60%;
+
+          @include smallxs {
+            width: 100%;
+          }
+
+          &_container {
+            border-radius: 9px;
+            box-shadow: 1px 4px 10px $grey;
+            padding: .5rem;
+            width: 90%;
+
+            h2 {
+              font-size: 1.4rem;
+              font-weight: 400;
+              width: 70%;
+            }
+
+            button {
+              color: $white;
+              
+              &:last-child {
+                align-self: center;
+                background-color: $black-brown;
+                border-radius: 22px;
+                border: none;
+                padding: .7rem .8rem;
+              }
+            }
+
+            .creator {
+              border-radius: 7px;
               display: flex;
-              height: 3rem;
-              justify-content: center
+              justify-content: space-between;
+              padding: .5rem 0;
+
+              .follos {
+                border-radius: 7px;
+                border: 1px solid $input-border ;
+                box-shadow: .5px 1.5px 3px $grey;
+                display: flex;
+                flex-direction: column;
+                padding: .5rem;
+              }
+
+              .heart {
+                align-items: center;
+                background-image: url('heart.svg');
+                background-size:  4rem;
+                box-shadow: 0px -1.5px 6px $red;
+                border-radius: 9px;
+                display: flex;
+                height: 4rem;
+                justify-content: center;
+                margin: -1.1rem 1rem 0 0;
+                width: 4rem;
+                
+                .likes {
+                  color: $red;
+                  font-size: 18px;
+                }
+              }
             }
 
-            #likeboton.desactivado {
-              background-color: $color-likebutton;
-              cursor: not-allowed;
-              cursor: pointer;
+            .cupon_state {
+              display: flex;
+              flex-direction: row;
+
+              .size {
+                border-radius: 22px;
+                font-size: .8rem;
+                margin: .2rem;
+                padding: .2rem .4rem;
+              }
+
+              .expired {background-color: $pink-white;}
+              .valid {background-color: $greenyellow;}
             }
 
-            #dislikeboton.desactivado {
-              background-color: $color-dislikebutton;
-              cursor: not-allowed;
-              cursor: pointer;
+            .price {
+              align-items: center;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-end;
+              margin-right: 2rem;
+
+              &_percentage {
+                background-color: $pink-white;
+                border-radius: 22px;
+                padding: .2rem;
+              }
+
+              &_normal {
+                font-size: .9rem;
+              }
+
+              &_discount {
+                font-size: 2.2rem;
+              }
+
+              p,s {
+                margin-left: 1.4rem;
+              }
             }
 
-            @include smallxs {
-              padding: 0%;
+            &_puntuation {
+              display: flex;
+              justify-content: space-between;
+              padding: 1.5rem;
+              
+              button {
+                background: none;
+                border-radius: 15px;
+                border: none;
+              }
+  
+              #likeboton,
+              #dislikeboton {
+                cursor: pointer;
+                padding: .5rem .5rem;
+              }
+  
+              img {
+                display: flex;
+                height: 3rem;
+                justify-content: center
+              }
+  
+              #likeboton.desactivado {
+                background-color: $color-likebutton;
+                cursor: not-allowed;
+                cursor: pointer;
+              }
+  
+              #dislikeboton.desactivado {
+                background-color: $color-dislikebutton;
+                cursor: not-allowed;
+                cursor: pointer;
+              }
+  
+              @include smallxs {
+                padding: 0%;
+              }
+  
+              @include large {
+                justify-content: space-evenly
+              }
             }
 
-            @include large {
-              justify-content: space-evenly
+            &_url {
+              display: flex;
+              justify-content: center;
+
+              button {
+                padding: 0.5rem 0.5rem;
+                width: 10rem;
+              }
+              
+              a {
+                align-items: center;
+                color: $white;
+                font-size: 20px;
+                justify-content: center;
+                text-decoration: none;
+              }
             }
+          }
+        }
+
+        &_map {
+          height: 14rem;
+          margin-top: .2rem;
+          padding: 1rem;
+
+          @include smallxs {
+            height: 16rem;
+          }
+          
+          iframe {
+            border-radius: 7px;
+            border: none;
+            height: 100%;
+            width: 100%;
           }
         }
 
         &_description {
-          background-color: $gray-medium-light;
           border-radius: 7px;
+          box-shadow: 1px 7px 12px $grey;
           font-weight: 300;
           margin: 1rem;
           padding: .7rem;

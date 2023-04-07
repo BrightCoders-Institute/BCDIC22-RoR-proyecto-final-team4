@@ -418,32 +418,6 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
               }
-
-              .following {
-                align-items: center;
-                display: flex;
-
-                &_svg {
-                  border: none;
-                  height: 75%;
-                  width: 15%;
-                }
-                
-                button {
-                  border-color: $grey;
-                  border-radius: 7px 2px;
-                  color:$white;
-                  margin: .1rem;
-                  padding: .1rem .3rem;
-                }
-                .follow {
-                  background: $color-susseful;
-                }
-
-                .not_follow {
-                  background: $red;
-                }
-              }
             }
           }
           
