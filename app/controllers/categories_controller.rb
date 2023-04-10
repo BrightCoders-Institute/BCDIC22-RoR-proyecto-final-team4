@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @pagy, @categories = pagy(Category.all, items: 4)
   end
 
   # GET /categories/new
