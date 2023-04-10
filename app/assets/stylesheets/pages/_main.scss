@@ -126,7 +126,7 @@
     #main {
       padding: 0 0rem 0 1rem;
       transition: margin-left .5s;
-      margin-left: 10rem;
+      margin-left: 20rem;
     }
     
     #mySidenav {
@@ -717,8 +717,7 @@
   }
 }
 
-@media (max-width: 1080px) {
-  
+@media (max-width: 1080px) {  
   .main_header_up {
     height: 100%;
     width: 120%;
@@ -731,7 +730,6 @@
       .serch_bar {
         margin-top: 2rem;
         
-
         .bar {
           width: 15rem;
         }
@@ -762,6 +760,52 @@
         
         a {
           margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .main_menu_left {
+    
+    .navbar__container {
+      
+      .navbar__logo__open {
+        margin: 1rem 21.5rem 1rem 0%;
+      }
+
+      button {
+        width: 10%;
+      }
+
+      .logo__search {
+        background-color: none;
+        margin-left: 0.5rem;
+        margin-top: 0;
+        width: 30px;
+      }
+    }
+
+    .navbar__menu {
+      
+      .navbar__menu__category {
+        font-size: 30px;
+      }
+
+      select {
+        font-size: 30px;
+        margin-top: 2%;
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  @media (max-width: 850px) {
+    .main_menu_left {
+      .navbar__container {
+        .navbar__logo__open {
+          margin: 1rem 21.5rem 1rem -56%;
         }
       }
     }
