@@ -1,11 +1,11 @@
 <ul class="main_cupons_content_promotions">
-  <% if @result.length == 0 %>
+  <% if @result_page.length == 0 %>
     <div class="noFound">
       <h2>Resultado no encontrado!! ¯\_(ツ)_/¯</h2>
       <h3>Favor de intentar con otro nombre.</h3>
     </div>
   <% else %>
-    <% @result.each do |result| %>
+    <% @result_page.each do |result| %>
       <li>
         <%if result.is_a? Cupon%>  
           <a href="<%= cupon_path(result.id) %>" class="link">

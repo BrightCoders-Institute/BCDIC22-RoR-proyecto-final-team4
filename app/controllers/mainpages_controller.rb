@@ -13,6 +13,7 @@ class MainpagesController < ApplicationController
       end
     elsif params[:users]
       @result = all_users
+      # users = User.where(active: true).order(created_at: :desc).limit(10).offset(20)
     else
       if params[:category_id].nil?
         @result = params[:search].nil? ? Cupon.all : (params[:search].length > 1 ? find : Cupon.all)
@@ -20,6 +21,7 @@ class MainpagesController < ApplicationController
         @result = find_by_category
       end
     end
+    @pagy, @result_page = pagy(@result)
     @followed = users_followed if current_user
   end
 

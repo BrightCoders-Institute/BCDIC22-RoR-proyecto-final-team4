@@ -9,7 +9,10 @@
         <% elsif params[:search].nil? || params[:search] == '' %>
           <div class='main_cupons_carrusel'><%= render 'carousel' if params[:users].nil? %></div>
         <% end %>
-        <div class='main_cupons_content'><%= render 'content'%></div>
+        <div class='main_cupons_content'>
+          <%= render 'content'%>
+          <%== pagy_nav(@pagy) %>
+        </div>
       </div>
       <div class='main_cupons_bar_right'><%= (render 'category') if current_user && current_user.email == Rails.application.credentials.mailer.public_username %></div>
     </div>
