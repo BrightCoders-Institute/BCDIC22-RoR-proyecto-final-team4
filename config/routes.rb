@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
+  delete 'users/:id', to: 'mainpages#destroy', as: 'user_delete'
+
   # Defines the root path route ("/")
   root "mainpages#index", via: [:get,:post]
   resources :mainpages, only: [:update]
