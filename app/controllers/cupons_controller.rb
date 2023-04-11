@@ -3,7 +3,6 @@ class CuponsController < ApplicationController
   before_action :set_cupon, only: [:show, :edit, :update, :destroy, :set_punctuation]
   def index
     @categories = Category.all
-    
   end
 
   def show
