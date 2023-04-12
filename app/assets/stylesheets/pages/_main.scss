@@ -39,7 +39,7 @@
         background-color: $color1;
         display: flex;
         flex-direction: column;
-        font-size: x-large;
+        font-size: 25px;
         height: 100%;
         left: 0;
         padding-left: .5rem;
@@ -63,9 +63,23 @@
         .navbar__logo__open {
           color: white;
           height: 1.5rem;
-          margin: 1rem 8rem 1rem 0rem;
+          margin: 1rem 20rem 1rem 0rem;
           transform: rotate(90deg);
           width: 2rem;
+        }
+
+        .select {
+          
+          .div_select {
+            display: flex;
+            flex-direction: row;
+          }
+
+          select {
+            margin-left: 0%;
+            width: 200%;
+            font-size: 25px;
+          }
         }
       }
 
@@ -98,16 +112,18 @@
         }
 
         button {
-          background: $color1;
+          background: none;
           border: 0px;
+          margin-left: 2%;
           width: 20%;
         }
         
         .logo__search {
           background: $color1;
           height: auto;
-          margin-top: 1rem;
-          width: 50%;
+          margin-top: 0rem;
+          width: 25px;
+          background-color: none;
         }
 
         &__category {
