@@ -1,6 +1,6 @@
 const openNav = () => {
   if (window.innerWidth >= 1080) {
-    document.getElementById("mySidenavService").style.width = "12%";
+    document.getElementById("mySidenavService").style.width = "25%";
     document.getElementById("mainService").style.marginLeft = "96%";
     document.getElementById("logoService").style.display = "none";
   }else {

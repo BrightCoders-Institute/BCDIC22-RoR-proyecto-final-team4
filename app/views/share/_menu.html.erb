@@ -11,11 +11,13 @@
       <%= form_with url: root_url, method: :get do | form | %>
       <div class= 'navbar__menu__category'>
         <div class = 'select'>
-          Category
-          <%= form.collection_select :category_id, Category.all, :id, :namecategory, class: 'list__category'%>
-          <%= form.button type: "submit" do%>
-            <%= image_tag("search.svg", class:'logo__search')%>
-          <% end %>
+          <div>Category</div>
+          <div class = "div_select">
+            <%= form.collection_select :category_id, Category.all, :id, :namecategory, class: 'list__category'%>
+            <%= form.button type: "submit" do%>
+              <%= image_tag("search.svg", class:'logo__search')%>
+            <% end %>
+          </div>
         </div>
       </div>
       <% end %>
