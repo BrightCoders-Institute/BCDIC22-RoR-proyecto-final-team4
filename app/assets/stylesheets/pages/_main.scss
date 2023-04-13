@@ -76,9 +76,9 @@
           }
 
           select {
+            font-size: 25px;
             margin-left: 0%;
             width: 200%;
-            font-size: 25px;
           }
         }
       }
@@ -119,11 +119,11 @@
         }
         
         .logo__search {
+          background-color: none;
           background: $color1;
           height: auto;
           margin-top: 0rem;
           width: 25px;
-          background-color: none;
         }
 
         &__category {
