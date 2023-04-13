@@ -20,6 +20,7 @@ class MainpagesController < ApplicationController
         @result = find_by_category
       end
     end
+    @pagy, @result = pagy(@result, items: 12) if params[:search].nil?
     @followed = users_followed if current_user
   end
 
@@ -33,13 +34,18 @@ class MainpagesController < ApplicationController
     render_layout
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to root_path
+  end
+
   private
     def render_layout
       redirect_to root_path(search: params[:search]).to_s unless params[:search].nil?
       redirect_to root_path(home: true, following: true) unless params[:following].nil?
       redirect_to root_path(users: true) unless params[:users].nil?
-      # redirect_to cupon_path(cupon: true, following: true) unless params[:id].nil?
-      # @cupon = Cupon.find(params[:id])
       redirect_to cupon_path(params[:id_cupon]) unless params[:id_cupon].nil?
     end
   
