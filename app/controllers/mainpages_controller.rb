@@ -33,6 +33,13 @@ class MainpagesController < ApplicationController
     render_layout
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to root_path
+  end
+
   private
     def render_layout
       redirect_to root_path(search: params[:search]).to_s unless params[:search].nil?

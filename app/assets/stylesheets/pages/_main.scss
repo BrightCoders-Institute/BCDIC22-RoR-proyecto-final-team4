@@ -386,7 +386,7 @@
 
             .coupon_opc {
               display: flex;
-              justify-content: space-around;
+              justify-content: space-between;
               margin-top: 5%;
               
               button {
@@ -452,6 +452,11 @@
             }
           }
           
+          .header_userbox {
+            display: flex;
+            justify-content: space-around;
+          }
+
           .users {
             display: flex;
             justify-content: center;
@@ -480,6 +485,29 @@
   
                 @include smallxs {
                   width: 60%;
+                }
+              }
+
+              .delete_user {
+                display: flex;
+                justify-content: flex-start;
+                margin-left: 5%;
+                margin-right: 35%;
+              
+                button {
+                  background-color: $color-dislikebutton;
+                  border-radius: 1rem;
+                  border: 1px solid $color-white;
+                  color: $color-white;
+                  font-size: 15px;
+                  height: 2rem;
+                  margin: 15% 0% 0% 0%;
+                  padding: 0% 14%;
+
+                  &:hover {
+                    box-shadow: 1px 5px 5px $grey;
+                    transition: .5s ease;
+                  }
                 }
               }
             }
