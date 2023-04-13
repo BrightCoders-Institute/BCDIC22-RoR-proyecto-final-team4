@@ -3,8 +3,9 @@
 
   <div id="mySidenavService" class="navbar__container">
     <a onclick="closeNav()"><%= image_tag("menuburger.svg", class:'navbar__logo__open')%></a>
-    <%= image_tag("logo02.png", class:'navbar__logo')%>
-
+    <%= link_to root_path do %>
+      <%= image_tag("logo02.png", class:'navbar__logo')%>
+    <% end %>
     <div class='navbar__menu' >
       <%= link_to 'Home', root_path(:cupon => true, :home => true), class: 'navbar__menu__category' if current_user%>
       
