@@ -23,7 +23,6 @@
                 <div class="following">
                   <%=
                     following = @followed.include? result.id if current_user 
-                    
                     button_to (following) ? 'Siguiendo' : 'Seguir', {:controller => :mainpages, :action => 'update', :id => result.id, 
                     :search => params[:search], :home => params[:home], 
                     :following => params[:following] , :id_cupon => @cupon.id }, :method => :patch, 

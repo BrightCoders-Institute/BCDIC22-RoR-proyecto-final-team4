@@ -4,37 +4,50 @@
 	font-family: 'Nunito', sans-serif;
 }
 
+
+$background-image: "https://imgs.search.brave.com/YFeXutVrkezCfY-NSAM3twl9_W4r3_ZG_FAC50WIzQg/rs:fit:728:546:1/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9pbWFn/ZW5lcy0xNjQwMi85/NS9pbWFnZW5lcy0x/Mi03MjguanBnP2Ni/PTExNjc1NjAxMzc";
+$background: linear-gradient(210deg, rgba(165,170,217,1) 0%, rgba(248,161,63,1) 50%, rgba(186,60,61,1) 100%);
+$bg: url("bg1.png");
+$black : #000000;
+$black-brown: #3c3521d5;
+$black-gray:rgba(0,0,0, 0.6);
+$blue : #a5aad9;
+$cancel-color: #dc3545;
+$cancel-hover: #B71C1C;
+$close-color: #aaa;
+$close-hover: #ff0000;
+$color-dislikebutton: #ad2121;
+$color-likebutton: #1cc708;
+$color-susseful: #65cf4f;
+$color-white: #FFFF;
 $color1 : #7e5686;
+$color10: #e8f9a2af;
 $color2 : #a5aad9;
 $color3 : #f8e479;
 $color4 : #f8a13f;
 $color5 : #ba3c3d;
 $color6 : #000000;
-$color10: #e8f9a2af;
-
-$purle : #7e5686;
-$blue : #a5aad9;
-$yellow : #f8e479;
-$orange : #f8a13f;
-$red : #ba3c3d;
-$black : #000000;
-$transparent-black: #000000a1;
-$green-yellow: #e8f9a2af;
-$background-image: "https://imgs.search.brave.com/YFeXutVrkezCfY-NSAM3twl9_W4r3_ZG_FAC50WIzQg/rs:fit:728:546:1/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9pbWFn/ZW5lcy0xNjQwMi85/NS9pbWFnZW5lcy0x/Mi03MjguanBnP2Ni/PTExNjc1NjAxMzc";
-$grey: rgb(199, 197, 197);
-$gray-white: hsl(0, 5%, 97%);
+$field-border: #cccccc;
+$field-color: #999;
 $gray-medium-light: hsl(0, 5%, 90%);
-$black-brown: #3c3521d5;
-$pink-white: hsl(341, 58%, 86%);
+$gray-white: hsl(0, 5%, 97%);
+$green-yellow: #e8f9a2af;
 $greenyellow: hsl(84, 100%, 59%);
-$white: #ffffff;
+$grey: rgb(199, 197, 197);
 $input-border:#BFBFBF;
-$black-gray:rgba(0,0,0, 0.6);
-$background: linear-gradient(210deg, rgba(165,170,217,1) 0%, rgba(248,161,63,1) 50%, rgba(186,60,61,1) 100%);
-$color-susseful: #65cf4f;
-$color-white: #FFFF;
-$color-likebutton: #1cc708;
-$color-dislikebutton: #ad2121;
+$message-border: 1px solid #DDD;
+$message-color: #333333;
+$message: #FFF8DC;
+$modal-background: #00000080;
+$modal-content: 0px 0px 5px #0000004d;
+$orange : #f8a13f;
+$pink-white: hsl(341, 58%, 86%);
+$purle : #7e5686;
+$red : #ba3c3d;
 $titles: $color6;
-$bg: url("bg1.png")
+$transparent-black: #000000a1;
+$update-color: #4CAF50;
+$update-hover: #3E8E41;
+$white: #ffffff;
+$yellow : #f8e479;
 
