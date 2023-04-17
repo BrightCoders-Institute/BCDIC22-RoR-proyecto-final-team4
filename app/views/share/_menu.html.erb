@@ -24,13 +24,12 @@
       <% end %>
 
       <%= link_to 'Usuarios', root_path(users: true), class: 'navbar__menu__category'%>
-      
+      <%= link_to 'Add Category', categories_path, class: 'navbar__menu__add' if current_user && current_user.email == Rails.application.credentials.mailer.public_username  %>
     </div>
 
     <div id='mainService' class="navbar__container__closed" onclick="openNav()">
       <%= image_tag("menuburger.svg", class:'navbar__logo__closed', id:'logoService')%>
     </div>
   </div>
-
 </div>
 

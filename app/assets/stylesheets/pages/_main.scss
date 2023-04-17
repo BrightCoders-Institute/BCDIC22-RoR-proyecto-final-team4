@@ -14,13 +14,24 @@
   }
 }
 
+#overlay {
+  background-color: $black-gray;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+ }
+ 
 .main {
   &_container {
     background-color: $white;
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 100%;
+    width: 112%;
   }
 
   &_menu_left {
@@ -30,7 +41,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    width: 16%;
+    width: 4%;
 
     .navbar {
       
@@ -78,7 +89,7 @@
           select {
             font-size: 25px;
             margin-left: 0%;
-            width: 200%;
+            width: 75%;
           }
         }
       }
@@ -102,7 +113,7 @@
         flex-direction: column;
         height: 40%;
         justify-content: space-around;
-        
+    
         select {
           background: $color1;
           border-radius: 7px;
@@ -128,6 +139,17 @@
 
         &__category {
           color: $white;
+          text-decoration: none;
+          transition: 0.5s;
+
+          &:hover {
+            color: $color4;
+          }
+        }
+
+        &__add {
+          color: $white;
+          display: none;
           text-decoration: none;
           transition: 0.5s;
 
@@ -775,6 +797,7 @@
       
       .serch_bar {
         margin-top: 2rem;
+        margin-left: 7%;
         
         .bar {
           width: 15rem;
@@ -785,7 +808,7 @@
       }
       .add_announce {
         height: 65px;
-        margin-left: 2%;
+        margin-left: 6%;
         margin-top: -4.5rem;
         width: 40%;
         
@@ -832,8 +855,14 @@
     }
 
     .navbar__menu {
-      
+      margin-left: -12.2rem;
+      width: 33%;
+
       .navbar__menu__category {
+        font-size: 30px;
+      }
+      .navbar__menu__add {
+        display: block;
         font-size: 30px;
       }
 
@@ -842,6 +871,14 @@
         margin-top: 2%;
         width: 45%;
       }
+    }
+
+    .navbar__container__closed {
+      width: 0rem;
+    }
+
+    .navbar__logo__closed {
+      margin-left: -1rem;
     }
   }
 }
