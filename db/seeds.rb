@@ -16,7 +16,8 @@ ActiveRecord::Schema[7.0].define() do
   normal_price: "1599",
   discount_price: "1119",
   start_date: "Tue, 04 Apr 2023",
-  expiration_date: "Mon, 24 Apr 2023" ,
+  expiration_date: "Mon, 28 Apr 2023" ,
+  punctuation: -4,
   user: User.first)
 
   Cupon.create(title: "Microsoft Xbox Series S 512GB Standard color blanco",
@@ -27,16 +28,20 @@ ActiveRecord::Schema[7.0].define() do
   normal_price: "6516",
   discount_price: "5499",
   start_date: "Tue, 04 Apr 2023",
-  expiration_date: "Mon, 24 Apr 2023" ,
+  expiration_date: "Mon, 28 Apr 2023" ,
+  punctuation: 3,
   user: User.first)
 
-  Cupon.create(title: "Xiaomi Redmi Note 10 Pro 108 Mpx Dual SIM 256 GB gris ónix 8 GB RAM",
+  Cupon.create(title: "Xiaomi Redmi Note 10 Pro",
   url: "https://www.mercadolibre.com.mx/xiaomi-redmi-note-10-pro-108-mpx-dual-sim-256-gb-gris-onix-8-gb-ram/p/MLM20916206?pdp_filters=deal:MLM779363-1#searchVariation=MLM20916206&position=1&search_layout=grid&type=product&tracking_id=86100ec8-e7c7-4bb0-b81a-1acefbffaea5&c_id=/home/promotions-recommendations/element&c_element_order=1&c_uid=74ac8761-16e0-47b0-98c2-617c6a11e825",
   description: "Experiencia visual increíble Mira tus series y películas favoritas con la mejor definición a través de su pantalla AMOLED de 6.67. Disfruta de colores brillantes y detalles precisos en todos tus contenidos.", 
   location: "JD DEP Tienda oficial de Mercado Libre",
   image_url: 'https://http2.mlstatic.com/D_NQ_NP_689330-MLA50263507908_062022-O.webp',
   normal_price: "5099",
   discount_price: "4999",
+  start_date: "Tue, 04 Apr 2023",
+  expiration_date: "Mon, 28 Apr 2023" ,
+  punctuation: -9,
   user: User.first)
 
   Cupon.create(title: "5 Micas Protectoras Para Xiaomi Mi Band 5 Compatible M5",
@@ -47,7 +52,8 @@ ActiveRecord::Schema[7.0].define() do
   normal_price: "79",
   discount_price: "75",
   start_date: "Tue, 04 Apr 2023",
-  expiration_date: "Mon, 24 Apr 2023" ,
+  expiration_date: "Mon, 28 Apr 2023" ,
+  punctuation: 8,
   user: User.first)
 
   Cupon.create(title: "Back Pack Hombre Vermonti By Aldo Conti h8486",
@@ -58,6 +64,7 @@ ActiveRecord::Schema[7.0].define() do
   normal_price: "873",
   discount_price: "298",
   start_date: "Tue, 04 Apr 2023",
-  expiration_date: "Mon, 24 Apr 2023" ,
+  expiration_date: "Mon, 28 Apr 2023" ,
+  punctuation: 15,
   user: User.first)
 end

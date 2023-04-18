@@ -5,6 +5,9 @@
 }
 
 
+$alert-background: #dff0d8;
+$alert-border: #3c763d;
+$alert-boxshadow: #888888;
 $background-image: "https://imgs.search.brave.com/YFeXutVrkezCfY-NSAM3twl9_W4r3_ZG_FAC50WIzQg/rs:fit:728:546:1/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9pbWFn/ZW5lcy0xNjQwMi85/NS9pbWFnZW5lcy0x/Mi03MjguanBnP2Ni/PTExNjc1NjAxMzc";
 $background: linear-gradient(210deg, rgba(165,170,217,1) 0%, rgba(248,161,63,1) 50%, rgba(186,60,61,1) 100%);
 $bg: url("bg1.png");
@@ -27,6 +30,8 @@ $color3 : #f8e479;
 $color4 : #f8a13f;
 $color5 : #ba3c3d;
 $color6 : #000000;
+$danger-background: #f2dede;
+$danger-color: #a94442;
 $field-border: #cccccc;
 $field-color: #999;
 $gray-medium-light: hsl(0, 5%, 90%);
@@ -50,4 +55,3 @@ $update-color: #4CAF50;
 $update-hover: #3E8E41;
 $white: #ffffff;
 $yellow : #f8e479;
-

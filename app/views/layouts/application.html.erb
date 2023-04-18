@@ -13,11 +13,6 @@
     <%= javascript_include_tag 'update' %>
   </head>
   <body>
-    <% if notice %>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
     <%= yield %>
   </body>
 </html>
