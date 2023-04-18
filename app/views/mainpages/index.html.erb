@@ -11,10 +11,14 @@
           <div class='main_cupons_carrusel'><%= render 'carousel' if params[:users].nil? %></div>
         <% end %>
         <div class='main_cupons_content'>
-          <%= render 'content'%>
-          <div class='nav_cupons'>
-            <%== pagy_nav(@pagy) if params[:search].nil?%>
-          </div>
+          <% if @result.length == 0 %>
+            <%= render 'noFound' %>
+          <% else %>
+            <%= render 'content'%>
+            <div class='nav_cupons'>
+              <%== pagy_nav(@pagy) if params[:search].nil?%>
+            </div>
+          <%end%>
         </div>
       </div>
       <% if current_user && current_user.email == Rails.application.credentials.mailer.public_username %>

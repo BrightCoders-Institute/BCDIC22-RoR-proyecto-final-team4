@@ -405,16 +405,26 @@
           }
         }
       }
+      
+      .noFound {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        &_card {
+          align-items: center;
+          border-radius: 12px;
+          box-shadow: 0px 5px 7px $grey;
+          display: flex;
+          flex-direction: column;
+          padding: 1.5rem;
+        }
+      }
 
       &_promotions {
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
-
-        .noFound {
-          display: flex;
-          flex-direction: column;
-        }
 
         li {
           display: flex;
