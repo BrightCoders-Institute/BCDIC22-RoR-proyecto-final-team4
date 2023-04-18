@@ -19,17 +19,16 @@
    }
 
   &_content {
+    box-sizing: content-box;
     display: flex;
     flex-direction: column;
-    width: 84%;
+    overflow-y: scroll;
+    width: 100%;
     
     &_detaills {
       background-color: $gray-white;
       border-radius: 9px;
-      box-sizing: content-box;
-      display: flex;
       flex-direction: column;
-      overflow-y: scroll;
     
       .area {
         display: flex;

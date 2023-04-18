@@ -1,29 +1,32 @@
-
 <div class="header_container">
-  <div class="serch_bar">
-    <%= form_with url: root_path, method: :get do |form| %>
-      <%= form.text_field :search, placeholder:"buscar por:", class:'bar',
-      pattern: "[a-zA-Z0-9ÁáÉéÍíÓóÚú,.\s]+" %>
-      <%= form.submit 'Search', class:'serch' %>
-    <% end %>
-  </div>
-  <div class="add_announce">
-    <h2 class="label_announce">Add Announce</h2>
-    <%= link_to new_cupon_path do %>
-      <input class="add" type="button" value="+">
-    <% end %>
+  <div class="header_container_section">
+    <div class="serch_bar">
+      <%= form_with url: root_path, method: :get do |form| %>
+        <%= form.text_field :search, placeholder:"buscar por:", class:'bar',
+        pattern: "[a-zA-Z0-9ÁáÉéÍíÓóÚú,.\s]+" %>
+        <%= form.submit 'Search', class:'serch' %>
+      <% end %>
+    </div>
+    <div class="add_announce">
+      <div class="content">
+        <%= link_to new_cupon_path do %>
+          <h2 class="label_announce">+ Add Announce</h2>
+        <% end %>
+      </div>
+    </div>
   </div>
   <div class="buttons_container">
-  <% if user_signed_in? %>
-    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'sign_up_header', id: 'logout-button' %>
-    <%= javascript_include_tag 'cookies'%>
-  <% else %>
-    <%= link_to user_session_path do %>
-      <input class="login_header" type="button" value="Login"> 
+    <% if user_signed_in? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'sign_up_header', id: 'logout-button' %>
+      <%= javascript_include_tag 'cookies'%>
+    <% else %>
+      <%= link_to user_session_path do %>
+        <input class="login_header" type="button" value="Login"> 
+      <% end %>
+      <%= link_to new_user_registration_path do %>
+        <input class="sign_up_header" type="button" value="Sing Up">
+      <% end %>
     <% end %>
-    <%= link_to new_user_registration_path do %>
-      <input class="sign_up_header" type="button" value="Sing Up">
-    <% end %>
-  <% end %>
   </div>
 </div>
+

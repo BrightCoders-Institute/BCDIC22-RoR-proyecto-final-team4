@@ -2,9 +2,9 @@
 <div class='main_container'>
   <div class='main_menu_left'><%= render 'share/menu'%></div>
   <div class='main_content'>
-    <div class='main_header_up'><%= render 'share/header'%> </div>
     <div class='main_cupons_container'>
       <div class='main_cupons_grup'>
+        <div class='main_header_up'><%= render 'share/header'%> </div>
         <% if params[:home] %>
           <div class='main_cupons_home'><%= render 'home'%></div>
         <% elsif params[:search].nil? || params[:search] == '' %>
@@ -17,7 +17,9 @@
           </div>
         </div>
       </div>
-      <div class='main_cupons_bar_right'><%= (render 'category') if current_user && current_user.email == Rails.application.credentials.mailer.public_username %></div>
+      <% if current_user && current_user.email == Rails.application.credentials.mailer.public_username %>
+        <div class='main_cupons_bar_right'><%= render 'category' %></div>
+      <% end %>
     </div>
   </div> 
 </div>
