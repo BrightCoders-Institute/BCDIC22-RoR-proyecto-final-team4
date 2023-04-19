@@ -7,7 +7,7 @@
         <div class='main_header_up'><%= render 'share/header'%> </div>
         <% if params[:home] %>
           <div class='main_cupons_home'><%= render 'home'%></div>
-        <% elsif params[:search].nil? || params[:search] == '' %>
+        <% elsif (params[:search].nil? || params[:search] == '') && (params[:category_id].nil? || params[:category_id] == '') %>
           <div class='main_cupons_carrusel'><%= render 'carousel' if params[:users].nil? %></div>
         <% end %>
         <div class='main_cupons_content'>
