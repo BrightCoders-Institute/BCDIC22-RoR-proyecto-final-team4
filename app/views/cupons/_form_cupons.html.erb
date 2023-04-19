@@ -17,7 +17,7 @@
 
         <div class="add_cupons_detalles_generales_content">
           <%= form.label 'Titulo' %>
-          <%= form.text_field :title, class:'add_cupons_detalles_generales_content_titulo', 
+          <%= form.text_field :title, class:'box_input_titulo', 
           pattern: "[a-zA-Z0-9ÁáÉéÍíÓóÚú,.\s]+" %>
         </div>
 
@@ -27,15 +27,15 @@
         </div>
 
         <div class="add_cupons_detalles_generales_container">
-          <div>
+          <div class="container_detallles">
             <div class="add_cupons_detalles_generales_content">
               <%= form.label 'Ubicación' %>
-              <%= form.text_field :location, placeholder: 'Nombre', class:'add_cupons_detalles_generales_content_ciudad', pattern: "[a-z0-9A-Z ÁáÉéÍíÓóÚú,.]+" %>
+              <%= form.text_field :location, placeholder: 'Nombre', class:'box_input_ubicacion', pattern: "[a-z0-9A-Z ÁáÉéÍíÓóÚú,.]+" %>
             </div>
             
             <div class="add_cupons_detalles_generales_content">
-              <%= form.label 'Link de imagen' %>
-              <%= form.text_field :image_url, placeholder: 'https://', class:'add_cupons_detalles_generales_content_imagen' %>
+              <%= form.label 'Link de imagen', class: 'lable_link_img' %>
+              <%= form.text_field :image_url, placeholder: 'https://', class:'box_input_img' %>
             </div>
             <div class="select">
               <%= form_for @cupon do |form| %>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="add_cupons_detalles_generales_tipo">
-          <%= form.label 'Tipo de publicación' %>
+          <%= form.label 'Tipo de publicación', class: 'label_tipo_publicacion'%>
           <div class="add_cupons_detalles_generales_tipo_options">
             <div>
               <%= form.radio_button :promotion_type, 'cupon', class: 'add_cupons_detalles_generales_tipo_options_values' %>
