@@ -1,6 +1,8 @@
 class Cupon < ApplicationRecord
   belongs_to :user
 
+  has_many :votes, dependent: :destroy
+
   validates :title, presence: true, 
   format: {
     with: /\A[a-z0-9A-ZÁáÉéÍíÓóÚú,.\s]+\z/

@@ -1,6 +1,6 @@
 class CuponsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :destroy]
-  before_action :set_cupon, only: [:show, :edit, :update, :destroy, :set_punctuation]
+  before_action :set_cupon, only: [:show, :edit, :update, :destroy]
   def index
     @categories = Category.all
   end
@@ -10,51 +10,6 @@ class CuponsController < ApplicationController
     @followed = users_followed if current_user
     img
     porcentaje
-  end
-
-  def update
-    if request.patch?
-      if params[:type] == "increment"
-        if !voted?(1)
-          @cupon.increment!(:punctuation)
-          set_voted_cookie(1)
-        end
-        respond_to do |format|
-          format.json { render json: { punctuation: @cupon.punctuation } }
-        end
-      elsif params[:type] == "decrement"
-        if !voted?(-1)
-          @cupon.decrement!(:punctuation)
-          set_voted_cookie(-1)
-        end
-        respond_to do |format|
-          format.json { render json: { punctuation: @cupon.punctuation } }
-        end
-      else
-        if @cupon.update(cupon_params)
-          redirect_to root_path
-        else
-          render :edit, status: :unprocessable_entity
-        end
-      end
-    else
-      
-    end
-  end
-
-  def set_punctuation
-    if params[:type] == "increment"
-      if !voted?(1)
-        @cupon.increment!(:punctuation)
-        set_voted_cookie(1)
-      end
-    elsif params[:type] == "decrement"
-      if !voted?(-1)
-        @cupon.decrement!(:punctuation)
-        set_voted_cookie(-1)
-      end
-    end
-    redirect_to @cupon
   end
 
   def new
@@ -75,34 +30,87 @@ class CuponsController < ApplicationController
     @cupon = Cupon.find(params[:id])
   end
 
-
   def destroy
     @cupon = Cupon.find(params[:id])
     @cupon.destroy
   end
 
+  def update
+    if request.patch?
+      if params[:type] == "increment"
+        unless voted?
+          @cupon.increment!(:punctuation)
+          create_or_update_vote(true)
+        else
+          vote = Vote.find_by(user_id: current_user.id, cupon_id: @cupon.id)
+          if vote.voted == false
+            @cupon.increment!(:punctuation, 1)
+            vote.update(voted: true)
+          end
+        end
+        respond_to do |format|
+          format.json { render json: { punctuation: @cupon.punctuation } }
+        end
+      elsif params[:type] == "decrement"
+        continue_execution = true
+        unless voted?
+          @cupon.decrement!(:punctuation)
+          if @cupon.punctuation <= -10
+            @cupon.destroy
+            redirect_to root_path, alert: "El cupón #{@cupon[:title]} ha sido eliminado porque su puntuación es igual o menor que -10"
+            continue_execution = false
+          end
+        else
+          vote = Vote.find_by(user_id: current_user.id, cupon_id: @cupon.id)
+          if vote.voted == true
+            @cupon.decrement!(:punctuation, 1)
+            vote.update(voted: false)
+          end
+        end
+        if continue_execution
+          respond_to do |format|
+            format.json { render json: { punctuation: @cupon.punctuation } }
+          end
+        end
+      else
+        if @cupon.update(cupon_params)
+          redirect_to root_path
+        else
+          render :edit, status: :unprocessable_entity
+        end
+      end
+    end
+  end
+  
   private
+  
+  def create_or_update_vote(voted)
+    vote = Vote.find_by(user_id: current_user.id, cupon_id: @cupon.id)
+  
+    if vote.nil?
+      Vote.create(user_id: current_user.id, cupon_id: @cupon.id, voted: true)
+    elsif vote.voted == voted
+      
+    else
+      vote.update(voted: voted)
+    end
+  end
+  
+  def voted?
+    Vote.exists?(user_id: current_user.id, cupon_id: @cupon.id)
+  end
   
     def users_followed
       result = current_user.follower&.split(",")&.map(&:to_i)
       (result.nil?) ? [] : result
     end
     
-  def set_cupon
-    @cupon = Cupon.find(params[:id])
-  end
-
-  def voted?(value)
-    voted = cookies.signed[@cupon.id] || 0
-    if voted == value
-      return true
-    else
-      return false
-    end
-  end
-
-    def set_voted_cookie(value)
-      cookies.signed[@cupon.id] = value
+    def set_cupon
+      begin
+        @cupon = Cupon.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        redirect_to root_path
+      end
     end
 
     def cupon_params

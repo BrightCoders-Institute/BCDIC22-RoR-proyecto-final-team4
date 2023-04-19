@@ -2,6 +2,12 @@
 <div class='main_container'>
   <div class='main_menu_left'><%= render 'share/menu'%></div>
   <div class='main_content'>
+    <% if notice %>
+      <p class="alert alert-success custom-alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger custom-alert"><%= alert %></p>
+    <% end %>
     <div class='main_cupons_container'>
       <div class='main_cupons_grup'>
         <div class='main_header_up'><%= render 'share/header'%> </div>

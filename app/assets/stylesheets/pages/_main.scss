@@ -194,6 +194,22 @@
     display: flex;
     flex-direction: column;
     width: 84%;
+
+    .custom-alert {
+      background-color: $alert-background;
+      border: 1px solid $alert-border;
+      box-shadow: 2px 2px 4px $alert-boxshadow;
+      color: $alert-border;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    
+    .custom-alert.alert-danger {
+      background-color: $danger-background;
+      border: 1px solid $danger-color;
+      color: $danger-color;
+    }
+    
   }
 
   &_header_up {
