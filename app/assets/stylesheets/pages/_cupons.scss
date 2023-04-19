@@ -224,29 +224,13 @@
       text-align: start;
 
 
-      .container_detallles {
-        width: 100%;
-      }
+.container_detallles, .box_input_ubicacion, .box_input_img, .box_input_titulo {
+  width: 100%;
+}
+.lable_link_img, .label_tipo_publicacion {
+  margin-top: 1rem;
+}
 
-      .box_input_ubicacion {
-        width: 100%;
-      }
-      
-      .box_input_img {
-        width: 100%;
-      }
-
-      .box_input_titulo {
-        width: 100%;
-      }
-      
-      .lable_link_img {
-        margin-top: 1rem;
-      }
-
-      .label_tipo_publicacion {
-        margin-top: 1rem;
-      }
 
       input {
         border-radius: 7px;
