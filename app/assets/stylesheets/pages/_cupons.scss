@@ -223,12 +223,22 @@
       justify-content:space-around;
       text-align: start;
 
+
+.container_detallles, .box_input_ubicacion, .box_input_img, .box_input_titulo {
+  width: 100%;
+}
+.lable_link_img, .label_tipo_publicacion {
+  margin-top: 1rem;
+}
+
+
       input {
         border-radius: 7px;
         border: 1px solid $input-border;
         font-size: 1.1rem;
         margin-top: .5rem;
         
+
         @include small {
           font-size: 1.5rem;
           width: 100%;
