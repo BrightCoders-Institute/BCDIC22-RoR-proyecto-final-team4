@@ -2,7 +2,7 @@
   <%=  javascript_include_tag 'navbarService' %>
 
   <div id="mySidenavService" class="navbar__container">
-    <a onclick="closeNav()"><%= image_tag("menuburger.svg", class:'navbar__logo__open')%></a>
+      <a onclick="closeNav()" class="navbar__container_button"><%= image_tag("menuburger.svg", class:'navbar__logo__open')%></a>
     <%= link_to root_path do %>
       <%= image_tag("logo02.png", class:'navbar__logo')%>
     <% end %>
