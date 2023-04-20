@@ -2,7 +2,7 @@
 
 # Pro Coupons
 
-[![Status - Finished](https://img.shields.io/badge/Status-InProgress-2ea44f?style=for-the-badge)](https://) ![Mob - Programming](https://img.shields.io/badge/Mob-Programming-blue?style=for-the-badge) [![Bright - Coders](https://img.shields.io/badge/Bright-Coders-blue?style=for-the-badge)](https://) [![Team - 4](https://img.shields.io/badge/Team-4-ff69b4?style=for-the-badge)](https://) [![Work - Team](https://img.shields.io/badge/Work-Team-important?style=for-the-badge)](https://) [![Project - ProCoupons](https://img.shields.io/badge/Project-ProCoupons-9cf?style=for-the-badge)](https://)
+[![Status - Finished](https://img.shields.io/badge/Status-Finished-2ea44f?style=for-the-badge)](https://) ![Mob - Programming](https://img.shields.io/badge/Mob-Programming-blue?style=for-the-badge) [![Bright - Coders](https://img.shields.io/badge/Bright-Coders-blue?style=for-the-badge)](https://) [![Team - 4](https://img.shields.io/badge/Team-4-ff69b4?style=for-the-badge)](https://) [![Work - Team](https://img.shields.io/badge/Work-Team-important?style=for-the-badge)](https://) [![Project - ProCoupons](https://img.shields.io/badge/Project-ProCoupons-9cf?style=for-the-badge)](https://)
 
 
 ![image](https://user-images.githubusercontent.com/116856441/232938778-e256d398-ebea-47ab-8087-e3d3fc63b016.png)
@@ -10,8 +10,12 @@
 ![image](https://user-images.githubusercontent.com/116856441/232938723-654ddd0f-766f-4a6c-8927-b69bf9921253.png)
 
 
+
 ## Descripcion
 Pro Coupons es un sistema web con una interfaz amigable en donde los usuarios pueden crear y compartir ofertas y cupones de todo tipo. Cada oferta o cupón cuenta con información básica, como su ubicación o enlace (si lo tiene). Cada usuario tendrá un perfil personalizable en donde podrá subir sus ofertas y cupones, los cuales otros usuarios podrán aprovechar y calificar.
+
+## Proyecto
+> https://procupon.up.railway.app/
 
 ## 💻🤝🏴‍☠️ Colaboradores:
 - Co-authored-by: EverardoAlcarazBaltazar <ealcaraz12@ucol.mx>
