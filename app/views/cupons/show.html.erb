@@ -49,11 +49,14 @@
                 <p class="size">Expira el: <%= (@cupon.expiration_date.nil?) ? '' : @cupon.expiration_date.strftime("%d de %B de %Y") %></p>
               <% end %>
             </div>
-            <div class="price">
-              <p class="price_percentage"><%= (@cupon.discount_percentage.present?) ? "- #{@cupon.discount_percentage} %" : '' %></p>
-              <div>
-                <s class="price_normal"><%= (@cupon.normal_price.present?) ? "$ #{@cupon.normal_price}" : '' %></s>
-                <p class="price_discount"><%= (@cupon.discount_price.present?) ? "$ #{@cupon.discount_price}" : '' %></p>
+            <div class="important_data">
+              <div><p><%= (@cupon.coupon.present?) ? "Cupón: #{@cupon.coupon}" : '' %></p></div>
+              <div class="price">
+                <p class="price_percentage"><%= (@cupon.discount_percentage.present?) ? "- #{@cupon.discount_percentage} %" : '' %></p>
+                <div>
+                  <s class="price_normal"><%= (@cupon.normal_price.present?) ? "$ #{@cupon.normal_price}" : '' %></s>
+                  <p class="price_discount"><%= (@cupon.discount_price.present?) ? "$ #{@cupon.discount_price}" : '' %></p>
+                </div>
               </div>
             </div>
             <% if user_signed_in? %>

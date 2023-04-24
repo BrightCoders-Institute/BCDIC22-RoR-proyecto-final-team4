@@ -156,6 +156,13 @@
               .valid {background-color: $greenyellow;}
             }
 
+            .important_data {
+              align-items: center;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            }
+
             .price {
               align-items: center;
               display: flex;
