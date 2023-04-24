@@ -15,7 +15,7 @@
 Pro Coupons es un sistema web con una interfaz amigable en donde los usuarios pueden crear y compartir ofertas y cupones de todo tipo. Cada oferta o cupón cuenta con información básica, como su ubicación o enlace (si lo tiene). Cada usuario tendrá un perfil personalizable en donde podrá subir sus ofertas y cupones, los cuales otros usuarios podrán aprovechar y calificar.
 
 ## Proyecto
-> https://procupon.up.railway.app/
+> https://procoupons.up.railway.app/
 
 ## 💻🤝🏴‍☠️ Colaboradores:
 - Co-authored-by: EverardoAlcarazBaltazar <ealcaraz12@ucol.mx>

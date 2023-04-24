@@ -156,6 +156,13 @@
               .valid {background-color: $greenyellow;}
             }
 
+            .important_data {
+              align-items: center;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            }
+
             .price {
               align-items: center;
               display: flex;
@@ -229,6 +236,7 @@
             &_url {
               display: flex;
               justify-content: center;
+              margin-bottom: 1rem;
 
               button {
                 padding: 0.5rem 0.5rem;

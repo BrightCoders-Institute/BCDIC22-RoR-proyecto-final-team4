@@ -60,7 +60,7 @@ class MainpagesController < ApplicationController
     end
     
     def update_expired
-      @cupon = Cupon.where('expiration_date <= ?', Date.today)
+      @cupon = Cupon.where('expiration_date < ?', Date.today)
       @cupon.each do |cupon|
         @cupon.update(image_url: 'https://thumbs.dreamstime.com/b/sello-expirado-122003510.jpg')
       end

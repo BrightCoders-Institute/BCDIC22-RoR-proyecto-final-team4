@@ -81,7 +81,7 @@
 
         <div class='add_cupons_detalles_cupon'>
           <%= form.label 'Cupón(opcional)' %>
-          <%= form.url_field :coupon, class:'input_border-color',placeholder: 'Codigo para optener el descuento' %>
+          <%= form.text_field :coupon, class:'input_border-color',placeholder: 'Codigo para optener el descuento' %>
         </div>
       </div>
 
@@ -100,7 +100,6 @@
         </div>
 
         <div class='add_cupons_detalles_finales_content'>
-          <button class='add_cupons_detalles_finales_content_buttons' id='vista_previa'>Vista previa</button>
           <%= form.submit 'Editar la oferta', class:'add_cupons_detalles_finales_content_buttons' %>
         </div>
       </div>
