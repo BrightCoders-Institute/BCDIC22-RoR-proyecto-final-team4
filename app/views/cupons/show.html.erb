@@ -42,7 +42,7 @@
 
             <h2><%= @cupon.title %></h2>
             <div class="cupon_state">
-              <% if @cupon.expiration_date.present? && @cupon.expiration_date < DateTime.current %>
+              <% if @cupon.expiration_date.present? && @cupon.expiration_date < Date.today %>
                 <mark class="size expired">Expiro</mark>
               <% else %>
                 <mark class="size valid">Vigente</mark>
@@ -67,8 +67,11 @@
             <% end %>
 
             <div class='area_data_container_url'>
-              <button><a href="<%= @cupon.url %>"><%= @cupon.url == "" ? "Sin Url" : "Ir a la oferta"%></a></button>
+              <% if @cupon.url.present? %>
+                <button><a href="<%= @cupon.url %>">Ir a la oferta</a></button>
+              <% end %>
             </div>
+            <div><h6>*El vendedor puede retirar o cancelar las ofertas y promociones de su negocio.</h6></div>
           </div>
         </div>
       </div>
